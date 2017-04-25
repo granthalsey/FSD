@@ -1,5 +1,6 @@
 
-var app = angular.module("app", ["angular.vertilize"]);
+var app = angular.module("app", ["angular.vertilize",
+"ui.router"]);
 
 
 app.controller("home", function ($scope, $window) {
@@ -22,12 +23,7 @@ app.controller("home", function ($scope, $window) {
         { name: 'Bed Frames and Mattresses', price: 450, image: randomImageUrl() },
         { name: 'Arts and Crafts Supplies', price: 50, image: randomImageUrl() },
         { name: 'Sports Equipment', price: 75, image: randomImageUrl() },
-        { name: 'Meals', price: 75, image: randomImageUrl() }, { name: 'Single Camp Admission', price: 250, image: randomImageUrl() },
-        { name: 'Bed Frames and Mattresses', price: 450, image: randomImageUrl() },
-        { name: 'Bed Frames and Mattresses', price: 450, image: randomImageUrl() },
-        { name: 'Arts and Crafts Supplies', price: 50, image: randomImageUrl() },
-        { name: 'Sports Equipment', price: 75, image: randomImageUrl() },
-        { name: 'Meals', price: 75, image: randomImageUrl() }
+        { name: 'Meals', price: 75, image: randomImageUrl() }, { name: 'Single Camp Admission', price: 250, image: randomImageUrl() }
     ];
     $scope.banner = {};
 
@@ -56,9 +52,9 @@ app.controller("home", function ($scope, $window) {
         var windowWidth = $(window).width();
         var scrollHeight = $(window).scrollTop();
         var documentHeight = $(document).height();
-        var MAX_BANNER_HEIGHT = 500;
+        var MAX_BANNER_HEIGHT = 450;
         var scrollRatio = (documentHeight - scrollHeight) / documentHeight;
-        console.log(scrollRatio);
+        scrollRatio = Math.pow(scrollRatio, 5);
 
         $scope.banner.height = Math.min(MAX_BANNER_HEIGHT, Math.max(0, parseInt(windowWidth * ratio * scrollRatio)));
         $scope.$apply();
@@ -69,8 +65,49 @@ app.controller("home", function ($scope, $window) {
 
 
 
+////////  states!
 
 
+app.config(function ($stateProvider, $urlRouterProvider) {
+    var states = [];
+
+    var homeState = {
+        name: 'home',
+        url: '/home',
+        templateUrl: 'templates/home.html'
+    }
+    var itemsState = {
+        name: 'items',
+        url: '/items',
+
+        templateUrl: 'templates/items.html'
+    }
+    var itemState = {
+        name: 'item',
+        url: '/item',
+
+        templateUrl: 'templates/item.html'
+    }
+
+
+    var checkoutState = {
+        name: 'checkout',
+        url: '/checkout',
+
+        templateUrl: 'templates/checkout.html'
+    }
+
+
+
+
+    $stateProvider.state(homeState);
+    $stateProvider.state(itemsState);
+    $stateProvider.state(itemState);
+    $stateProvider.state(checkoutState);
+
+
+    $urlRouterProvider.otherwise("/home");
+});
 
 
 
