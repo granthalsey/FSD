@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- This is a static prototype based on the UX Pin high-fidelity wireframes discussed with Omar and Grant -->
+    <title>Purchase Items</title>
+    <!-- Bootstrap CDN (current version 3.3.7 as of April 2017) -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Custom Google web font -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-1.12.4.js"
+            integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
+            crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+</head>
+<body ng-app="app">
+    <div class="wrap" ng-controller="home">
+        <div id="purchase-items-home">
+            <!-- Static header with shopping cart goes here -->
+            <!-- CTA banner goes here -->
+            <div class="hero" style="height: {{banner.height}}px !important"></div>
+            <!-- Main content -->
+            <section class="main-contents container-fluid">
+                <div class="cross-sell-item cross-sell-item cart-home" >
+                    <a href="checkout.html" class=" purchase-image purchase-image-more">
+                        <span>
+                            <i class="zmdi zmdi-shopping-cart"></i>
+                        </span>
+                        <small>
+                            cart
+                        </small>
+                    </a>
+                </div>
+                <h1 class="text-center">Purchase Items</h1>
+                <h2 class="main-subheading text-center">Select the items that you would like to purchase.</h2>
+
+                <!-- Products thumbnail grid -->
+                <!-- End single purchase item -->
+                <div class="row text-center" vertilize-container>
+                    <div class="col-lg-2 col-sm-4  col-xs-12 purchase-item-column" ng-repeat="item in items" >
+                        <div class="purchase-item " vertilize>
+                            <div class="thumbnail">
+                                <a class="purchase-image" href=" purchase-item-details.html" style="background-image: url({{item.image}})">
+
+                                    <span class="purchase-item-price">{{item.price | currency:"$":2}}</span>
+                                </a>
+                                <div class="caption">
+                                    <p class="purchase-item-title">
+                                        <a href="purchase-item-details.html">{{item.name}}</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+    </div>
+
+    <!-- Cart logic -->
+    <script src="js/purchase-items-cart.js"></script>
+</body>
+</html>

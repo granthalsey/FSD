@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- This is a static prototype based on the UX Pin high-fidelity wireframes discussed with Omar and Grant -->
+    <title>Purchase Items</title>
+    <!-- Bootstrap CDN (current version 3.3.7 as of April 2017) -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Custom Google web font -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-1.12.4.js"
+            integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
+            crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+</head>
+<body ng-app="app">
+    <div class="wrap" ng-controller="home">
+
+        <div class="hero" style="height: {{banner.height}}px !important"></div>
+        <div class="container">
+            <div>
+                <div class="row">
+                    <div class="col-lg-5 col-md-6 col-sm-12  col-xs-12 pull-right">
+                        <div class="purchase-items-checkout">
+                            <h2>Order Summary</h2>
+                            <div class="row"><br /></div>
+                            <div class="row">
+                                <div class="col-md-2 col-xs-12">
+                                    <img class="img-responsive" src="https://placeimg.com/200/200/any" />
+                                </div>
+                                <div class="col-md-7 col-xs-9">
+                                    <span class="cart-title">Bed Frames and Mattresses</span><br />
+                                    Price: $150.00<br />
+                                    Size: Medium<br />
+                                    Quantity: 2<br />
+                                    <a href class="cart-link">edit</a> | <a href class="cart-link">remove</a>
+
+                                </div>
+                                <div class="col-md-3 col-xs-3 text-right">
+                                    <span class="cart-subtotal">$300.00</span>
+                                </div>
+                                <hr class="col-xs-12" />
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-2 col-xs-12">
+                                    <img class="img-responsive" src="https://placeimg.com/200/180/any" />
+                                </div>
+                                <div class="col-md-7 col-xs-9">
+                                    <span class="cart-title">A Different Item</span><br />
+                                    Price: $100.00<br />
+                                    Size: Medium<br />
+                                    Quantity: 3<br /> <a href class="cart-link">edit</a> | <a href class="cart-link">remove</a>
+
+                                </div>
+                                <div class="col-xs-3 text-right">
+                                    <span class="cart-subtotal">$210.00</span>
+                                </div>
+                                <hr class="col-xs-12" />
+                            </div>
+
+                            <div class="row">
+                                <!--<div class="col-xs-9">
+                                    Item Subtotal
+                                </div>
+                                <div class=" col-xs-3 text-right">
+                                    $610.00
+                                </div>-->
+                                <div class="col-xs-9">
+                                    Shipping
+                                </div>
+                                <div class=" col-xs-3 text-right">
+                                    $10.00
+                                </div>
+                                <div class="col-xs-9">
+                                    Tax
+                                </div>
+                                <div class=" col-xs-3 text-right">
+                                    $31.00
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="">
+                                    <div class="col-xs-9 cart-total">
+                                        Total
+                                    </div>
+                                    <div class=" col-xs-3 text-right cart-total">
+                                        $651.00
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-md-6 col-sm-12 col-xs-12 pull-left">
+                        <div class="purchase-items-checkout">
+                            <form>
+                                <section>
+                                    <h2>Shipping Information</h2>
+                                    <fieldset>
+
+                                        <div class="row">
+                                            <div class="col-xs-6">
+                                                <input class="form-control " placeholder="First" autofocus />
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <input class="form-control" placeholder="Last" />
+                                            </div>
+                                        </div>
+
+
+                                        <input class="form-control " placeholder="Street Address" />
+                                        <div class="row">
+                                            <div class="col-xs-6">
+                                                <input class="form-control" placeholder="City" />
+                                            </div>
+                                            <div class="col-xs-3">
+                                                <input class="form-control" placeholder="State" />
+                                            </div>
+                                            <div class="col-xs-3">
+                                                <input class="form-control" placeholder="Zip" />
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </section>
+                                <section>
+                                    <h2>Billing </h2>
+                                    <fieldset>
+
+                                        <div class="row">
+                                            <div class="col-xs-12">
+                                                <input placeholder="Name on Card" type="text" name="CardName" class="form-control" />
+                                            </div>
+
+
+
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-7 col-xs-12">
+                                                <input placeholder="Card number" type="text" name="CardNumber" class="form-control" />
+                                            </div>
+                                            <div class="col-md-3 col-xs-7">
+                                                <input placeholder="MM / YYYY" type="text" name="CardExpiry" class="form-control" />
+                                            </div>
+                                            <div class="col-md-2 col-xs-5">
+                                                <input placeholder="CVC" type="text" name="CardCvc"  class="form-control" />
+                                            </div>
+                                        </div>
+                                        <label>
+                                            <input type="checkbox" checked />
+                                            Use shipping as billing address
+                                        </label>
+
+                                        <a href class="btn btn-blue btn-block btn-lg">Submit</a>
+                                        <a href=" " class=" btn btn-block btn-link">
+                                            Continue Shopping
+                                        </a>
+                                    </fieldset>
+                                </section>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="js/purchase-items-cart.js"></script>
+</body>
+</html>
