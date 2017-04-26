@@ -3,14 +3,12 @@ var app = angular.module("app", ["angular.vertilize",
 "ui.router"]);
 
 
-app.controller("home", function ($scope, $window) {
+app.controller("home", function ($scope, $window, $rootScope) {
 
 
     var randomImageUrl = function () {
         return 'https://placeimg.com/' + (Math.floor(Math.random() * 3) + 600) + '/' + (Math.floor(Math.random() * 300) + 600) + '/any';
     }
-
-
 
     $scope.items = [
         { name: 'Single Camp Admission', price: 250, image: randomImageUrl() },
@@ -27,6 +25,11 @@ app.controller("home", function ($scope, $window) {
     ];
     $scope.banner = {};
 
+
+
+
+
+    // refactor to directive
     // banner size logic
     var imgLoad = $("<img />");
     imgLoad.attr("src", 'images/hero-banner.png');
@@ -59,7 +62,9 @@ app.controller("home", function ($scope, $window) {
         $scope.banner.height = Math.min(MAX_BANNER_HEIGHT, Math.max(0, parseInt(windowWidth * ratio * scrollRatio)));
         $scope.$apply();
     }
-
+    $rootScope.$on('$stateChangeSuccess', function () {
+        document.body.scrollTop = document.documentElement.scrollTop = 0;
+    });
 
 })
 
@@ -107,8 +112,8 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 
 
     $urlRouterProvider.otherwise("/home");
+ 
 });
-
 
 
 /*!
