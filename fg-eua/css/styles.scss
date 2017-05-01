@@ -81,16 +81,32 @@ body {
         position: relative;
         background-size: cover;
         background-position: 50% 50%;
-          small {
-                    color: $color_white !important;
-                }
+
+        .btn-shadow {
+            height: 50px;
+            width: 50px;
+            padding: 0 0;
+            line-height: 50px;
+            font-size: 36px;
+        }
+
+        .btn-sm {
+            padding: 0 0;
+            line-height: 20px;
+        }
+
+        small {
+            color: $color_white !important;
+            font-size: 50%;
+        }
+
         .hero-overlay {
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0,0,0,.5);
+            background: rgba(0,0,0,.7);
         }
 
         .hero-content {
@@ -102,7 +118,6 @@ body {
             margin-top: 20px;
 
             h3 {
-              
             }
         }
     }
@@ -159,5 +174,24 @@ body {
 
     .default-background {
         background: $default_background;
+    }
+
+    .btn-shadow {
+        color: #fff;
+        color: rgba(255,255,255,.9);
+        background: rgba(255,255,255,.2);
+
+        &:hover {
+            color: #fff;
+            background: rgba(0,0,0,.6);
+        }
+    }
+
+    .btn {
+        transition: all .3s;
+    }
+
+    .text-left {
+        text-align: left !important;
     }
 }
