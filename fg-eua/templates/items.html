@@ -1,0 +1,35 @@
+<section class="main-contents container-fluid">
+    <div class="cross-sell-item cross-sell-item cart-home">
+        <a ui-sref="checkout" class=" purchase-image purchase-image-more">
+            <span>
+                <i class="zmdi zmdi-shopping-cart"></i>
+            </span>
+            <small>
+                cart
+            </small>
+        </a>
+    </div>
+    <h1 class="text-center">Purchase Items</h1>
+    <h2 class="main-subheading text-center">Select the items that you would like to purchase.</h2>
+
+    <!-- Products thumbnail grid -->
+    <!-- End single purchase item -->
+    <div class="row text-center" vertilize-container>
+        <div class="col-lg-2 col-sm-4  col-xs-12 purchase-item-column" ng-repeat="item in items">
+            <div class="purchase-item " vertilize>
+                <div class="thumbnail">
+                    <a class="purchase-image" ui-sref="item" style="background-image: url({{item.image}})">
+
+                        <span class="purchase-item-price">{{item.price | currency:"$":2}}</span>
+                    </a>
+                    <div class="caption">
+                        <p class="purchase-item-title">
+                            <a ui-sref="item">{{item.name}}</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>

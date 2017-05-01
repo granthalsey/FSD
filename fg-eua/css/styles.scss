@@ -1,0 +1,91 @@
+//colors
+$color_navy_blue: #003e5d;
+$default_background: #F1F1F1;
+$color_medium_blue: #19a6df;
+$color_white: #fff;
+$color_white_trans: rgba(255,255,255,.7);
+$color_shadow: rgba(0,0,0,.15);
+$color_dark_blue: #006a98;
+$color_light_orange: #F55D3E;
+
+//fonts
+$font_0: Open Sans;
+$font_1: sans-serif;
+
+
+
+body {
+    background: $default_background;
+    font-family: $font_0, $font_1;
+    margin: 0;
+
+
+    .navbar-inverse {
+        background: $color_navy_blue;
+        border-bottom: $color_navy_blue;
+    }
+
+    .navbar-img {
+        width: 140px;
+        position: relative;
+        top: 10px;
+        margin-right: 10px;
+    }
+
+    .navbar-inverse .navbar-nav > li {
+        > a {
+            color: $color_white;
+            color: $color_white_trans;
+            transition: all .3s;
+        }
+
+        &.active {
+            a, a:hover, a:active {
+                background: $color_dark_blue;
+            }
+
+            a {
+                box-shadow: inset 0 -4px 0 $color_light_orange;
+            }
+        }
+    }
+
+    .card {
+        background: $color_white;
+        box-shadow: 0 1px 3px $color_shadow;
+    }
+
+    .card-image {
+        height: 0;
+        padding-bottom: 100%;
+        width: 100%;
+        display: block;
+        background-size: cover;
+        position: relative;
+    }
+
+    .card-footer {
+        padding: 5px 5px;
+
+        p {
+            margin: 0 0 3px;
+        }
+    }
+
+
+    .hero-header {
+        background-color: #000;
+        background-repeat: no-repeat;
+        border-bottom: 3px solid #3baaa6;
+        min-height: 325px;
+        position: relative;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+    .main-content {
+        margin-top: 60px;
+    }
+}

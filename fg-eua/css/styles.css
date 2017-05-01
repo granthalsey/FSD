@@ -1,0 +1,48 @@
+body {
+  background: #F1F1F1;
+  font-family: Open Sans, sans-serif;
+  margin: 0; }
+  body .navbar-inverse {
+    background: #003e5d;
+    border-bottom: #003e5d; }
+  body .navbar-img {
+    width: 140px;
+    position: relative;
+    top: 10px;
+    margin-right: 10px; }
+  body .navbar-inverse .navbar-nav > li > a {
+    color: #fff;
+    color: rgba(255, 255, 255, 0.7);
+    transition: all .3s; }
+  body .navbar-inverse .navbar-nav > li.active a, body .navbar-inverse .navbar-nav > li.active a:hover, body .navbar-inverse .navbar-nav > li.active a:active {
+    background: #006a98; }
+  body .navbar-inverse .navbar-nav > li.active a {
+    box-shadow: inset 0 -4px 0 #F55D3E; }
+  body .card {
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15); }
+  body .card-image {
+    height: 0;
+    padding-bottom: 100%;
+    width: 100%;
+    display: block;
+    background-size: cover;
+    position: relative; }
+  body .card-footer {
+    padding: 5px 5px; }
+    body .card-footer p {
+      margin: 0 0 3px; }
+  body .hero-header {
+    background-color: #000;
+    background-repeat: no-repeat;
+    border-bottom: 3px solid #3baaa6;
+    min-height: 325px;
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center; }
+  body .main-content {
+    margin-top: 60px; }
+
+/*# sourceMappingURL=styles.css.map */

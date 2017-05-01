@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- This is a static prototype based on the UX Pin high-fidelity wireframes discussed with Omar and Grant -->
+    <title>Purchase Items</title>
+    <!-- Bootstrap CDN (current version 3.3.7 as of April 2017) -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Custom Google web font -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-1.12.4.js"
+            integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
+            crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.0-rc.1/angular-ui-router.js"></script>
+</head>
+<body ng-app="eua">
+    <div ng-controller="base">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <h1 class="sr-only">FirstGiving</h1>
+                    <img class="navbar-img"
+                         src="https://www.firstgiving.com/Images/logo/first-giving-logo-small.png" />
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a ui-sref="home">
+                                Fundraising
+                            </a>
+                        </li>
+                        <li>
+                            <a ui-sref="donations">
+                                Donations
+                            </a>
+                        </li>
+                        <li>
+                            <a ui-sref="Profile">
+                                Profile
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav pull-right">
+                        <a class="dropdown-toggle dropdown-avatar hidden-xs">
+                            <img class="avatar"
+                                 src="https://placeimg.com/40/40/people" />
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <ui-view></ui-view>
+
+    </div>
+
+    <!-- Cart logic -->
+    <script src="js/eua.js"></script>
+</body>
+</html>
