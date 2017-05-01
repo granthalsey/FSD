@@ -15,7 +15,6 @@ $font_1: sans-serif;
 
 
 body {
-    background: $default_background;
     font-family: $font_0, $font_1;
     margin: 0;
 
@@ -53,6 +52,7 @@ body {
     .card {
         background: $color_white;
         box-shadow: 0 1px 3px $color_shadow;
+        margin-bottom: 20px;
     }
 
     .card-image {
@@ -76,16 +76,88 @@ body {
     .hero-header {
         background-color: #000;
         background-repeat: no-repeat;
-        border-bottom: 3px solid #3baaa6;
+        border-bottom: 3px solid $color_medium_blue;
         min-height: 325px;
         position: relative;
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-align: center;
-        align-items: center;
+        background-size: cover;
+        background-position: 50% 50%;
+          small {
+                    color: $color_white !important;
+                }
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,.5);
+        }
+
+        .hero-content {
+            margin-top: 70px;
+            color: $color_white;
+        }
+
+        hero-sub-content {
+            margin-top: 20px;
+
+            h3 {
+              
+            }
+        }
     }
 
     .main-content {
-        margin-top: 60px;
+        margin-top: 50px;
+    }
+
+    .sidebar {
+    }
+
+    .sidebar-section {
+    }
+
+    .sidebar-section-title {
+        border-bottom: 1px solid #ccc;
+        font-size: inherit;
+        line-height: 2;
+        color: #777;
+    }
+
+    .content-section {
+        padding-top: 20px;
+    }
+
+    .navbar-subnav {
+        background: $default_background;
+
+        li {
+            font-size: 18px;
+            margin-right: 20px;
+            transition: all .3s;
+
+            &.active {
+                a {
+                    color: $color_medium_blue !important;
+                }
+
+                border-bottom: 2px solid $color_medium_blue;
+            }
+
+            a {
+                color: #777;
+                transition: all .3s;
+                border-top: 2px solid transparent;
+                border-bottom: 2px solid transparent;
+
+                &:hover, &:active, &.active {
+                    color: $color_medium_blue;
+                }
+            }
+        }
+    }
+
+    .default-background {
+        background: $default_background;
     }
 }

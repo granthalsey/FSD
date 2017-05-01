@@ -1,6 +1,7 @@
 
 var eua = angular.module("eua", ["angular.vertilize",
-"ui.router"]);
+"ui.router",
+'ui.bootstrap']);
 
 
 eua.controller("base", function ($scope, $window, $rootScope) {
@@ -81,10 +82,10 @@ eua.config(function ($stateProvider, $urlRouterProvider) {
     });
 
     states.push({
-        name: 'fundraisingpages',
-        url: '/fundraisingpages',
+        name: 'fundraisingpage',
+        url: '/fundraisingpage',
 
-        templateUrl: 'templates/checkout.html'
+        templateUrl: 'templates/fundraisingpage.html'
     });
     // register states
     console.log(states);

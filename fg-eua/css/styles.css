@@ -1,5 +1,4 @@
 body {
-  background: #F1F1F1;
   font-family: Open Sans, sans-serif;
   margin: 0; }
   body .navbar-inverse {
@@ -20,7 +19,8 @@ body {
     box-shadow: inset 0 -4px 0 #F55D3E; }
   body .card {
     background: #fff;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15); }
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+    margin-bottom: 20px; }
   body .card-image {
     height: 0;
     padding-bottom: 100%;
@@ -35,14 +35,52 @@ body {
   body .hero-header {
     background-color: #000;
     background-repeat: no-repeat;
-    border-bottom: 3px solid #3baaa6;
+    border-bottom: 3px solid #19a6df;
     min-height: 325px;
     position: relative;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-align: center;
-    align-items: center; }
+    background-size: cover;
+    background-position: 50% 50%; }
+    body .hero-header small {
+      color: #fff !important; }
+    body .hero-header .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5); }
+    body .hero-header .hero-content {
+      margin-top: 70px;
+      color: #fff; }
+    body .hero-header hero-sub-content {
+      margin-top: 20px; }
   body .main-content {
-    margin-top: 60px; }
+    margin-top: 50px; }
+  body .sidebar-section-title {
+    border-bottom: 1px solid #ccc;
+    font-size: inherit;
+    line-height: 2;
+    color: #777; }
+  body .content-section {
+    padding-top: 20px; }
+  body .navbar-subnav {
+    background: #F1F1F1; }
+    body .navbar-subnav li {
+      font-size: 18px;
+      margin-right: 20px;
+      transition: all .3s; }
+      body .navbar-subnav li.active {
+        border-bottom: 2px solid #19a6df; }
+        body .navbar-subnav li.active a {
+          color: #19a6df !important; }
+      body .navbar-subnav li a {
+        color: #777;
+        transition: all .3s;
+        border-top: 2px solid transparent;
+        border-bottom: 2px solid transparent; }
+        body .navbar-subnav li a:hover, body .navbar-subnav li a:active, body .navbar-subnav li a.active {
+          color: #19a6df; }
+  body .default-background {
+    background: #F1F1F1; }
 
 /*# sourceMappingURL=styles.css.map */
