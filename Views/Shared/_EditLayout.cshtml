@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <base href="/">
+    <!-- Custom Google web font -->
+    <link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+    @Styles.Render("~/bundles/css/bootstrap")
+    @Styles.Render("~/bundles/css")
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/angular")
+    @Scripts.Render("~/bundles/bootstrap.js")
+    @Scripts.Render("~/bundles/plugins.js")
+    @Scripts.Render("~/bundles/ckeditor.js")
+    @Scripts.Render("~/bundles/datetimepicker.js")
+    @Scripts.Render("~/bundles/edit.js")
+
+</head>
+<body ng-app="edit">
+    @RenderBody()
+
+</body>
+</html>

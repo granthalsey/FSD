@@ -1,0 +1,222 @@
+﻿.ui-grid-header-cell-row .ui-grid-header-cell {
+    text-transform: uppercase;
+    font-weight: normal;
+    color: #54698d;
+    background: #fff;
+    }
+
+    .ui-grid-header-cell:last-child .ui-grid-column-resizer.right {
+    border-right: none;
+    }
+
+    .ui-grid .ui-grid-render-container-body .ui-grid-viewport {
+    overflow-y: auto !important;
+    }
+
+    .ui-grid-row:nth-child(odd) .ui-grid-cell, .ui-grid-row:nth-child(even) .ui-grid-cell {
+    background: #fff;
+    }
+
+    .ui-grid-row {
+    border-bottom: 1px solid #eee;
+    }
+
+    .ui-grid-contents-wrapper .ui-grid-header-canvas {
+    background: #fff;
+    }
+
+    .ui-grid-contents-wrapper .ui-grid-menu-button {
+    border: none !important;
+    padding: 4px 4px;
+    }
+
+    .ui-grid-menu .ui-grid-menu-inner ul li {
+    padding: 0 0 !important;
+    }
+
+    .ui-grid-menu .ui-grid-menu-inner ul li button {
+        text-align: left;
+    }
+
+    .ui-grid-cell .ui-grid-tree-base-header {
+    white-space: nowrap;
+    }
+
+    .ui-grid-cell {
+    overflow: visible !important;
+    }
+
+    .ui-grid-viewport .ui-grid-cell-contents {
+    word-wrap: break-word;
+    white-space: normal !important;
+    }
+
+    .ui-grid-row, .ui-grid-cell {
+    height: auto !important;
+    }
+
+    .ui-grid-row div[role=row] {
+        display: flex;
+        align-content: stretch;
+    }
+
+                /*
+    .ui-grid-viewport {
+    height: auto !important;
+    }
+    */
+    [ui-grid="newCustomReportGrid"].grouped {
+        height: auto !important;
+    }
+
+    .no-animate div, .no-animate span, .no-animate input, .no-animate table, .no-animate tr, .no-animate td, .no-animate ul, .no-animate li, .no-animate ol, .ui-grid div, .ui-grid span, .ui-grid input, .ui-grid table, .ui-grid tr, .ui-grid td, .ui-grid ul, .ui-grid li, .ui-grid ol {
+        -webkit-transition: initial;
+        -moz-transition: initial;
+        -o-transition: initial;
+        transition: initial;
+    }
+
+    .ui-grid-pager-row-count-picker, .ui-grid-pager-count {
+        float: left;
+        margin: 20px 0;
+    }
+
+        .ui-grid-pager-row-count-picker select, .ui-grid-pager-count select {
+            height: 26px !important;
+            padding: 0 0 !important;
+        }
+
+    .truncate-text, .ui-grid .ui-grid-viewport .truncate-text div.ui-grid-cell-contents {
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+    }
+
+        .truncate-text:hover, .ui-grid .ui-grid-viewport .truncate-text div.ui-grid-cell-contents:hover {
+            overflow: visible !important;
+            text-overflow: initial !important;
+            white-space: initial !important;
+        }
+
+    .ui-grid {
+        border: none !important;
+        overflow: hidden;
+    }
+
+        .ui-grid .ui-grid-header {
+            border-bottom: 2px solid #eee;
+            background: #fff;
+        }
+
+        .ui-grid .ui-grid-header-cell, .ui-grid .ui-grid-cell {
+            border: none !important;
+        }
+
+        .ui-grid .ui-grid-viewport .ui-grid-cell-contents {
+            white-space: normal;
+        }
+
+        .ui-grid .ui-grid-viewport {
+            overflow: auto !important;
+            min-height: 200px;
+        }
+
+    .ui-grid-pager-panel {
+        background: #FFFFFF;
+    }
+
+    [ng-click].ui-grid-cell:hover {
+        text-decoration: underline;
+    }
+
+    .contributions-panel .ui-grid-header-cell:first-child .ui-grid-cell-contents,
+    .contributions-panel [ui-grid-cell]:first-child > div {
+        padding-left: 0;
+    }
+
+    .contributions-panel .ui-grid-header-cell:last-child .ui-grid-cell-contents,
+    .contributions-panel [ui-grid-cell]:last-child > div {
+        padding-right: 0;
+    }
+
+    .contributions-panel .ui-grid-top-panel {
+        background: #FFFFFF;
+    }
+
+    .contributions-panel .ui-grid-pager-control {
+        margin-left: 0;
+    }
+
+                /*
+    loading icons for smartlist listing
+    */
+    .ui-grid-cell.initial span,
+    .ui-grid-cell.initial .fa, .ui-grid-cell.loading span,
+    .ui-grid-cell.loading .fa, .ui-grid-cell.warning span,
+    .ui-grid-cell.warning .fa {
+        display: none;
+    }
+
+    .ui-grid-cell.initial .fa, .ui-grid-cell.loading .fa, .ui-grid-cell.warning .fa {
+        font-size: 16px;
+        left: 2px;
+        top: 3px;
+        position: relative;
+        margin: 0;
+        padding: 0;
+        left: 0;
+        transform: none;
+    }
+
+    .ui-grid-cell.loaded .fa {
+        display: none;
+    }
+
+    .ui-grid-cell.initial .fa-cog {
+        display: inline-block;
+        color: #ababab;
+    }
+
+    .ui-grid-cell.initial .fa-spin {
+        display: none;
+    }
+
+    .ui-grid-cell.loading .fa-cog.fa-spin {
+        display: inline-block;
+        color: #333;
+    }
+
+    .ui-grid-cell.warning .fa-exclamation-triangle {
+        display: inline-block;
+        color: #EDD964;
+    }
+
+    .split-pledge .ui-grid {
+        overflow: hidden;
+    }
+
+    [ui-grid-selection] .ui-grid-row,
+    [ui-grid-selection] .ui-grid-cell-contents {
+        cursor: pointer;
+    }
+
+        [ui-grid-selection] .ui-grid-row:not(.ui-grid-row-selected):hover,
+        [ui-grid-selection] .ui-grid-row:not(.ui-grid-row-selected):hover .ui-grid-cell-contents {
+            background: #F4F4F4;
+        }
+
+    .ui-grid .unselectable {
+        color: #ABABAB;
+        text-decoration: none !important;
+        pointer-events: none;
+        cursor: default;
+    }
+
+    .ui-grid-cell-contents .fa {
+        color: #6E778C;
+    }
+
+        .ui-grid-cell-contents .fa.yes {
+            color: #fff;
+            text-shadow: 0 0 2px #000;
+    }
