@@ -39,7 +39,6 @@ C:\quantivprojects\bb02\Dev\FirstGiving.Main\Solutions\MvcApplication1\bin\Syste
 C:\quantivprojects\bb02\Dev\FirstGiving.Main\Solutions\MvcApplication1\bin\ru-ru\BundleTransformer.Core.resources.dll
 C:\fsd\FSD\obj\Debug\MvcApplication1.dll
 C:\fsd\FSD\obj\Debug\MvcApplication1.pdb
-C:\fsd\FSD\obj\Debug\FirstGivingPrototype.csprojResolveAssemblyReference.cache
 C:\fsd\FSD\bin\libsass32.dll
 C:\fsd\FSD\bin\libsass64.dll
 C:\fsd\FSD\bin\x86\libsass.dll
@@ -76,9 +75,9 @@ C:\fsd\FSD\bin\System.Web.Razor.xml
 C:\fsd\FSD\bin\System.Web.WebPages.xml
 C:\fsd\FSD\bin\System.Web.WebPages.Deployment.xml
 C:\fsd\FSD\bin\System.Web.WebPages.Razor.xml
-C:\fsd\FSD\bin\EntityFramework.xml
 C:\fsd\FSD\bin\Microsoft.Web.Infrastructure.xml
 C:\fsd\FSD\bin\System.Net.Http.Formatting.xml
 C:\fsd\FSD\bin\System.Web.Http.xml
 C:\fsd\FSD\bin\System.Web.Http.WebHost.xml
 C:\fsd\FSD\bin\ru-ru\BundleTransformer.Core.resources.dll
+C:\fsd\FSD\obj\Debug\FirstGivingPrototype.csprojResolveAssemblyReference.cache

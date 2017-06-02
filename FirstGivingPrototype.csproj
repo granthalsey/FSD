@@ -165,23 +165,57 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Static\CSS\App\angular-ui-grid\ui-grid.scss" />
+    <None Include="Static\CSS\App\angular-ui-grid\ui-grid.scss">
+      <Compile>False</Compile>
+      <Minify>True</Minify>
+      <IgnoreWarnings>True</IgnoreWarnings>
+      <IgnoreErrors>True</IgnoreErrors>
+      <CompileStyle>Nested</CompileStyle>
+      <DebugInfo>False</DebugInfo>
+    </None>
     <Content Include="Static\CSS\App\angular-ui-grid\ui-grid.svg" />
     <Content Include="Static\CSS\App\styles.css">
       <DependentUpon>styles.scss</DependentUpon>
     </Content>
-    <Content Include="Static\Fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Static\CSS\Bootstrap\bootstrap.scss" />
-    <Content Include="Static\CSS\Bootstrap\datetimepicker.scss" />
-    <Content Include="Static\CSS\App\angular-bootstrap-datetimepicker\src\scss\datetimepicker.scss" />
+    <Content Include="Static\CSS\Bootstrap\datetimepicker.scss">
+      <Compile>False</Compile>
+      <Minify>True</Minify>
+      <IgnoreWarnings>True</IgnoreWarnings>
+      <IgnoreErrors>True</IgnoreErrors>
+      <CompileStyle>Nested</CompileStyle>
+      <DebugInfo>False</DebugInfo>
+    </Content>
+    <Content Include="Static\CSS\App\angular-bootstrap-datetimepicker\src\scss\datetimepicker.scss">
+      <Compile>False</Compile>
+      <Minify>True</Minify>
+      <IgnoreWarnings>True</IgnoreWarnings>
+      <IgnoreErrors>True</IgnoreErrors>
+      <CompileStyle>Nested</CompileStyle>
+      <DebugInfo>False</DebugInfo>
+    </Content>
     <Content Include="Static\CSS\App\angular-bootstrap-datetimepicker\src\scss\_core.scss" />
     <Content Include="Static\CSS\App\angular-bootstrap-datetimepicker\src\scss\_variables.scss" />
-    <Content Include="Static\CSS\App\ui-grid-custom.scss" />
+    <Content Include="Static\CSS\App\ui-grid-custom.scss">
+      <Compile>False</Compile>
+      <Minify>True</Minify>
+      <IgnoreWarnings>True</IgnoreWarnings>
+      <IgnoreErrors>True</IgnoreErrors>
+      <CompileStyle>Nested</CompileStyle>
+      <DebugInfo>False</DebugInfo>
+    </Content>
     <Content Include="Static\CSS\App\angular-ui-grid\ui-grid.ttf" />
     <Content Include="Static\CSS\App\angular-ui-grid\ui-grid.woff" />
-    <None Include="Static\CSS\Bootstrap\ui-bootstrap-custom-2.5.0-csp.scss" />
+    <Content Include="Static\CSS\App\_variables.scss" />
+    <None Include="Static\CSS\Bootstrap\ui-bootstrap-custom-2.5.0-csp.scss">
+      <Compile>False</Compile>
+      <Minify>True</Minify>
+      <IgnoreWarnings>True</IgnoreWarnings>
+      <IgnoreErrors>True</IgnoreErrors>
+      <CompileStyle>Nested</CompileStyle>
+      <DebugInfo>False</DebugInfo>
+    </None>
     <Content Include="Scripts\Angular\angular-growl.js" />
     <Content Include="Scripts\Angular\angular-sanitize.js" />
     <Content Include="Scripts\Angular\angular-translate.js" />
@@ -435,6 +469,7 @@
     <Content Include="Scripts\plugins\facebook\init-sync.js" />
     <Content Include="Scripts\plugins\moment\moment.js" />
     <Content Include="Scripts\plugins\twitter\twitter-platform.js" />
+    <Content Include="Static\JS\Edit\HomeController.js" />
     <Content Include="Static\JS\Public\app.config.js" />
     <Content Include="Static\JS\Public\app.module.js" />
     <Content Include="Static\JS\Public\base\base.controller.js" />
@@ -448,6 +483,7 @@
     <Content Include="Static\JS\Edit\app.module.js" />
     <Content Include="Static\JS\Edit\app.config.js" />
     <Content Include="Static\JS\Public\HomeController.js" />
+    <Content Include="templates\edit\home.html" />
     <Content Include="templates\public\home.html" />
     <Content Include="templates\subnavTabs.html" />
     <Content Include="Web.config">
@@ -464,10 +500,6 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_EditLayout.cshtml" />
     <Content Include="Views\Event\Index.cshtml" />
-    <Content Include="Static\Fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Static\Fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="Static\Fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="Static\Fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="Views\Shared\_PublicLayout.cshtml" />
     <Content Include="Views\Event\Edit.cshtml" />
   </ItemGroup>
@@ -481,7 +513,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Static\CSS\App\styles.css.map" />
-    <Content Include="Static\CSS\App\styles.scss" />
+    <Content Include="Static\CSS\App\styles.scss">
+      <Compile>False</Compile>
+      <Minify>True</Minify>
+      <IgnoreWarnings>True</IgnoreWarnings>
+      <IgnoreErrors>True</IgnoreErrors>
+      <CompileStyle>Nested</CompileStyle>
+      <DebugInfo>False</DebugInfo>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Static\CSS\App\scss watch.bat" />

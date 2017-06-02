@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('Edit')
+        .module('edit')
         .controller('base', baseController);
 
     baseController.$inject = [

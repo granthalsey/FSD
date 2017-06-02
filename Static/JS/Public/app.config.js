@@ -9,9 +9,10 @@
         var states = [];
 
         states.push({
-            name: 'hello',
+            name: 'home',
             url: '/home',
             controller: 'home',
+            controllerAs: "homeVM",
             templateUrl: '/templates/public/home.html'
         });
 

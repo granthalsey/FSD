@@ -1,23 +1,28 @@
 @import "angular-bootstrap-datetimepicker/src/scss/datetimepicker.scss";
 @import "angular-ui-grid/ui-grid.scss";
 @import "_angular-growl.min.scss";
+@import "_variables.scss";
 
-//colors
-$color_navy_blue: #003e5d;
-$default_background: #eee;
-$color_medium_blue: #19a6df;
-$color_white: #fff;
-$color_white_trans: rgba(255,255,255,.7);
-$color_shadow: rgba(0,0,0,.15);
-$color_dark_blue: #006a98;
-$color_light_orange: #F55D3E;
-$black_10: rgba(0, 0, 0, 0.1);;
-$white: #ffffff;
-$black_10: rgba(0, 0, 0, 0.1);
-$color_alto_approx: #dadada;
-$color_bondi_blue_approx: #1185b5;
 
-//fonts
-$font_0: Open Sans;
-$font_1: sans-serif;
 
+.fs-admin {
+    .hero {
+        background-color: $color_dark_blue;
+    }
+}
+
+.pull-left {
+    float: left !important;
+}
+
+.pull-right {
+    float: right !important;
+}
+
+.nav-bar-compensation {
+    padding-top: 70px;
+}
+
+.app-menu {
+    display: none !important; //hack for compatability
+}
