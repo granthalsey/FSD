@@ -10,60 +10,112 @@
                 <li class="breadcrumb-item"><a href="#">Events</a></li>
                 <li class="breadcrumb-item active">Polar Plunge 2018</li>
             </ol>
-            <div class="jumbotron jumbotron-fluid">
-                <div class="container">
+            <div class="container-fluid">
+
+                <header class="block-header">
                     <div class="row">
-                        <div class="col col-md-2">
-                            <img src="https://placeimg.com/300/300/tech"
-                                 class="img-fluid" />
-                        </div>
-                        <div class="col col-md-10">
-                            <div class="btn-group pull-right">
-                                <div class="btn btn btn-outline-white">Things</div>
-                            </div>
-                            <h1>Polar Plunge 2018</h1>
-                            <h3>Jan 18, 2018</h3>
+
+                        <div class="col d-flex align-items-baseline">
+                            <h1 class="float-left">Polar Plunge 2018</h1>
+
+                            <ul class="nav nav-tabs ml-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Dashboard</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Settings</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#">Pages</a>
+                                </li>
+                                @*<li class="ml-auto">
+                                    <button class="btn btn-outline-white">Things</button>
+                                </li>*@
+                            </ul>
                         </div>
                     </div>
+                </header>
 
-                </div>
-            </div>
-            <div class="container">
                 <div class="row">
-                    <div class="col col-xs-12">
-                        <ul class="nav nav-tabs">
+                    <div class=" col page-selector">
 
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Dashboard</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Settings</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" href="#">Pages</a>
-                            </li>
-                        </ul>
+                        <a href class="active">
+                            <i class="zmdi zmdi-calendar-check"></i>
+                            <span>
+                                Event
+                            </span>
+                        </a>
+                        <a href>
+                            <i class="zmdi zmdi-pin"></i>
+                            <span>
+                                Location
+                            </span>
+                        </a>
+                        <a href>
+                            <i class="zmdi zmdi-accounts-alt"></i>
+                            <span>
+                                Team
+                            </span>
+                        </a>
+                        <a href>
+                            <i class="zmdi zmdi-account-circle"></i>
+                            <span>
+                                Individual
+                            </span>
+                        </a>
+                        <a href>
+                            <i class="zmdi zmdi-shield-check"></i>
+                            <span>
+                                Donation
+                            </span>
+                        </a>
+                        <a href>
+                            <i class="zmdi zmdi-thumb-up"></i>
+                            <span>
+                                Thank You
+                            </span>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="content-edit-wrap">
-        <div class="fluid-container">
+    <div class="content-edit-wrap margin-top-20">
+        <div class="container-fluid">
             <div class="row">
-                <div class="fs-admin content-edit-tabs col col-xs-12">
+                <div class="fs-admin content-edit-tabs col">
                     <header class="block-header">
-                        <h2>Event Page</h2>
+                        <div class="row">
+                            <div class="col">
+                                <h5>Event Page</h5>
+                                <ul class="nav nav-tabs float-right">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Design</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link active" href="#">Content</a>
+                                    </li>
+                                    <li class="ml-auto">
+                                        <button class="btn btn-outline-secondary">Cancel</button>
+                                        <button class="btn btn-outline-primary">Save</button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </header>
                 </div>
             </div>
+            <div class="row">
+                <div class="fs-admin col col-md-2">
+                    left
+                </div>
+                <div class="fs-custom col col-md-10">
+                    <div class="shadow bg-white">
+                        right
+                    </div>
 
-            <div class="fs-admin">
-                left
-            </div>
-            <div class="fs-custom">
-                right
-            </div>
+                </div>
+            </div> @*/row*@
         </div>
     </div>
 </div>

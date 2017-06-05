@@ -8,47 +8,70 @@
 .fs-admin {
     font-family: 'Open Sans', sans-serif;
 
-    .block-header {
-    }
+    .nav-tabs {
+        border: none;
 
-    .content-edit-wrap {
-        padding: 10px;
-    }
+        .btn {
+            padding: 3px 9px;
+        }
 
-    .hero {
-        background-color: $color_dark_blue;
-        background-image: linear-gradient(-45deg, $color_medium_blue -20%, $color_navy_blue 100%);
-        color: #fff;
+        .nav-item {
+            margin-bottom: 0;
+        }
 
-        .nav-tabs {
+        .nav-link {
             border: none;
+            text-transform: uppercase;
 
-            .nav-item {
-                margin-bottom: 0;
-            }
+            &.nav-link {
+                background-color: transparent;
+                @include transition (all .3s ease);
+                @include opacity(.8);
+                position: relative;
 
-            .nav-link {
-                border: none;
-                color: $white;
-                box-shadow: inset 0px -3px 0 transparent;
-                text-transform: uppercase;
+                &:hover, &.active {
+                    @include opacity(1);
 
-                &.nav-link {
-                    background-color: transparent;
-                    @include transition (all .3s ease);
-                    @include opacity(.8);
-
-                    &:hover, &.active {
-                        box-shadow: inset 0px -3px 0 $color_light_orange;
-                        @include opacity(1);
+                    &:after {
+                        content: '';
+                        width: 40px;
+                        height: 0;
+                        border-bottom: 3px solid $color_bright_orange;
+                        position: absolute;
+                        bottom: 0;
+                        left: calc(50% - 20px);
                     }
                 }
             }
         }
+    }
 
-        .jumbotron {
-            background-color: transparent;
+    .block-header {
+        border-bottom: 1px solid $color_grey;
+        margin-bottom: 20px;
+
+        h5 {
+            margin: 0 0;
+            display: inline-block;
         }
+
+        .nav-tabs {
+            margin-bottom: -1px; //offset for border
+        }
+    }
+
+
+    .hero {
+        .nav-tabs {
+            .nav-link {
+                color: $white;
+            }
+        }
+
+        background-color: $color_dark_blue;
+        background-image: linear-gradient(-45deg, $color_navy_blue 30%, #000 140%);
+        color: #fff;
+
 
         .breadcrumb {
             background-color: transparent;
@@ -76,13 +99,6 @@
     }
 }
 
-.pull-left {
-    float: left !important;
-}
-
-.pull-right {
-    float: right !important;
-}
 
 .nav-bar-compensation {
     padding-top: 60px;
@@ -104,4 +120,86 @@
 // utility
 .default-bg {
     background: $color_light_grey; //$color_lighter_grey;
+}
+
+.bg-white {
+    background: $white;
+}
+
+.shadow {
+    box-shadow: 0 0 9px rgba(0,0,0,0.36);
+}
+
+.end {
+    align-self: flex-end;
+}
+
+.margin-top-20 {
+    margin-top: 20px;
+}
+
+.page-selector {
+    text-align: center;
+    padding: 20px 0;
+    overflow: hidden;
+
+    a {
+        i {
+            display: block;
+            font-size: 3rem;
+            @include opacity (.7);
+        }
+
+        text-transform: uppercase;
+        padding: 10px 0;
+        display: inline-block;
+        width: 100px;
+        text-decoration: none;
+        border: 1px solid $color_grey;
+        background: rgba(255, 255, 255, .1);
+        color: $white;
+        margin: 0 10px;
+        @include transition(all .3s ease);
+        position: relative;
+
+        span {
+            font-size: .8em;
+            @include opacity (.7);
+        }
+
+        &:hover, &.active, &:active {
+            color: $color_navy_blue;
+
+            i, span {
+                @include opacity (1);
+            }
+        }
+
+        &:hover {
+            background: rgba(255,255,255,.8);
+        }
+
+        &.active, :active {
+            border-color: $color_medium_blue;
+            background: rgba(255,255,255,.9);
+
+            &:after {
+                content: '';
+                position: absolute;
+                left: calc(50% - 5px);
+                bottom: -30px;
+                display: inline-block;
+                width: 15px;
+                height: 15px;
+                -webkit-transform: rotate(45deg);
+                -moz-transform: rotate(45deg);
+                -o-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
+                border-top: 1px solid $color_grey;
+                border-left: 1px solid $color_grey;
+                background-color: $color_light_grey;
+            }
+        }
+    }
 }
