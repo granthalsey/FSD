@@ -2,27 +2,68 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_EditLayout.cshtml";
 }
-
 <div ng-controller="base">
     <div class="fs-admin">
-        hero
-        <div>
-            breadcrumbs
+        <div class="hero ">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item"><a href="#">Events</a></li>
+                <li class="breadcrumb-item active">Polar Plunge 2018</li>
+            </ol>
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                    <div class="row">
+                        <div class="col col-md-2">
+                            <img src="https://placeimg.com/300/300/tech"
+                                 class="img-fluid" />
+                        </div>
+                        <div class="col col-md-10">
+                            <div class="btn-group pull-right">
+                                <div class="btn btn btn-outline-white">Things</div>
+                            </div>
+                            <h1>Polar Plunge 2018</h1>
+                            <h3>Jan 18, 2018</h3>
+                        </div>
+                    </div>
 
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col col-xs-12">
+                        <ul class="nav nav-tabs">
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Dashboard</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Settings</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#">Pages</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <div class="content-edit-wrap">
-        <div class="content-edit-tabs">
-            edit tabs
-        </div>
-        <div class="fs-admin">
-            left
-        </div>
-        <div class="fs-custom">
-            right
+        <div class="fluid-container">
+            <div class="row">
+                <div class="fs-admin content-edit-tabs col col-xs-12">
+                    <header class="block-header">
+                        <h2>Event Page</h2>
+                    </header>
+                </div>
+            </div>
 
+            <div class="fs-admin">
+                left
+            </div>
+            <div class="fs-custom">
+                right
+            </div>
         </div>
-
     </div>
-
 </div>

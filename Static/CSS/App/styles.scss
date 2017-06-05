@@ -6,8 +6,73 @@
 
 
 .fs-admin {
+    font-family: 'Open Sans', sans-serif;
+
+    .block-header {
+    }
+
+    .content-edit-wrap {
+        padding: 10px;
+    }
+
     .hero {
         background-color: $color_dark_blue;
+        background-image: linear-gradient(-45deg, $color_medium_blue -20%, $color_navy_blue 100%);
+        color: #fff;
+
+        .nav-tabs {
+            border: none;
+
+            .nav-item {
+                margin-bottom: 0;
+            }
+
+            .nav-link {
+                border: none;
+                color: $white;
+                box-shadow: inset 0px -3px 0 transparent;
+                text-transform: uppercase;
+
+                &.nav-link {
+                    background-color: transparent;
+                    @include transition (all .3s ease);
+                    @include opacity(.8);
+
+                    &:hover, &.active {
+                        box-shadow: inset 0px -3px 0 $color_light_orange;
+                        @include opacity(1);
+                    }
+                }
+            }
+        }
+
+        .jumbotron {
+            background-color: transparent;
+        }
+
+        .breadcrumb {
+            background-color: transparent;
+            font-size: .8em;
+
+            .breadcrumb-item {
+                a {
+                    color: #fff;
+                    color: $white-secondary;
+
+                    &.active, &:hover {
+                        color: $white;
+                    }
+                }
+
+                &.active {
+                    color: $white;
+                }
+
+                &:before {
+                    color: $white-secondary;
+                }
+            }
+        }
     }
 }
 
@@ -20,9 +85,23 @@
 }
 
 .nav-bar-compensation {
-    padding-top: 70px;
+    padding-top: 60px;
 }
 
-.app-menu {
-    display: none !important; //hack for compatability
+.app-menu, .app-dropdown {
+    display: none !important; //hack for compatibility issues
+}
+
+
+
+///buttons
+.btn-outline-white {
+    color: $white;
+    background-image: none;
+    background-color: transparent;
+    border-color: $white;
+}
+// utility
+.default-bg {
+    background: $color_light_grey; //$color_lighter_grey;
 }

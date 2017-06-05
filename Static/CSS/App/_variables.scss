@@ -33,9 +33,22 @@ $color_lighter_grey: lighten($color_light_grey, 7);
 $white: #fff;
 $black_20: rgba(0,0,0,0.2);
 $seashell: #f1f1f1;
-
+$white-secondary:rgba(255, 255,255, .8);
 
 $color_dark_red: #6D213C;
 $color_bright_orange: #FC440F;
 
 $color_eggplant: #540D6E;
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
