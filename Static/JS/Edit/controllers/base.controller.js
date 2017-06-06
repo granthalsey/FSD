@@ -1,9 +1,7 @@
 ﻿(function () {
     'use strict';
 
-    angular
-        .module('edit')
-        .controller('base', baseController);
+    angular.module('app').controller('baseController', baseController);
 
     baseController.$inject = [
         '$scope',
@@ -20,6 +18,7 @@
         $rootScope.$on('$stateChangeSuccess',
           function (event, toState, toParams, fromState, fromParams) {
               $state.current = toState;
+              console.log('toState', toState);
           });
 
     }
