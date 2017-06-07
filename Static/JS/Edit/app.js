@@ -20,8 +20,19 @@
         states.push({
             name: 'pages',
             url: '/pages',
-            parent: 'home',
+            //parent: 'home',
             controller: 'pages',
+            views: {
+                '@': {
+                    templateUrl: '/templates/edit/editPage.html',
+                    controller: 'pages'
+                },
+                '@secondaryNavigation': {
+                    templateUrl: '/templates/edit/pageSelector.html'
+
+                }
+            },
+            templateUrl: '/templates/edit/home.html',
             controllerAs: "pageVM"
         });
 
@@ -32,5 +43,4 @@
         //  $locationProvider.html5Mode(true);
         $urlRouterProvider.otherwise("/home");
     };
-
 })();
