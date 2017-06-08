@@ -23,6 +23,7 @@
     @Scripts.Render("~/bundles/ckeditor.js")
     @Scripts.Render("~/bundles/datetimepicker.js")
     @Scripts.Render("~/bundles/edit.js")
+    @Scripts.Render("~/bundles/common.js")
 
 
     <script type="text/javascript" src="https://dev-auth.frontstream.com/bundles/shared/navbar-templates.js?1.0.0.21305"></script>
@@ -33,14 +34,14 @@
 
 </head>
 <body class="default-bg" ng-app="app">
-    <div  ng-controller="baseController" class="nav-bar-compensation">
+    <div ng-controller="baseController" class="nav-bar-compensation">
         <nav-bar class="v2" env="'dev'"
                  product-logout-url="'https://dev-crm.frontstream.com/common/user/logout'"
                  product-logo-path="'https://dev-crm.frontstream.com/static/images/brand/giftworks/giftworks-white-60.png'"></nav-bar>
     </div>
     <div growl></div>
-  
-    <div >
+
+    <div>
         @RenderBody()
     </div>
 </body>

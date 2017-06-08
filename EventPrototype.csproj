@@ -469,6 +469,9 @@
     <Content Include="Scripts\plugins\facebook\init-sync.js" />
     <Content Include="Scripts\plugins\moment\moment.js" />
     <Content Include="Scripts\plugins\twitter\twitter-platform.js" />
+    <Content Include="Static\JS\common\common.js" />
+    <Content Include="Static\JS\common\Themes\App.Themes.js" />
+    <Content Include="Static\JS\common\Themes\ThemeFactory.js" />
     <Content Include="Static\JS\Edit\controllers\pages.js" />
     <Content Include="Static\JS\Edit\controllers\HomeController.js" />
     <Content Include="Static\JS\Public\app.config.js" />

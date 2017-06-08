@@ -1,10 +1,63 @@
-﻿<div class="row margin-top-20">
-    <div class="fs-admin col col-md-2">
-        left
-    </div>
-    <div class="fs-custom col col-md-10">
-        <div class="shadow bg-white">
-            right
+﻿<div class="content-edit-wrap margin-top-20">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="fs-admin content-edit-tabs col">
+                <header class="block-header">
+                    <div class="row">
+                        <div class="col">
+                            <h5>Event Page</h5>
+                            <ul class="nav nav-tabs float-right">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Design</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#">Content</a>
+                                </li>
+                                <li class="ml-auto">
+                                    <button class="btn btn-outline-secondary">Cancel</button>
+                                    <button class="btn btn-outline-primary">Save</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </header>
+            </div>
         </div>
+        <div class="row margin-top-20">
+            <div class="fs-admin col col-md-2">
+                <div ng-repeat="(key, value) in pageVM.themeObj"
+                     class="">
+
+                    <legend>
+                        {{value.displayName || key}}
+                    </legend>
+                    <section>
+                        <div ng-repeat="rule in value.rules">
+                            <label>{{rule.property}}</label>
+                            <input ng-model="rule.value"
+                                   ng-change="pageVM.updateThemePreview();"
+                                   required />
+                            {{rule | json}}
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <div class="fs-custom col col-md-10">
+                <div class="shadow bg-white">
+                    <div class="fs-wrap">
+                        <div class="btn fs-btn-primary">Le Button</div>
+                        <div class="btn fs-btn-primary">Le Button</div>
+
+                        <div class="btn fs-btn-primary">Le Button</div>
+                        <a href class="fs-link">Link</a>
+                        home?
+                        {{layout | json}}
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>

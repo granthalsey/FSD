@@ -2,9 +2,9 @@
     'use strict';
 
     angular.module("app", [
-        "ui.router"
+        "ui.router",
         //Modules
-
+        "themes"
     ]).config(config);
 
 
@@ -21,19 +21,20 @@
             name: 'pages',
             url: '/pages',
             //parent: 'home',
-            controller: 'pages',
+            // controller: 'pages',
             views: {
-                '@': {
+                'main': {
                     templateUrl: '/templates/edit/editPage.html',
-                    controller: 'pages'
+                    controller: 'pages',
+                    controllerAs: "pageVM"
                 },
-                '@secondaryNavigation': {
+                'secondaryNavigation': {
                     templateUrl: '/templates/edit/pageSelector.html'
 
                 }
             },
             templateUrl: '/templates/edit/home.html',
-            controllerAs: "pageVM"
+            
         });
 
         states.forEach(function (state) {

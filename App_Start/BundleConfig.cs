@@ -66,6 +66,8 @@ namespace MvcApplication1
             bundles.Add(new ScriptBundle("~/bundles/ckeditor.js").Include(
                         "~/Scripts/ckeditor/ckeditor.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/common.js").IncludeDirectory("~/static/js/common/", "*.js", true));
+
             bundles.Add(new ScriptBundle("~/bundles/angular").Include(
                 "~/Scripts/Angular/angular.js").IncludeDirectory("~/Scripts/Angular", "angular-*", true));
 
