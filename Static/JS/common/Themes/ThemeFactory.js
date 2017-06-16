@@ -12,7 +12,7 @@
         wrap: {
             rules:
             [
-                { property: PROPERTIES.backgroundColor, type: TYPES.color, value: '#ccc' }
+                { property: PROPERTIES.backgroundColor, type: TYPES.color, value: '#fff' }
             ],
             displayName: 'Body'
         },

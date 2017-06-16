@@ -4,6 +4,7 @@
     angular.module("app", [
         "ui.router",
         //Modules
+        'layout',
         "themes"
     ]).config(config);
 
@@ -33,8 +34,8 @@
 
                 }
             },
-            templateUrl: '/templates/edit/home.html',
-            
+            templateUrl: '/templates/edit/home.html'
+
         });
 
         states.forEach(function (state) {

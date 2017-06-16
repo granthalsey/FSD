@@ -1,0 +1,30 @@
+﻿<div ng-switch="layout.type" class="c {{layout.type}}" style="background-color:{{layout.backgroundColor}}">
+    <div ng-switch-when="container">
+        <div ng-repeat="c in layout.content">
+            <content-layout layout="c"></content-layout>
+        </div>
+    </div>
+    <div ng-switch-when="container-fluid">
+        <div ng-repeat="c in layout.content">
+            <content-layout layout="c"></content-layout>
+        </div>
+    </div>
+    <div ng-switch-when="hero">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-3">Fluid jumbotron</h1>
+                <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+            </div>
+        </div>
+    </div>
+    <div ng-switch-when="header">
+        <h1>header</h1>
+
+    </div>
+    <div ng-switch-default>
+        i am default?
+    </div>
+</div>
+
+
+

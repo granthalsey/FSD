@@ -1,7 +1,7 @@
 ﻿(function () {
     'use strict';
 
-    angular.module("app").controller('pages', ['themeFactory', function (themeFactory) {
+    angular.module("app").controller('pages', ['themeFactory', 'layoutFactory', function (themeFactory, layoutFactory) {
         var pageVM = this;
         pageVM.themeObj = themeFactory.getTheme();
         pageVM.themeCss = themeFactory.getThemeCss();
@@ -12,6 +12,10 @@
             themeFactory.saveTheme(pageVM.themeObj);
             themeFactory.applyTheme(pageVM.themeObj);
         };
+
+
+        pageVM.layout = layoutFactory.getLayout();
+
 
 
     }]);

@@ -45,19 +45,29 @@
             <div class="fs-custom col col-md-10">
                 <div class="shadow bg-white">
                     <div class="fs-wrap">
-                        <div class="btn fs-btn-primary">Le Button</div>
-                        <div class="btn fs-btn-primary">Le Button</div>
 
+
+                        <div ng-repeat="c in pageVM.layout.content">
+                            <content-layout layout="c"></content-layout>
+                        </div>
+
+
+                        <!--{{pageVM.layout | json}}-->
+
+
+
+                        <div class="btn fs-btn-primary">Le Button</div>
+                        <div class="btn fs-btn-primary">Le Button</div>
                         <div class="btn fs-btn-primary">Le Button</div>
                         <a href class="fs-link">Link</a>
-                        home?
-                        {{layout | json}}
-
-
                     </div>
+                    <pre>
+                     layout:   {{pageVM.layout | json}}
+</pre>
                 </div>
             </div>
         </div>
-
     </div>
+
 </div>
+

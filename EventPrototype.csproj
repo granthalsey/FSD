@@ -470,7 +470,10 @@
     <Content Include="Scripts\plugins\moment\moment.js" />
     <Content Include="Scripts\plugins\twitter\twitter-platform.js" />
     <Content Include="Static\JS\common\common.js" />
+    <Content Include="Static\JS\common\Layout\App.Layout.js" />
+    <Content Include="Static\JS\common\Layout\LayoutDirective.js" />
     <Content Include="Static\JS\common\Themes\App.Themes.js" />
+    <Content Include="Static\JS\common\Layout\LayoutFactory.js" />
     <Content Include="Static\JS\common\Themes\ThemeFactory.js" />
     <Content Include="Static\JS\Edit\controllers\pages.js" />
     <Content Include="Static\JS\Edit\controllers\HomeController.js" />
@@ -487,6 +490,7 @@
     <Content Include="Static\JS\Edit\app.js" />
     <Content Include="Static\JS\Public\HomeController.js" />
     <Content Include="templates\edit\editPage.html" />
+    <Content Include="templates\edit\LayoutHelper.html" />
     <Content Include="templates\edit\pageSelector.html" />
     <Content Include="templates\public\home.html" />
     <Content Include="templates\subnavTabs.html" />
@@ -499,7 +503,9 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Views\Web.config" />
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_EditLayout.cshtml" />
