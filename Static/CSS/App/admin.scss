@@ -101,6 +101,13 @@
     }
 }
 
+.content-edit-wrap {
+    background: $color_light_grey;
+    z-index: 4;
+    position: relative;
+    padding-top: 20px;
+}
+
 
 .nav-bar-compensation {
     padding-top: 60px;
@@ -228,5 +235,26 @@
                 background-color: $color_light_grey;
             }
         }
+    }
+}
+
+
+/*we have double borders as a hack so that its visible no matter what*/
+.fs-outline {
+    outline: 1px dashed rgba(255,255,255,.2);
+    position: relative;
+
+    &:before {
+        position: absolute;
+        display: block;
+        content: '';
+        outline: 1px dashed rgba(0,0,0,.2);
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
     }
 }

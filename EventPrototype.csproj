@@ -174,8 +174,11 @@
       <DebugInfo>False</DebugInfo>
     </None>
     <Content Include="Static\CSS\App\angular-ui-grid\ui-grid.svg" />
+    <Content Include="Static\CSS\App\public.css">
+      <DependentUpon>public.scss</DependentUpon>
+    </Content>
     <Content Include="Static\CSS\App\styles.css">
-      <DependentUpon>styles.scss</DependentUpon>
+      <DependentUpon>admin.scss</DependentUpon>
     </Content>
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -208,6 +211,7 @@
     <Content Include="Static\CSS\App\angular-ui-grid\ui-grid.ttf" />
     <Content Include="Static\CSS\App\angular-ui-grid\ui-grid.woff" />
     <Content Include="Static\CSS\App\_variables.scss" />
+    <Content Include="Static\CSS\App\public.scss" />
     <None Include="Static\CSS\Bootstrap\ui-bootstrap-custom-2.5.0-csp.scss">
       <Compile>False</Compile>
       <Minify>True</Minify>
@@ -523,7 +527,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Static\CSS\App\styles.css.map" />
-    <Content Include="Static\CSS\App\styles.scss">
+    <Content Include="Static\CSS\App\admin.scss">
       <Compile>False</Compile>
       <Minify>True</Minify>
       <IgnoreWarnings>True</IgnoreWarnings>

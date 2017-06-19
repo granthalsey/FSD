@@ -10,6 +10,7 @@
             scope: {
                 layout: '='
             },
+            replace: true,
             link: function (scope, element, attrs) {
                 log('I\'m Helping');
 

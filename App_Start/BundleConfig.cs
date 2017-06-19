@@ -82,7 +82,7 @@ namespace MvcApplication1
             bundles.Add(new ScriptBundle("~/bundles/public.js").IncludeDirectory("~/Static/JS/public", "*.module.js", true)
                .IncludeDirectory("~/Static/JS/public", "*.config.js", true).IncludeDirectory("~/Static/JS/public", "*.js", true));
 
-            var styles = new Bundle("~/bundles/css");
+            var styles = new Bundle("~/bundles/admin.css");
             styles.IncludeDirectory("~/Static/CSS/app", "*.scss", false);
             styles.Transforms.Add(new StyleTransformer());
             bundles.Add(styles);

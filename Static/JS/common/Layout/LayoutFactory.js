@@ -4,21 +4,36 @@
         type: 'container-fluid',
         background: 'transparent',
         content: [
-        {
-            type: 'container-fluid',
-            backgroundColor: 'red',
-            content: [{ type: 'header' }]
-        },
-        {
-            type: 'container',
-            backgroundColor: 'transparent',
-            content: [{ type: 'hero' }]
-        },
+            {
+                type: 'container-fluid',
+                backgroundColor: 'red',
+                content: [{ type: 'header' }]
+            },
             {
                 type: 'container',
-                content: [{}, {}, {}]
-            }
+                backgroundColor: 'transparent',
+                content: [{ type: 'hero' }]
+            },
+            {
+                type: 'container',
+                content: [
+                    {
+                        type: 'content',
+                        size: "md"
+                    }, {
+                        type: 'content',
+                        size: 'sm'
+                    }, {
+                        type: 'content',
+                        size: 'full'
+                    }
+                ]
+            },
+                {
+                    type: 'footer'
+                }
         ]
+
     };
     var WIDGETTYPE = {
         container: { displayName: 'Container', allowsChildren: true },

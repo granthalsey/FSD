@@ -1,30 +1,47 @@
-﻿<div ng-switch="layout.type" class="c {{layout.type}}" style="background-color:{{layout.backgroundColor}}">
-    <div ng-switch-when="container">
-        <div ng-repeat="c in layout.content">
-            <content-layout layout="c"></content-layout>
-        </div>
-    </div>
-    <div ng-switch-when="container-fluid">
-        <div ng-repeat="c in layout.content">
-            <content-layout layout="c"></content-layout>
-        </div>
-    </div>
-    <div ng-switch-when="hero">
-        <div class="jumbotron jumbotron-fluid">
-            <div class="container">
-                <h1 class="display-3">Fluid jumbotron</h1>
-                <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+﻿<div class="fs-outline"
+      ng-class="layout.size == 'sm'? ' col col-sm-4': layout.size == 'md' ? ' col col-sm-8' : layout.size == 'full' ? ' col col-xs-12' :'noop' ">
+    <!--not using a switch because it messes up the markup-->
+    <!--the two containers are basically the same at this point, other than the background treatment-->
+
+    <div ng-if="layout.type=='container'" style="background-color: {{layout.backgroundColor}}">
+        <div class="container">
+            <div class="row">
+                <content-layout ng-repeat="c in layout.content" layout="c"></content-layout>
+
             </div>
         </div>
     </div>
-    <div ng-switch-when="header">
-        <h1>header</h1>
+    <div ng-if="layout.type=='container-fluid'" class="container-fluid" style="background-color: {{layout.backgroundColor}}">
+        <div class="row">
+            <div ng-repeat="c in layout.content">
+
+                <content-layout layout="c"></content-layout>
+            </div>
+        </div>
+    </div>
+    <div ng-if="layout.type=='hero'" style="background-color: {{layout.backgroundColor}}">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-3">I'll Be Your Hero</h1>
+                <p class="lead">This is a modified jumbotron </p>
+            </div>
+        </div>
+    </div>
+    <div ng-if="layout.type=='header'" style="background-color: {{layout.backgroundColor}}">
+        <h1> header</h1>
 
     </div>
-    <div ng-switch-default>
-        i am default?
+
+    <footer class="footer" ng-if="layout.type=='footer'" style="background-color: {{layout.backgroundColor}}">
+        <div class="container">
+            <span class="text-muted">Place sticky footer content here.</span>
+        </div>
+    </footer>
+    <div ng-if="layout.type=='content'">
+        <div style="background-color: {{layout.backgroundColor}}">
+            todo? {{layout.type}}
+        </div>
     </div>
+
+
 </div>
-
-
-
