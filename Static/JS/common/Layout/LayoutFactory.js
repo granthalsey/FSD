@@ -26,7 +26,7 @@
                         content: [
                             {
                                 type: 'content',
-                                size: "md",
+                                size: "sm",
                                 id: 3
                             }, {
                                 type: 'content',
@@ -34,10 +34,25 @@
 
                                 id: 4
                             }, {
-                                type: 'content',
-                                size: 'full',
+                                type: 'container',
+                                size: 'sm',
+                                content: [
+                                    {
+                                        type: 'content',
+                                        size: "md",
+                                        id: 8
+                                    }, {
+                                        type: 'content',
+                                        size: 'sm',
 
-                                id: 5
+                                        id: 9
+                                    }, {
+                                        type: 'content',
+                                        size: 'full',
+
+                                        id: 10
+                                    }
+                                ]
                             }
                         ]
                     }, {
@@ -55,9 +70,9 @@
                     }
                 ]
             },
-                {
-                    type: 'footer'
-                }
+            {
+                type: 'footer'
+            }
         ]
 
     };
