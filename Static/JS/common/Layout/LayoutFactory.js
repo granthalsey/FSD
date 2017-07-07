@@ -6,7 +6,7 @@
         content: [
             {
                 type: 'container-fluid',
-                backgroundColor: 'red',
+                backgroundColor: 'rgb(26,91,164)',
                 content: [{ type: 'header' }],
                 id: 1
             },
