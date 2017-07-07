@@ -7,25 +7,51 @@
             {
                 type: 'container-fluid',
                 backgroundColor: 'red',
-                content: [{ type: 'header' }]
+                content: [{ type: 'header' }],
+                id: 1
             },
             {
                 type: 'container',
                 backgroundColor: 'transparent',
-                content: [{ type: 'hero' }]
+                content: [{
+                    type: 'hero',
+                    id: 2
+                }]
             },
             {
                 type: 'container',
                 content: [
                     {
-                        type: 'content',
-                        size: "md"
+                        type: 'container',
+                        content: [
+                            {
+                                type: 'content',
+                                size: "md",
+                                id: 3
+                            }, {
+                                type: 'content',
+                                size: 'sm',
+
+                                id: 4
+                            }, {
+                                type: 'content',
+                                size: 'full',
+
+                                id: 5
+                            }
+                        ]
                     }, {
                         type: 'content',
-                        size: 'sm'
+                        size: 'sm',
+
+
+                        id: 6
                     }, {
                         type: 'content',
-                        size: 'full'
+                        size: 'full',
+
+
+                        id: 7
                     }
                 ]
             },

@@ -1,5 +1,5 @@
 ﻿<div class="fs-outline"
-      ng-class="layout.size == 'sm'? ' col col-sm-4': layout.size == 'md' ? ' col col-sm-8' : layout.size == 'full' ? ' col col-xs-12' :'noop' ">
+     ng-class="layout.size == 'sm'? ' col col-sm-4': layout.size == 'md' ? ' col col-sm-8' : layout.size == 'full' ? ' col col-xs-12' :'noop' ">
     <!--not using a switch because it messes up the markup-->
     <!--the two containers are basically the same at this point, other than the background treatment-->
 
@@ -28,8 +28,7 @@
         </div>
     </div>
     <div ng-if="layout.type=='header'" style="background-color: {{layout.backgroundColor}}">
-        <h1> header</h1>
-
+        <ng-include src="'/templates/edit/sample/header.html'"></ng-include>
     </div>
 
     <footer class="footer" ng-if="layout.type=='footer'" style="background-color: {{layout.backgroundColor}}">
@@ -39,9 +38,9 @@
     </footer>
     <div ng-if="layout.type=='content'">
         <div style="background-color: {{layout.backgroundColor}}">
-            todo? {{layout.type}}
+            <h2>{{layout.id}} Heading</h2>
+            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+            <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
         </div>
     </div>
-
-
 </div>
