@@ -92,12 +92,11 @@ namespace MvcApplication1
 
             var PublicStyles = new StyleBundle("~/bundles/public.css");
             PublicStyles.Include("~/Static/CSS/app/public.css");
-           // PublicStyles.Transforms.Add(new StyleTransformer());
+            // PublicStyles.Transforms.Add(new StyleTransformer());
             bundles.Add(PublicStyles);
 
 
-
-
+            System.Web.Optimization.BundleTable.EnableOptimizations = false;
         }
     }
 }
