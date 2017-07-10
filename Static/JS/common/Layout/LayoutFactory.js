@@ -11,51 +11,69 @@
                 id: 1
             },
             {
-                type: 'container',
-                backgroundColor: 'transparent',
-                content: [{
-                    type: 'hero',
-                    id: 2
-                }]
+                type: 'hero',
+                backgroundImage: 'https://gallery.mailchimp.com/381dca877e43c44046caa6dd1/images/4ec6fcae-1f88-4090-9165-a052103f6cdb.jpg'
+
             },
             {
                 type: 'container',
+                backgroundColor: '#fff',
                 content: [
                     {
-                        type: 'container',
+                        type: 'content',
+                        size: 'full',
+
+                        id: 3
+                    }
+                ]
+
+
+            },
+
+
+
+
+
+            {
+                type: 'container',
+                backgroundColor: '#1a5ba4',
+                content: [
+                    {
+
                         content: [
-                            {
-                                type: 'content',
-                                size: "sm",
-                                id: 3
-                            }, {
-                                type: 'content',
-                                size: 'sm',
+                            //{
+                            //    type: 'content',
+                            //    size: "sm"
 
-                                id: 4
-                            }, {
-                                type: 'container',
-                                size: 'sm',
-                                content: [
-                                    {
-                                        type: 'content',
-                                        size: "md",
-                                        id: 8
-                                    }, {
-                                        type: 'content',
-                                        size: 'sm',
+                            //}, {
+                            //    type: 'content',
+                            //    size: 'sm',
 
-                                        id: 9
-                                    }, {
-                                        type: 'content',
-                                        size: 'full',
+                            //    id: 4
+                            //}//, {
+                            //    type: 'container',
+                            //    size: 'sm',
+                            //    content: [
+                            //        {
+                            //            type: 'content',
+                            //            size: "md",
+                            //            id: 8
+                            //        }, {
+                            //            type: 'content',
+                            //            size: 'sm',
 
-                                        id: 10
-                                    }
-                                ]
-                            }
+                            //            id: 9
+                            //        }, {
+                            //            type: 'content',
+                            //            size: 'full',
+
+                            //            id: 10
+                            //        }
+                            //    ]
+                            //}
                         ]
                     }, {
+
                         type: 'content',
                         size: 'sm',
 
@@ -70,8 +88,43 @@
                     }
                 ]
             },
+
+
+                 {
+                     type: 'container',
+                     backgroundColor: '#22c2d2',
+                     content: [
+                         {
+                             type: 'sponsors',
+
+                             id: 3
+                         }
+                     ]
+
+
+                 },
+                              {
+                                  type: 'container',
+                                
+                                  content: [
+                                      {
+                                          type: 'fundraiserLeaderboard',
+
+                                          size: 'half'
+                                      },
+                                        {
+                                            type: 'teamLeaderboard',
+
+                                            size: 'half'
+                                        },
+
+                                  ]
+
+
+                              },
             {
-                type: 'footer'
+                type: 'footer',
+                backgroundColor: '#353535'
             }
         ]
 

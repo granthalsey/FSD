@@ -2,17 +2,20 @@
     var PROPERTIES = {
         backgroundColor: 'background-color',
         textDecoration: 'text-decoration',
-        color: 'color'
+        color: 'color',
+        backgroundImage: 'background-image',
+        backgroundPosition: 'background-position'
     };
     var TYPES = {
         color: 'color',
         textDecoration: 'text-decoration'
     };
+
     var hardCodedTestTheme = {
         wrap: {
             rules:
             [
-                { property: PROPERTIES.backgroundColor, type: TYPES.color, value: '#fff' }
+                { property: PROPERTIES.backgroundColor, type: TYPES.color, value: '#ececec' }
             ],
             displayName: 'Body'
         },
@@ -32,12 +35,26 @@
 
         },
         'primary-btn': {
+            rules: [{
+                property: PROPERTIES.backgroundColor, type: TYPES.color, value: '#f27221'
 
+            }
+            ]
 
 
         },
         'secondary-btn': {
 
+        },
+        'button': {
+            displayName: 'button',
+            rules: []
+        },
+        'header-link': {
+            rules: [
+                { property: PROPERTIES.color, type: TYPES.color, value: '#fff' }
+            ],
+            displayName: 'Header Navigation'
         }
 
 
@@ -69,6 +86,7 @@
 
             //extract rules from definition
             angular.forEach(value.rules, function (rule) {
+                log('rts', rulesToString(rule, prefix, key));
                 strTheme = strTheme += rulesToString(rule, prefix, key);
             });
 

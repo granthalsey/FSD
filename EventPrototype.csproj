@@ -184,7 +184,6 @@
       <DependentUpon>admin.scss</DependentUpon>
     </Content>
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
     <None Include="Static\CSS\App\_util.scss" />
     <Content Include="Static\CSS\Bootstrap\datetimepicker.scss">
       <Compile>False</Compile>
@@ -485,9 +484,7 @@
     <Content Include="Static\JS\common\Themes\ThemeFactory.js" />
     <Content Include="Static\JS\Edit\controllers\pages.js" />
     <Content Include="Static\JS\Edit\controllers\HomeController.js" />
-    <Content Include="Static\JS\Public\app.config.js" />
-    <Content Include="Static\JS\Public\app.module.js" />
-    <Content Include="Static\JS\Public\base\base.controller.js" />
+    <Content Include="Static\JS\Public\app.js" />
     <Content Include="Static\JS\Edit\controllers\base.controller.js" />
     <Content Include="Static\JS\common\libs\ng-flow-standalone.js" />
     <Content Include="Static\JS\common\libs\ui-grid.js" />
@@ -500,7 +497,15 @@
     <Content Include="templates\edit\editPage.html" />
     <Content Include="templates\edit\LayoutHelper.html" />
     <Content Include="templates\edit\pageSelector.html" />
+    <Content Include="templates\edit\sample\6.html" />
+    <Content Include="templates\edit\sample\8.html" />
+    <Content Include="templates\edit\sample\7.html" />
+    <Content Include="templates\edit\sample\5.html" />
+    <Content Include="templates\edit\sample\4.html" />
+    <Content Include="templates\edit\sample\3.html" />
     <Content Include="templates\edit\sample\header.html" />
+    <Content Include="templates\edit\sample\hero.html" />
+    <Content Include="templates\edit\sample\sponsors.html" />
     <Content Include="templates\public\home.html" />
     <Content Include="templates\subnavTabs.html" />
     <Content Include="Web.config">

@@ -87,6 +87,12 @@ namespace MvcApplication1
             styles.Transforms.Add(new StyleTransformer());
             bundles.Add(styles);
 
+            var PublicStyles = new Bundle("~/bundles/public.css");
+            PublicStyles.Include("~/Static/CSS/app/public.scss");
+            PublicStyles.Transforms.Add(new StyleTransformer());
+            bundles.Add(PublicStyles);
+
+
             styles = new Bundle("~/bundles/css/bootstrap");
             styles.Transforms.Add(new StyleTransformer());
             styles.Include("~/Static/CSS/bootstrap/bootstrap.scss");

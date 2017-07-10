@@ -2,8 +2,14 @@
     'use strict';
 
     angular.module("public", [
-        "ui.router"
-        //Modules
 
-    ]);
+        //Modules
+        'layout',
+        "themes"
+    ]).config(config);
+
+
+    function config() {
+
+    };
 })();

@@ -3,9 +3,8 @@
     Layout = "~/Views/Shared/_PublicLayout.cshtml";
 }
 
-<div ng-controller="base">
-
-    <div growl></div>
-    <ui-view></ui-view>
-
+<div ng-controller="home" class="fs-wrap">
+    <div ng-repeat="c in layout.content">
+        <content-layout layout="c"></content-layout>
+    </div>
 </div>
