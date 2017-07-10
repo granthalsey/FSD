@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="packages\LibSassHost.Native.win-x86.1.0.3\build\LibSassHost.Native.win-x86.props" Condition="Exists('packages\LibSassHost.Native.win-x86.1.0.3\build\LibSassHost.Native.win-x86.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -25,11 +24,11 @@
     <SccLocalPath>SAK</SccLocalPath>
     <SccAuxPath>SAK</SccAuxPath>
     <SccProvider>SAK</SccProvider>
-    <WebGreaseLibPath>packages\WebGrease.1.5.2\lib</WebGreaseLibPath>
-    <NuGetPackageImportStamp>1b3202b3</NuGetPackageImportStamp>
+    <NuGetPackageImportStamp>ef4d607b</NuGetPackageImportStamp>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">.\</SolutionDir>
     <RestorePackages>true</RestorePackages>
     <UseGlobalApplicationHostFile />
+    <WebGreaseLibPath>packages\WebGrease.1.5.2\lib</WebGreaseLibPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -53,26 +52,6 @@
   <ItemGroup>
     <Reference Include="Antlr3.Runtime, Version=3.4.1.9004, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
       <HintPath>packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="BundleTransformer.Core, Version=1.9.152.0, Culture=neutral, PublicKeyToken=973c344c93aac60d, processorArchitecture=MSIL">
-      <HintPath>packages\BundleTransformer.Core.1.9.152\lib\net40\BundleTransformer.Core.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="BundleTransformer.SassAndScss, Version=1.9.154.0, Culture=neutral, PublicKeyToken=973c344c93aac60d, processorArchitecture=MSIL">
-      <HintPath>packages\BundleTransformer.SassAndScss.1.9.154\lib\net40\BundleTransformer.SassAndScss.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="LibSass.NET, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\libsassnet.3.3.7\lib\net40\LibSass.NET.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="LibSass.NET.Web, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\libsassnet.Web.2.3.0\lib\net40\LibSass.NET.Web.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="LibSassHost, Version=1.0.3.0, Culture=neutral, PublicKeyToken=3e24e88796a38e46, processorArchitecture=MSIL">
-      <HintPath>packages\LibSassHost.1.0.3\lib\net45\LibSassHost.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
@@ -609,13 +588,10 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
-  <Import Project="packages\libsassnet.3.3.7\build\libsassnet.targets" Condition="Exists('packages\libsassnet.3.3.7\build\libsassnet.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('packages\libsassnet.3.3.7\build\libsassnet.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\libsassnet.3.3.7\build\libsassnet.targets'))" />
-    <Error Condition="!Exists('packages\LibSassHost.Native.win-x86.1.0.3\build\LibSassHost.Native.win-x86.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\LibSassHost.Native.win-x86.1.0.3\build\LibSassHost.Native.win-x86.props'))" />
     <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
   </Target>
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />

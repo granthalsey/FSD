@@ -87,17 +87,10 @@ C:\fsd\FSD\event\obj\Debug\MvcApplication1.dll
 C:\fsd\FSD\event\obj\Debug\MvcApplication1.pdb
 C:\fsd\FSD\event\obj\Debug\EventPrototype.csprojResolveAssemblyReference.cache
 C:\artez\event\bin\x86\libsass.dll
-c:\artez\event\bin\libsass32.dll
-c:\artez\event\bin\libsass64.dll
 c:\artez\event\bin\MvcApplication1.dll.config
 c:\artez\event\bin\MvcApplication1.dll
 c:\artez\event\bin\MvcApplication1.pdb
 c:\artez\event\bin\Antlr3.Runtime.dll
-c:\artez\event\bin\BundleTransformer.Core.dll
-c:\artez\event\bin\BundleTransformer.SassAndScss.dll
-c:\artez\event\bin\LibSass.NET.dll
-c:\artez\event\bin\LibSass.NET.Web.dll
-c:\artez\event\bin\LibSassHost.dll
 c:\artez\event\bin\Microsoft.Web.Infrastructure.dll
 c:\artez\event\bin\Newtonsoft.Json.dll
 c:\artez\event\bin\System.Net.Http.Formatting.dll
@@ -112,7 +105,6 @@ c:\artez\event\bin\System.Web.WebPages.dll
 c:\artez\event\bin\System.Web.WebPages.Razor.dll
 c:\artez\event\bin\WebGrease.dll
 c:\artez\event\bin\Antlr3.Runtime.pdb
-c:\artez\event\bin\LibSassHost.xml
 c:\artez\event\bin\Newtonsoft.Json.xml
 c:\artez\event\bin\System.Web.Helpers.xml
 c:\artez\event\bin\System.Web.Mvc.xml
@@ -125,6 +117,6 @@ c:\artez\event\bin\Microsoft.Web.Infrastructure.xml
 c:\artez\event\bin\System.Net.Http.Formatting.xml
 c:\artez\event\bin\System.Web.Http.xml
 c:\artez\event\bin\System.Web.Http.WebHost.xml
-c:\artez\event\bin\ru-ru\BundleTransformer.Core.resources.dll
 c:\artez\event\obj\Debug\MvcApplication1.dll
 c:\artez\event\obj\Debug\MvcApplication1.pdb
+c:\artez\event\obj\Debug\EventPrototype.csprojResolveAssemblyReference.cache
