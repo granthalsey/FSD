@@ -90,9 +90,6 @@ C:\artez\event\bin\x86\libsass.dll
 C:\artez\event\bin\x64\libsass.dll
 C:\artez\event\bin\libsass32.dll
 C:\artez\event\bin\libsass64.dll
-C:\artez\event\bin\EventPrototype.dll.config
-C:\artez\event\bin\EventPrototype.dll
-C:\artez\event\bin\EventPrototype.pdb
 C:\artez\event\bin\Antlr3.Runtime.dll
 C:\artez\event\bin\BundleTransformer.Core.dll
 C:\artez\event\bin\BundleTransformer.SassAndScss.dll
@@ -127,5 +124,9 @@ C:\artez\event\bin\System.Net.Http.Formatting.xml
 C:\artez\event\bin\System.Web.Http.xml
 C:\artez\event\bin\System.Web.Http.WebHost.xml
 C:\artez\event\bin\ru-ru\BundleTransformer.Core.resources.dll
-C:\artez\event\obj\Debug\EventPrototype.dll
-C:\artez\event\obj\Debug\EventPrototype.pdb
+c:\artez\event\bin\MvcApplication1.dll.config
+c:\artez\event\bin\MvcApplication1.dll
+c:\artez\event\bin\MvcApplication1.pdb
+c:\artez\event\obj\Debug\EventPrototype.csprojResolveAssemblyReference.cache
+c:\artez\event\obj\Debug\MvcApplication1.dll
+c:\artez\event\obj\Debug\MvcApplication1.pdb
