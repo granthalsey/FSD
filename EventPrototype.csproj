@@ -175,12 +175,10 @@
       <CompileStyle>Nested</CompileStyle>
       <DebugInfo>False</DebugInfo>
     </None>
+    <Content Include="Static\CSS\App\admin.css" />
     <Content Include="Static\CSS\App\angular-ui-grid\ui-grid.svg" />
     <Content Include="Static\CSS\App\public.css">
       <DependentUpon>public.scss</DependentUpon>
-    </Content>
-    <Content Include="Static\CSS\App\styles.css">
-      <DependentUpon>admin.scss</DependentUpon>
     </Content>
     <Content Include="Global.asax" />
     <None Include="Static\CSS\App\_util.scss" />

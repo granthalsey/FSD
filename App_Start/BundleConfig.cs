@@ -1,7 +1,7 @@
 ﻿using System.Text;
 using System.Web;
 using System.Web.Optimization;
-using BundleTransformer.Core.Transformers;
+//using BundleTransformer.Core.Transformers;
 
 namespace MvcApplication1
 {
@@ -82,22 +82,21 @@ namespace MvcApplication1
             bundles.Add(new ScriptBundle("~/bundles/public.js").IncludeDirectory("~/Static/JS/public", "*.module.js", true)
                .IncludeDirectory("~/Static/JS/public", "*.config.js", true).IncludeDirectory("~/Static/JS/public", "*.js", true));
 
-            var styles = new Bundle("~/bundles/admin.css");
-            styles.IncludeDirectory("~/Static/CSS/app", "*.scss", false);
-            styles.Transforms.Add(new StyleTransformer());
+            var styles = new StyleBundle("~/bundles/admin.css");
+            styles.Include("~/Static/CSS/app/admin.css");
+            //styles.Transforms.Add(new StyleTransformer());
             bundles.Add(styles);
 
-            var PublicStyles = new Bundle("~/bundles/public.css");
-            PublicStyles.Include("~/Static/CSS/app/public.scss");
-            PublicStyles.Transforms.Add(new StyleTransformer());
+
+
+
+            var PublicStyles = new StyleBundle("~/bundles/public.css");
+            PublicStyles.Include("~/Static/CSS/app/public.css");
+           // PublicStyles.Transforms.Add(new StyleTransformer());
             bundles.Add(PublicStyles);
 
 
-            styles = new Bundle("~/bundles/css/bootstrap");
-            styles.Transforms.Add(new StyleTransformer());
-            styles.Include("~/Static/CSS/bootstrap/bootstrap.scss");
-            styles.Include("~/Static/CSS/bootstrap/ui-bootstrap-custom-2.5.0-csp.scss");
-            bundles.Add(styles);
+
 
         }
     }

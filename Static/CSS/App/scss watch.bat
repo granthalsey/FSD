@@ -1,2 +1,3 @@
-scss --watch styles.scss 
+scss --watch admin.scss 
+scss --watch public.scss 
 PAUSE
