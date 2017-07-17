@@ -25,6 +25,32 @@
         </div>
         <div class="row margin-top-20">
             <div class="fs-admin col col-md-2">
+                <h2>Layout</h2>
+
+                <script type="text/ng-template" id="nodes_renderer.html">
+                    <div ui-tree-handle class="tree-node tree-node-content angular-ui-tree-handle">
+                        {{node.type}}
+
+                        <a class="pull-right btn btn-danger btn-xs" data-nodrag="" ng-click="remove(this)"><span class="glyphicon glyphicon-remove"></span></a>
+                        <a class="pull-right btn btn-primary btn-xs" data-nodrag="" ng-click="newSubItem(this)" style="margin-right: 8px;"><span class="glyphicon glyphicon-plus"></span></a>
+                    </div>
+                    <ol ui-tree-nodes="" ng-model="node.content">
+                        <li ng-repeat="node in node.content" ui-tree-node ng-include="'nodes_renderer.html'">
+
+                        </li>
+                    </ol>
+                </script>
+                <div ui-tree>
+                    <ol ui-tree-nodes="" ng-model="data" id="tree-root">
+                        <li ng-repeat="node in pageVM.layout.content" ui-tree-node ng-include="'nodes_renderer.html'">
+
+
+                        </li>
+                    </ol>
+                </div>
+
+
+                <h2>theme</h2>
                 <div ng-repeat="(key, value) in pageVM.themeObj"
                      class="">
 

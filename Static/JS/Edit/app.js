@@ -5,7 +5,8 @@
         "ui.router",
         //Modules
         'layout',
-        "themes"
+        "themes",
+        'ui.tree'
     ]).config(config);
 
 

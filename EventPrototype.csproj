@@ -156,6 +156,8 @@
     </None>
     <Content Include="Static\CSS\App\admin.css" />
     <Content Include="Static\CSS\App\angular-ui-grid\ui-grid.svg" />
+    <Content Include="Static\CSS\App\angular-ui-tree.css" />
+    <Content Include="Static\CSS\App\lib\angular-ui-tree.css" />
     <Content Include="Static\CSS\App\public.css">
       <DependentUpon>public.scss</DependentUpon>
     </Content>
@@ -455,6 +457,7 @@
     <Content Include="Static\JS\common\common.js" />
     <Content Include="Static\JS\common\Layout\App.Layout.js" />
     <Content Include="Static\JS\common\Layout\LayoutDirective.js" />
+    <Content Include="Static\JS\Edit\libs\angular-ui-tree.js" />
     <Content Include="Static\JS\common\Themes\App.Themes.js" />
     <Content Include="Static\JS\common\Layout\LayoutFactory.js" />
     <Content Include="Static\JS\common\Themes\ThemeFactory.js" />
@@ -463,7 +466,7 @@
     <Content Include="Static\JS\Public\app.js" />
     <Content Include="Static\JS\Edit\controllers\base.controller.js" />
     <Content Include="Static\JS\common\libs\ng-flow-standalone.js" />
-    <Content Include="Static\JS\common\libs\ui-grid.js" />
+    <Content Include="Static\JS\Edit\libs\ui-grid.js" />
     <Content Include="Static\JS\common\libs\ui-router-tabs.js" />
     <Content Include="Static\JS\common\libs\ui-bootstrap-custom-tpls-2.5.0.js" />
     <Content Include="Static\JS\common\libs\vertilize.js" />
@@ -472,6 +475,7 @@
     <Content Include="Static\JS\Public\HomeController.js" />
     <Content Include="templates\edit\editPage.html" />
     <Content Include="templates\edit\LayoutHelper.html" />
+    <Content Include="templates\edit\nodes_renderer.html" />
     <Content Include="templates\edit\pageSelector.html" />
     <Content Include="templates\edit\sample\6.html" />
     <Content Include="templates\edit\sample\8.html" />
