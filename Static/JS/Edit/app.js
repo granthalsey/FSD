@@ -10,8 +10,29 @@
     ]).config(config);
 
 
-    function config($stateProvider, $urlRouterProvider, $locationProvider) {
+    function config($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
         var states = [];
+        $httpProvider.interceptors.push(function () {
+            //todo remove this one we have proper versioning/bundling
+            var __version_number = Math.random();
+            return {
+                'request': function (config) {
+                    // !!config.cached represents if the request is resolved using 
+                    //      the angular-templatecache
+                    if (!config.cached) {
+                        config.url += ((config.url.indexOf('?') > -1) ? '&' : '?')
+                          + config.paramSerializer({ v: __version_number });
+                    } else if (config.url.indexOf('no-cache') > -1) {
+                        // if the cached URL contains 'no-cache' then remove it from the cache
+                        config.cache.remove(config.url);
+                        config.cached = false; // unknown consequences
+                        // Warning: if you remove the value form the cache, and the asset is not
+                        //          accessable at the given URL, you will get a 404 error.
+                    }
+                    return config;
+                }
+            }
+        });
         states.push({
             name: 'home',
             url: '/home',

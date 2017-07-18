@@ -4,12 +4,7 @@
         type: 'container-fluid',
         background: 'transparent',
         content: [
-            {
-                type: 'container-fluid',
-                backgroundColor: 'rgb(26,91,164)',
-                content: [{ type: 'header' }],
-                id: 1
-            },
+          { type: 'header', backgroundColor: 'rgb(26,91,164)' },
             {
                 type: 'hero',
                 backgroundImage: 'https://gallery.mailchimp.com/381dca877e43c44046caa6dd1/images/4ec6fcae-1f88-4090-9165-a052103f6cdb.jpg'
@@ -105,7 +100,7 @@
                  },
                               {
                                   type: 'container',
-                                
+
                                   content: [
                                       {
                                           type: 'fundraiserLeaderboard',
@@ -139,6 +134,7 @@
 
 
     }
+    var SIZES = ['sm', 'half', 'full'];
 
 
     service.getLayout = function () {
@@ -150,7 +146,9 @@
 
         return true;
     }
-
+    service.isChildFriendly = function (node) {
+        return (node && node.type && (node.type == 'container' || node.type == 'container-fluid'));
+    }
 
     return service;
 })

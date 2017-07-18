@@ -10,6 +10,6 @@
 
 
     function config() {
-
+        log('Welcome to the edit app');
     };
 })();

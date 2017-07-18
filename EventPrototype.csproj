@@ -500,7 +500,7 @@
     <Content Include="Static\JS\Public\HomeController.js" />
     <Content Include="templates\edit\editPage.html" />
     <Content Include="templates\edit\LayoutHelper.html" />
-    <Content Include="templates\edit\nodes_renderer.html" />
+    <Content Include="templates\edit\LayoutManager.html" />
     <Content Include="templates\edit\pageSelector.html" />
     <Content Include="templates\edit\sample\6.html" />
     <Content Include="templates\edit\sample\8.html" />

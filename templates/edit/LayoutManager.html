@@ -1,0 +1,23 @@
+﻿<div>
+    <div ui-tree-handle class="tree-node tree-node-content ">
+        <div angular-ui-tree-handle>
+            {{node.type}} }}
+        </div>         <div class="btn-group btn-group-sm">
+
+            <a class="pull-right btn btn-secondary "
+               ng-show="pageVM.isChildFriendly(node)"
+               data-nodrag="" ng-click="newSubItem(this)">
+                <i class="zmdi zmdi-plus"></i>
+            </a><a class="pull-right btn btn-secondary " data-nodrag="" ng-click="remove(this)">
+                <i class="zmdi zmdi-delete"></i>
+            </a>
+        </div>
+    </div>
+</div>
+<ol ui-tree-nodes="" ng-model="node.content">
+    <li class="card" ng-repeat="node in node.content" ui-tree-node
+        data-nodrop-enabled="pageVM.isChildFriendly(node)"
+        ng-include="'/templates/edit/layoutManager.html'">
+
+    </li>
+</ol>
