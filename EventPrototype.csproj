@@ -551,9 +551,6 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Static\CSS\App\scss watch.bat" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Static\CSS\App\_angular-growl.min.scss" />
   </ItemGroup>
   <ItemGroup>
