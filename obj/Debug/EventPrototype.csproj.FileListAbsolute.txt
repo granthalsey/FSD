@@ -119,7 +119,6 @@ c:\artez\event\bin\System.Web.Http.WebHost.xml
 c:\artez\event\obj\Debug\MvcApplication1.dll
 c:\artez\event\obj\Debug\MvcApplication1.pdb
 c:\artez\event\bin\EntityFramework.dll
-c:\artez\event\obj\Debug\EventPrototype.csprojResolveAssemblyReference.cache
 c:\artez\event\bin\EntityFramework.SqlServer.dll
 c:\artez\event\bin\System.Net.Http.dll
 c:\artez\event\bin\System.Net.Http.WebRequest.dll
@@ -133,3 +132,5 @@ c:\artez\event\bin\System.Web.Providers.dll
 c:\artez\event\bin\EntityFramework.xml
 c:\artez\event\bin\EntityFramework.SqlServer.xml
 c:\artez\event\bin\System.Web.Providers.xml
+c:\artez\event\bin\System.Data.DataSetExtensions.dll
+c:\artez\event\bin\System.Data.dll
