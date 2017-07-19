@@ -72,4 +72,30 @@
             width: auto;
         }
     }
+
+    .fs-leaderboard-avatar {
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        margin: 0 .5rem .5rem;
+    }
+
+    .fs-leaderboard-header {
+        display: flex;
+
+        h4 {
+            float: left;
+            flex-direction: row;
+        }
+
+
+
+        .view-all {
+            flex-direction: row;
+            margin-left: auto;
+            align-self: flex-end;
+        }
+
+        border-bottom: 1px solid;
+    }
 }

@@ -510,6 +510,7 @@
     <Content Include="templates\edit\sample\3.html" />
     <Content Include="templates\edit\sample\header.html" />
     <Content Include="templates\edit\sample\hero.html" />
+    <Content Include="templates\edit\sample\LeaderBoard.html" />
     <Content Include="templates\edit\sample\sponsors.html" />
     <Content Include="templates\public\home.html" />
     <Content Include="templates\subnavTabs.html" />

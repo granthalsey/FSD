@@ -2190,6 +2190,21 @@ div.ui-grid-cell-contents.invalid {
 .fs-custom .fs-sponors .sponsor-img {
   max-height: 110px;
   width: auto; }
+.fs-custom .fs-leaderboard-avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin: 0 .5rem .5rem; }
+.fs-custom .fs-leaderboard-header {
+  display: flex;
+  border-bottom: 1px solid; }
+  .fs-custom .fs-leaderboard-header h4 {
+    float: left;
+    flex-direction: row; }
+  .fs-custom .fs-leaderboard-header .view-all {
+    flex-direction: row;
+    margin-left: auto;
+    align-self: flex-end; }
 
 .fs-admin {
   font-family: 'Open Sans', sans-serif; }

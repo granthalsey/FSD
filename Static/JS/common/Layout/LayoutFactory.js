@@ -1,4 +1,6 @@
 ﻿angular.module("layout").factory('layoutFactory', function () {
+    var fakeFundraisers = [{ "first_name": "Dane", "last_name": "Jezzard", "amount raised": "694.56" }, { "first_name": "Jake", "last_name": "Bachman", "amount raised": "921.00" }, { "first_name": "Audy", "last_name": "Berntsson", "amount raised": "721.07" }, { "first_name": "Alf", "last_name": "Fitzroy", "amount raised": "534.15" }, { "first_name": "Friederike", "last_name": "Wyrill", "amount raised": "902.30" }, { "first_name": "Melloney            ", "last_name": "Ainslie", "amount raised": "995.51" }, { "first_name": "Ashlie", "last_name": "Ashfold", "amount raised": "903.65" }, { "first_name": "Boone", "last_name": "Hendriksen", "amount raised": "870.75" }, { "first_name": "Nicolais            ", "last_name": "Tombleson           ", "amount raised": "776.74" }, { "first_name": "Justino", "last_name": "Drogan", "amount raised": "738.59" }];
+
     var service = {};
     var layout = {
         type: 'container-fluid',
@@ -100,18 +102,23 @@
                  },
                               {
                                   type: 'container',
-
+                                  backgroundColor: 'rgba(255, 255, 255, 0.5)',
                                   content: [
                                       {
-                                          type: 'fundraiserLeaderboard',
+                                          type: 'leaderboard',
+                                          source: 'individual',
+                                          size: 'half',
+                                          members: fakeFundraisers,
+                                          heading: 'Top Individuals'
 
-                                          size: 'half'
                                       },
                                         {
-                                            type: 'teamLeaderboard',
+                                            type: 'leaderboard',
+                                            source: 'team',
+                                            size: 'half',
+                                            heading: 'Top Teams'
 
-                                            size: 'half'
-                                        },
+                                        }
 
                                   ]
 
