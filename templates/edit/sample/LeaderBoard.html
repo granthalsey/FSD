@@ -6,10 +6,11 @@
 
 </header>
 <div class="fs-leaderboard-body ">
-    <a href class=" d-flex flex-row" ng-repeat="item in layout.members">
-        <img src="https://lorempixel.com/400/400/people/{{$index}}" class="fs-leaderboard-avatar flex-column" />
+    <a href class=" d-flex flex-row" ng-repeat="item in layout.members"
+       style="color:{{layout.bodyColor}}">
+        <img src="https://lorempixel.com/400/400/people/? {{item['amount raised']}}" class="fs-leaderboard-avatar flex-column" />
         <div class="flex-column align-self-center">
-            <h5>{{item.first_name}} {{item.last_name}}</h5>
+            <h5>{{item.team_name}}{{item.first_name}} {{item.last_name}}</h5>
             {{item['amount raised'] | currency:$0}}
         </div>
 

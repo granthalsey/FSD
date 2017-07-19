@@ -31,7 +31,7 @@
                    "pageVM.treeLayout",
                    function handleChange(newValue, oldValue) {
                        log('fired watch, syncing layout');
-                       newValue != oldValue ? pageVM.layout.content = pageVM.treeLayout : false;
+                       newValue !== oldValue ? pageVM.layout.content = pageVM.treeLayout : false;
                    }, true
                );
 
