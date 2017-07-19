@@ -171,6 +171,60 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="packages\Antlr.3.4.1.9004\Antlr.3.4.1.9004.nupkg" />
+    <Content Include="packages\EntityFramework.5.0.0\Content\App.config.transform" />
+    <Content Include="packages\EntityFramework.5.0.0\Content\Web.config.transform" />
+    <Content Include="packages\EntityFramework.5.0.0\EntityFramework.5.0.0.nupkg" />
+    <Content Include="packages\EntityFramework.5.0.0\tools\EntityFramework.PS3.psd1" />
+    <Content Include="packages\EntityFramework.5.0.0\tools\EntityFramework.psd1" />
+    <Content Include="packages\EntityFramework.5.0.0\tools\EntityFramework.psm1" />
+    <Content Include="packages\EntityFramework.5.0.0\tools\init.ps1" />
+    <Content Include="packages\EntityFramework.5.0.0\tools\install.ps1" />
+    <Content Include="packages\EntityFramework.5.0.0\tools\Redirect.config" />
+    <Content Include="packages\EntityFramework.5.0.0\tools\Redirect.VS11.config" />
+    <Content Include="packages\EntityFramework.6.0.0\Content\App.config.transform" />
+    <Content Include="packages\EntityFramework.6.0.0\Content\Web.config.transform" />
+    <Content Include="packages\EntityFramework.6.0.0\EntityFramework.6.0.0.nupkg" />
+    <Content Include="packages\EntityFramework.6.0.0\tools\EntityFramework.psd1" />
+    <Content Include="packages\EntityFramework.6.0.0\tools\EntityFramework.psm1" />
+    <Content Include="packages\EntityFramework.6.0.0\tools\init.ps1" />
+    <Content Include="packages\EntityFramework.6.0.0\tools\install.ps1" />
+    <Content Include="packages\Microsoft.AspNet.Mvc.5.2.3\Content\Web.config.install.xdt" />
+    <Content Include="packages\Microsoft.AspNet.Mvc.5.2.3\Content\Web.config.uninstall.xdt" />
+    <Content Include="packages\Microsoft.AspNet.Mvc.5.2.3\Microsoft.AspNet.Mvc.5.2.3.nupkg" />
+    <Content Include="packages\Microsoft.AspNet.Mvc.FixedDisplayModes.5.0.0\Microsoft.AspNet.Mvc.FixedDisplayModes.5.0.0.nupkg" />
+    <Content Include="packages\Microsoft.AspNet.Providers.2.0.0\content\web.config.transform" />
+    <Content Include="packages\Microsoft.AspNet.Providers.2.0.0\Microsoft.AspNet.Providers.2.0.0.nupkg" />
+    <Content Include="packages\Microsoft.AspNet.Providers.2.0.0\tools\Install.ps1" />
+    <Content Include="packages\Microsoft.AspNet.Providers.Core.2.0.0\Microsoft.AspNet.Providers.Core.2.0.0.nupkg" />
+    <Content Include="packages\Microsoft.AspNet.Providers.LocalDB.1.1\content\web.config.transform" />
+    <Content Include="packages\Microsoft.AspNet.Providers.LocalDB.1.1\Microsoft.AspNet.Providers.LocalDB.1.1.nupkg" />
+    <Content Include="packages\Microsoft.AspNet.Providers.LocalDB.1.1\tools\Install.ps1" />
+    <Content Include="packages\Microsoft.AspNet.Razor.3.2.3\Microsoft.AspNet.Razor.3.2.3.nupkg" />
+    <Content Include="packages\Microsoft.AspNet.Web.Optimization.1.1.3\Microsoft.AspNet.Web.Optimization.1.1.3.nupkg" />
+    <Content Include="packages\Microsoft.AspNet.WebApi.4.0.30506.0\Microsoft.AspNet.WebApi.4.0.30506.0.nupkg" />
+    <Content Include="packages\Microsoft.AspNet.WebApi.Client.4.0.30506.0\Microsoft.AspNet.WebApi.Client.4.0.30506.0.nupkg" />
+    <Content Include="packages\Microsoft.AspNet.WebApi.Core.4.0.30506.0\content\web.config.transform" />
+    <Content Include="packages\Microsoft.AspNet.WebApi.Core.4.0.30506.0\Microsoft.AspNet.WebApi.Core.4.0.30506.0.nupkg" />
+    <Content Include="packages\Microsoft.AspNet.WebApi.WebHost.4.0.30506.0\Microsoft.AspNet.WebApi.WebHost.4.0.30506.0.nupkg" />
+    <Content Include="packages\Microsoft.AspNet.WebPages.3.2.3\Content\Web.config.install.xdt" />
+    <Content Include="packages\Microsoft.AspNet.WebPages.3.2.3\Content\Web.config.uninstall.xdt" />
+    <Content Include="packages\Microsoft.AspNet.WebPages.3.2.3\Microsoft.AspNet.WebPages.3.2.3.nupkg" />
+    <Content Include="packages\Microsoft.jQuery.Unobtrusive.Ajax.2.0.30506.0\Microsoft.jQuery.Unobtrusive.Ajax.2.0.30506.0.nupkg" />
+    <Content Include="packages\Microsoft.jQuery.Unobtrusive.Validation.2.0.30506.0\Microsoft.jQuery.Unobtrusive.Validation.2.0.30506.0.nupkg" />
+    <Content Include="packages\Microsoft.Net.Http.2.0.20710.0\lib\net45\_._" />
+    <Content Include="packages\Microsoft.Net.Http.2.0.20710.0\Microsoft.Net.Http.2.0.20710.0.nupkg" />
+    <Content Include="packages\Microsoft.Web.Infrastructure.1.0.0.0\Microsoft.Web.Infrastructure.1.0.0.0.nupkg" />
+    <Content Include="packages\Modernizr.2.6.2\Modernizr.2.6.2.nupkg" />
+    <Content Include="packages\Modernizr.2.6.2\Tools\common.ps1" />
+    <Content Include="packages\Modernizr.2.6.2\Tools\install.ps1" />
+    <Content Include="packages\Modernizr.2.6.2\Tools\uninstall.ps1" />
+    <Content Include="packages\Newtonsoft.Json.5.0.4\Newtonsoft.Json.5.0.4.nupkg" />
+    <Content Include="packages\repositories.config" />
+    <Content Include="packages\WebGrease.1.5.2\tools\install.ps1" />
+    <Content Include="packages\WebGrease.1.5.2\tools\uninstall.ps1" />
+    <Content Include="packages\WebGrease.1.5.2\WebGrease.1.5.2.nupkg" />
+    <Content Include="Static\CSS\App\admin.css.map" />
     <None Include="Static\CSS\App\angular-ui-grid\ui-grid.scss">
       <Compile>False</Compile>
       <Minify>True</Minify>
@@ -179,14 +233,91 @@
       <CompileStyle>Nested</CompileStyle>
       <DebugInfo>False</DebugInfo>
     </None>
+    <Content Include="packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll" />
+    <Content Include="packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.pdb" />
+    <Content Include="packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll" />
+    <Content Include="packages\EntityFramework.5.0.0\lib\net40\EntityFramework.xml" />
+    <Content Include="packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll" />
+    <Content Include="packages\EntityFramework.5.0.0\lib\net45\EntityFramework.xml" />
+    <Content Include="packages\EntityFramework.5.0.0\tools\about_EntityFramework.help.txt" />
+    <Content Include="packages\EntityFramework.5.0.0\tools\EntityFramework.PowerShell.dll" />
+    <Content Include="packages\EntityFramework.5.0.0\tools\EntityFramework.PowerShell.Utility.dll" />
+    <Content Include="packages\EntityFramework.5.0.0\tools\migrate.exe" />
+    <Content Include="packages\EntityFramework.6.0.0\lib\net40\EntityFramework.dll" />
+    <Content Include="packages\EntityFramework.6.0.0\lib\net40\EntityFramework.SqlServer.dll" />
+    <Content Include="packages\EntityFramework.6.0.0\lib\net40\EntityFramework.SqlServer.xml" />
+    <Content Include="packages\EntityFramework.6.0.0\lib\net40\EntityFramework.xml" />
+    <Content Include="packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll" />
+    <Content Include="packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll" />
+    <Content Include="packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.xml" />
+    <Content Include="packages\EntityFramework.6.0.0\lib\net45\EntityFramework.xml" />
+    <Content Include="packages\EntityFramework.6.0.0\tools\about_EntityFramework.help.txt" />
+    <Content Include="packages\EntityFramework.6.0.0\tools\EntityFramework.PowerShell.dll" />
+    <Content Include="packages\EntityFramework.6.0.0\tools\EntityFramework.PowerShell.Utility.dll" />
+    <Content Include="packages\EntityFramework.6.0.0\tools\migrate.exe" />
+    <Content Include="packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll" />
+    <Content Include="packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.xml" />
+    <Content Include="packages\Microsoft.AspNet.Mvc.FixedDisplayModes.5.0.0\readme.txt" />
+    <Content Include="packages\Microsoft.AspNet.Providers.Core.2.0.0\lib\net40\System.Web.Providers.dll" />
+    <Content Include="packages\Microsoft.AspNet.Providers.Core.2.0.0\lib\net40\System.Web.Providers.xml" />
+    <Content Include="packages\Microsoft.AspNet.Providers.Core.2.0.0\ReadMe.txt" />
+    <Content Include="packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll" />
+    <Content Include="packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.xml" />
+    <Content Include="packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll" />
+    <Content Include="packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\system.web.optimization.xml" />
+    <Content Include="packages\Microsoft.AspNet.WebApi.Client.4.0.30506.0\lib\net40\System.Net.Http.Formatting.dll" />
+    <Content Include="packages\Microsoft.AspNet.WebApi.Client.4.0.30506.0\lib\net40\System.Net.Http.Formatting.xml" />
+    <Content Include="packages\Microsoft.AspNet.WebApi.Core.4.0.30506.0\lib\net40\System.Web.Http.dll" />
+    <Content Include="packages\Microsoft.AspNet.WebApi.Core.4.0.30506.0\lib\net40\System.Web.Http.xml" />
+    <Content Include="packages\Microsoft.AspNet.WebApi.WebHost.4.0.30506.0\lib\net40\System.Web.Http.WebHost.dll" />
+    <Content Include="packages\Microsoft.AspNet.WebApi.WebHost.4.0.30506.0\lib\net40\System.Web.Http.WebHost.xml" />
+    <Content Include="packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll" />
+    <Content Include="packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.xml" />
+    <Content Include="packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll" />
+    <Content Include="packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.xml" />
+    <Content Include="packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll" />
+    <Content Include="packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll" />
+    <Content Include="packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.xml" />
+    <Content Include="packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.xml" />
+    <Content Include="packages\Microsoft.jQuery.Unobtrusive.Ajax.2.0.30506.0\Content\Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="packages\Microsoft.jQuery.Unobtrusive.Ajax.2.0.30506.0\Content\Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="packages\Microsoft.jQuery.Unobtrusive.Validation.2.0.30506.0\Content\Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="packages\Microsoft.jQuery.Unobtrusive.Validation.2.0.30506.0\Content\Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="packages\Microsoft.Net.Http.2.0.20710.0\lib\net40\System.Net.Http.dll" />
+    <Content Include="packages\Microsoft.Net.Http.2.0.20710.0\lib\net40\System.Net.Http.WebRequest.dll" />
+    <Content Include="packages\Microsoft.Net.Http.2.0.20710.0\lib\net40\System.Net.Http.WebRequest.xml" />
+    <Content Include="packages\Microsoft.Net.Http.2.0.20710.0\lib\net40\System.Net.Http.xml" />
+    <Content Include="packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="packages\Modernizr.2.6.2\Content\Scripts\modernizr-2.6.2.js" />
+    <Content Include="packages\Newtonsoft.Json.5.0.4\lib\net20\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.5.0.4\lib\net20\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.5.0.4\lib\net35\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.5.0.4\lib\net35\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.5.0.4\lib\net40\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.5.0.4\lib\net40\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.5.0.4\lib\net45\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.5.0.4\lib\net45\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.5.0.4\lib\netcore45\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.5.0.4\lib\netcore45\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.5.0.4\lib\portable-net40+sl4+wp7+win8\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.5.0.4\lib\portable-net40+sl4+wp7+win8\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.5.0.4\lib\portable-net45+wp80+win8\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.5.0.4\lib\portable-net45+wp80+win8\Newtonsoft.Json.xml" />
+    <Content Include="packages\WebGrease.1.5.2\lib\WebGrease.dll" />
+    <Content Include="packages\WebGrease.1.5.2\tools\WG.exe" />
     <Content Include="Static\CSS\App\admin.css" />
     <Content Include="Static\CSS\App\angular-ui-grid\ui-grid.svg" />
     <Content Include="Static\CSS\App\angular-ui-tree.css" />
     <Content Include="Static\CSS\App\lib\angular-ui-tree.css" />
+    <Content Include="Static\CSS\App\lib\angularjs-color-picker-bootstrap.css" />
+    <Content Include="Static\CSS\App\lib\angularjs-color-picker.css" />
     <Content Include="Static\CSS\App\public.css">
       <DependentUpon>public.scss</DependentUpon>
     </Content>
     <Content Include="Global.asax" />
+    <Content Include="Static\CSS\App\scss public watch.bat" />
+    <Content Include="Static\CSS\App\scss admin watch.bat" />
+    <Content Include="Static\CSS\App\public.css.map" />
     <None Include="Static\CSS\App\_util.scss" />
     <Content Include="Static\CSS\Bootstrap\datetimepicker.scss">
       <Compile>False</Compile>
@@ -488,13 +619,10 @@
     <Content Include="Static\JS\common\Themes\ThemeFactory.js" />
     <Content Include="Static\JS\Edit\controllers\pages.js" />
     <Content Include="Static\JS\Edit\controllers\HomeController.js" />
+    <Content Include="Static\JS\Edit\libs\angularjs-color-picker.js" />
     <Content Include="Static\JS\Public\app.js" />
     <Content Include="Static\JS\Edit\controllers\base.controller.js" />
-    <Content Include="Static\JS\common\libs\ng-flow-standalone.js" />
     <Content Include="Static\JS\Edit\libs\ui-grid.js" />
-    <Content Include="Static\JS\common\libs\ui-router-tabs.js" />
-    <Content Include="Static\JS\common\libs\ui-bootstrap-custom-tpls-2.5.0.js" />
-    <Content Include="Static\JS\common\libs\vertilize.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Static\JS\Edit\app.js" />
     <Content Include="Static\JS\Public\HomeController.js" />
@@ -536,12 +664,12 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Static\JS\common\libs\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Static\CSS\App\styles.css.map" />
     <Content Include="Static\CSS\App\admin.scss">
       <Compile>False</Compile>
       <Minify>True</Minify>

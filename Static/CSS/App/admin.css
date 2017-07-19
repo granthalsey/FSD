@@ -2191,10 +2191,18 @@ div.ui-grid-cell-contents.invalid {
   max-height: 110px;
   width: auto; }
 .fs-custom .fs-leaderboard-avatar {
-  width: 90px;
-  height: 90px;
+  /*width: 90px;
+  height: 90px;*/
   border-radius: 50%;
   margin: 0 .5rem .5rem; }
+.fs-custom .fs-leaderboard-caption {
+  width: 100%; }
+  .fs-custom .fs-leaderboard-caption .progress-stats {
+    font-size: 1rem; }
+    .fs-custom .fs-leaderboard-caption .progress-stats .goal {
+      font-size: 1rem; }
+    .fs-custom .fs-leaderboard-caption .progress-stats span.label {
+      font-size: .8rem; }
 .fs-custom .fs-leaderboard-header {
   display: flex;
   border-bottom: 1px solid; }
