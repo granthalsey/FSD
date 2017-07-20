@@ -2281,8 +2281,7 @@ div.ui-grid-cell-contents.invalid {
 .content-edit-wrap {
   background: #e1e2e3;
   z-index: 4;
-  position: relative;
-  padding-top: 20px; }
+  position: relative; }
 
 .nav-bar-compensation {
   padding-top: 60px; }
@@ -2310,6 +2309,9 @@ div.ui-grid-cell-contents.invalid {
 
 .margin-top-20 {
   margin-top: 20px; }
+
+.no-padding {
+  padding: 0 0 !important; }
 
 .page-selector {
   text-align: center;
@@ -2410,26 +2412,30 @@ div.ui-grid-cell-contents.invalid {
 .no-drag .angular-ui-tree-handle {
   cursor: default; }
 
-.angular-ui-tree .angular-ui-tree-nodes .angular-ui-tree-nodes {
-  padding-left: 0; }
-.angular-ui-tree .btn-group-sm {
-  margin-bottom: .5rem; }
-.angular-ui-tree .card {
-  transition: all .3s;
-  margin-bottom: .5rem;
-  background-color: #f4f4f4; }
-  .angular-ui-tree .card.open {
-    background-color: #fff; }
-  .angular-ui-tree .card .card-header {
-    border-bottom: none;
-    background: #f4f4f4;
-    padding: .5rem .5rem; }
-  .angular-ui-tree .card .card-content {
-    padding: .5rem 1.25rem; }
-  .angular-ui-tree .card .open .card-header {
-    margin-bottom: .75rem; }
-.angular-ui-tree .angular-ui-tree-handle {
-  font-weight: normal; }
+.angular-ui-tree {
+  margin-bottom: 10px; }
+  .angular-ui-tree .angular-ui-tree-nodes .angular-ui-tree-nodes {
+    padding-left: 0; }
+  .angular-ui-tree .btn-group-sm {
+    margin-bottom: .5rem; }
+  .angular-ui-tree .card {
+    transition: all .3s;
+    margin-bottom: -1px !important;
+    border-radius: 0;
+    margin-bottom: .5rem;
+    background-color: #f4f4f4; }
+    .angular-ui-tree .card.open {
+      background-color: #fff; }
+    .angular-ui-tree .card .card-header {
+      border-bottom: none;
+      background: #f4f4f4;
+      padding: .5rem .5rem; }
+    .angular-ui-tree .card .card-content {
+      padding: .5rem .5rem; }
+    .angular-ui-tree .card .open .card-header {
+      margin-bottom: .75rem; }
+  .angular-ui-tree .angular-ui-tree-handle {
+    font-weight: normal; }
 
 button, ng-click {
   cursor: pointer; }

@@ -30,7 +30,6 @@
 
         <ol ui-tree-nodes="" ng-model="node.content" class="card-content"
             ng-show="node.content && node.content.length">
-            <label>Content</label>
             <li class="card" ng-repeat="node in node.content" ui-tree-node
                 data-nodrop-enabled="pageVM.isChildFriendly(node)"
                 ng-include="'/templates/edit/layoutManager.html'"

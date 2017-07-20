@@ -1,29 +1,19 @@
 ﻿<div class="content-edit-wrap margin-top-20">
     <div class="container-fluid">
-        <div class="row">
+        <!--<div class="row">
             <div class="fs-admin content-edit-tabs col">
                 <header class="block-header">
                     <div class="row">
                         <div class="col">
                             <h5>Event Page</h5>
-                            <ul class="nav nav-tabs float-right">
-                              
-                                <li class="nav-item">
-                                    <a class="nav-link active" href="#">Preview</a>
-                                </li>
-                         
-                                <li class="ml-auto">
-                                    <button class="btn btn-outline-secondary">Cancel</button>
-                                    <button class="btn btn-outline-primary">Save</button>
-                                </li>
-                            </ul>
+                            <ul class="nav nav-tabs float-right"></ul>
                         </div>
                     </div>
                 </header>
             </div>
-        </div>
-        <div class="row margin-top-20">
-            <div class="fs-admin col col-md-2">
+        </div>-->
+        <div class="row ">
+            <div class="fs-admin col col-md-2 no-padding">
 
                 <ul class="nav nav-tabs">
                     <li class="nav-item">
@@ -46,20 +36,20 @@
                         </li>
                     </ol>
 
-                    <small ng-if="pageVM.enableRearrange">
-                        Drag and drop widgets to reorder
-                    </small>
-                    <div class="btn-group-sm">
-                        <button class="btn btn-link"
-                                ng-click="pageVM.toggleEnableRerrange()">
-                            {{pageVM.enableRearrange ? 'Done' : 'Rearrange Widgets'}}
-                        </button>
-                        <button class="btn btn-outline-primary">
-                            Add Widget
-                        </button>
-                    </div>
                 </div>
 
+                <small ng-if="pageVM.enableRearrange">
+                    Drag and drop widgets to reorder
+                </small>
+                <div class="btn-group-sm">
+                    <button class="btn btn-link"
+                            ng-click="pageVM.toggleEnableRerrange()">
+                        {{pageVM.enableRearrange ? 'Done' : 'Rearrange Widgets'}}
+                    </button>
+                    <button class="btn btn-outline-primary">
+                        Add Widget
+                    </button>
+                </div>
 
                 <h2>theme</h2>
                 <div ng-repeat="(key, value) in pageVM.themeObj"
@@ -81,10 +71,14 @@
 
                 </div>
 
+                <footer class="nav-footer">
+                    <button class="btn btn-outline-secondary">Cancel</button>
+                    <button class="btn btn-outline-primary">Save</button>
+                </footer>
             </div>
 
 
-            <div class="fs-custom col col-md-10">
+            <div class="fs-custom col col-md-10 no-padding">
                 <div class="shadow bg-white">
                     <div class="fs-wrap">
 

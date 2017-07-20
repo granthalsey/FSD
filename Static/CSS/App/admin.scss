@@ -106,7 +106,7 @@
     background: $color_light_grey;
     z-index: 4;
     position: relative;
-    padding-top: 20px;
+    // padding-top: 20px;
 }
 
 
@@ -146,6 +146,10 @@
 
 .margin-top-20 {
     margin-top: 20px;
+}
+
+.no-padding {
+    padding: 0 0 !important;
 }
 
 .page-selector {
@@ -266,6 +270,8 @@
 }
 
 .angular-ui-tree {
+    margin-bottom: 10px;
+
     .angular-ui-tree-nodes .angular-ui-tree-nodes {
         padding-left: 0;
     }
@@ -276,6 +282,8 @@
 
     .card {
         transition: all .3s;
+        margin-bottom: -1px !important;
+        border-radius: 0;
 
         &.open {
             background-color: #fff;
@@ -291,7 +299,7 @@
         }
 
         .card-content {
-            padding: .5rem 1.25rem;
+            padding: .5rem .5rem;
         }
 
         .open {
