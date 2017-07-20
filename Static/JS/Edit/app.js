@@ -3,6 +3,7 @@
 
     angular.module("app", [
         "ui.router",
+        'ngAnimate',
         //Modules
         'layout',
         "themes",

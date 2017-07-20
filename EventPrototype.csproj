@@ -224,6 +224,7 @@
     <Content Include="packages\WebGrease.1.5.2\tools\install.ps1" />
     <Content Include="packages\WebGrease.1.5.2\tools\uninstall.ps1" />
     <Content Include="packages\WebGrease.1.5.2\WebGrease.1.5.2.nupkg" />
+    <Content Include="Scripts\Angular\angular-animate.js" />
     <Content Include="Static\CSS\App\admin.css.map" />
     <None Include="Static\CSS\App\angular-ui-grid\ui-grid.scss">
       <Compile>False</Compile>

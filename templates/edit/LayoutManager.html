@@ -5,12 +5,15 @@
         <div>
             {{node.type}}
             <small class="pull-right">
-                <i class="zmdi " ng-class="pageVM.isCurrentEditingWidget(node.id) ? 'zmdi-chevron-up' : 'zmdi-chevron-down'"></i>
-            </small>
+                <i ng-hide="pageVM.enableRearrange"
+                   class="zmdi zmdi-chevron-down" ng-class="pageVM.isCurrentEditingWidget(node.id) ? 'open' : ''"></i>
 
+                <i ng-show="pageVM.enableRearrange" class="zmdi zmdi-unfold-more"></i>
+            </small>
+            <!--ng-class="pageVM.isCurrentEditingWidget(node.id) ? 'zmdi-chevron-up' : '"-->
         </div>
     </div>
-    <div>
+    <div class="hide-overflow">
         <div ng-show="pageVM.isCurrentEditingWidget(node.id)" class="card-content">
             <div class="form-group">
                 <label>Background color</label>
