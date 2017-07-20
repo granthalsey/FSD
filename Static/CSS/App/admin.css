@@ -2403,4 +2403,7 @@ div.ui-grid-cell-contents.invalid {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box; }
 
+.no-drag .angular-ui-tree-handle {
+  cursor: default; }
+
 /*# sourceMappingURL=admin.css.map */

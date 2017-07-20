@@ -1,19 +1,32 @@
-﻿<div>
-    <div ui-tree-handle class="tree-node tree-node-content ">
-        <div angular-ui-tree-handle>
-            {{node.type}}
-        </div>         <div class="btn-group btn-group-sm">
+﻿<div class="card-block">
 
-            <a class="pull-right btn btn-secondary "
-               ng-show="pageVM.isChildFriendly(node)"
-               data-nodrag="" ng-click="newSubItem(this)">
-                <i class="zmdi zmdi-plus"></i>
-            </a><a class="pull-right btn btn-secondary " data-nodrag="" ng-click="remove(this)">
-                <i class="zmdi zmdi-delete"></i>
-            </a>
+    <div ui-tree-handle class="tree-node tree-node-content ">
+        <div angular-ui-tree-handle
+             ng-click="pageVM.editWidget(node.id)">
+            <h5 class="card-title">
+                {{node.type}}
+                <small class="pull-right">
+                    <i class="zmdi " ng-class="pageVM.isCurrentEditingWidget(node.id) ? 'zmdi-chevron-up' : 'zmdi-chevron-down'"></i>
+                </small>
+
+            </h5>
+        </div>
+        <div class="card-content" ng-show="pageVM.isCurrentEditingWidget(node.id)">
+            <div class="btn-group-sm">
+                <p>Options Options Options </p>
+                <a class="pull-right btn btn-secondary " data-nodrag="" ng-click="remove(this)">
+                    Remove
+                </a>
+                <a class="pull-right btn btn-secondary "
+                   ng-show="pageVM.isChildFriendly(node)"
+                   data-nodrag="" ng-click="newSubItem(this)">
+                    Add Widget
+                </a>
+            </div>
         </div>
     </div>
 </div>
+
 <ol ui-tree-nodes="" ng-model="node.content">
     <li class="card" ng-repeat="node in node.content" ui-tree-node
         data-nodrop-enabled="pageVM.isChildFriendly(node)"

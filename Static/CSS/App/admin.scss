@@ -259,3 +259,9 @@
         -webkit-box-sizing: border-box;
     }
 }
+//ui tree customization
+
+.no-drag .angular-ui-tree-handle {
+    cursor: default;
+}
+// end  ui tree customization

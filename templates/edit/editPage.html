@@ -27,15 +27,30 @@
             <div class="fs-admin col col-md-2">
                 <h2>Layout</h2>
 
-                <div ui-tree>
+                <div ui-tree data-drag-enabled="pageVM.enableRearrange"
+                     ng-class="pageVM.enableRearrange ? '' : 'no-drag'">
                     <ol ui-tree-nodes="" ng-model="pageVM.treeLayout" id="tree-root">
                         <li class="card" ng-repeat="node in pageVM.treeLayout" ui-tree-node
                             ng-include="'/templates/edit/layoutManager.html'"
-                            data-nodrop-enabled="pageVM.isChildFriendly(node)">
+                            data-nodrop-enabled="pageVM.isChildFriendly(node)"
+                           >
 
 
                         </li>
                     </ol>
+
+                    <small ng-if="pageVM.enableRearrange">
+                        Drag and drop widgets to reorder
+                    </small>
+                    <div class="btn-group-sm">
+                        <button class="btn btn-link"
+                                ng-click="pageVM.toggleEnableRerrange()">
+                            {{pageVM.enableRearrange ? 'Done' : 'Rearrange Widgets'}}
+                        </button>
+                        <button class="btn btn-outline-primary">
+                            Add Widget
+                        </button>
+                    </div>
                 </div>
 
 
@@ -55,8 +70,10 @@
                             <!--{{rule | json}}-->
                         </div>
                     </section>
+
                 </div>
             </div>
+
             <div class="fs-custom col col-md-10">
                 <div class="shadow bg-white">
                     <div class="fs-wrap">
@@ -64,9 +81,14 @@
 
                         <div ng-repeat="c in pageVM.layout.content">
                             <content-layout layout="c"></content-layout>
+           </div>
+                            
+
                         </div>
 
 
+                        
+
                         <!--{{pageVM.layout | json}}-->
 
 
@@ -81,5 +103,5 @@
         </div>
     </div>
 
-</div>
+
 
