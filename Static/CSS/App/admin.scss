@@ -266,18 +266,42 @@
 }
 
 .angular-ui-tree {
-    .card {
-        margin-bottom: .5rem;
-        padding: .5rem;
+    .angular-ui-tree-nodes .angular-ui-tree-nodes {
+        padding-left: 0;
     }
 
-    .card-block {
-        padding: 0 0;
+    .btn-group-sm {
+        margin-bottom: .5rem;
+    }
+
+    .card {
+        margin-bottom: .5rem;
+
+        .card-header {
+            border-bottom: none;
+            background: $color_lighter_grey;
+        }
+
+        .card-content {
+            padding: .5rem 1.25rem;
+        }
+
+        .open {
+            .card-header {
+                margin-bottom: .75rem;
+            }
+        }
+    }
+
+
+
+    .angular-ui-tree-handle {
+        font-weight: normal;
     }
 }
 
 // end  ui tree customization
 
-ng-click {
+button, ng-click {
     cursor: pointer;
 }

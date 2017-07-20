@@ -2406,13 +2406,23 @@ div.ui-grid-cell-contents.invalid {
 .no-drag .angular-ui-tree-handle {
   cursor: default; }
 
+.angular-ui-tree .angular-ui-tree-nodes .angular-ui-tree-nodes {
+  padding-left: 0; }
+.angular-ui-tree .btn-group-sm {
+  margin-bottom: .5rem; }
 .angular-ui-tree .card {
-  margin-bottom: .5rem;
-  padding: .5rem; }
-.angular-ui-tree .card-block {
-  padding: 0 0; }
+  margin-bottom: .5rem; }
+  .angular-ui-tree .card .card-header {
+    border-bottom: none;
+    background: #f4f4f4; }
+  .angular-ui-tree .card .card-content {
+    padding: .5rem 1.25rem; }
+  .angular-ui-tree .card .open .card-header {
+    margin-bottom: .75rem; }
+.angular-ui-tree .angular-ui-tree-handle {
+  font-weight: normal; }
 
-ng-click {
+button, ng-click {
   cursor: pointer; }
 
 /*# sourceMappingURL=admin.css.map */

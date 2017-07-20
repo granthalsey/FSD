@@ -1,36 +1,37 @@
-﻿<div class="card-block">
+﻿<div class="tree-node tree-node-content ">
+    <div ui-tree-handle
+         class="card-header"
+         ng-click="pageVM.editWidget(node.id)">
+        <div>
+            {{node.type}}
+            <small class="pull-right">
+                <i class="zmdi " ng-class="pageVM.isCurrentEditingWidget(node.id) ? 'zmdi-chevron-up' : 'zmdi-chevron-down'"></i>
+            </small>
 
-    <div  class="tree-node tree-node-content ">
-        <div ui-tree-handle
-             ng-click="pageVM.editWidget(node.id)">
-            <h5 class="card-title" >
-                {{node.type}}
-                <small class="pull-right">
-                    <i class="zmdi " ng-class="pageVM.isCurrentEditingWidget(node.id) ? 'zmdi-chevron-up' : 'zmdi-chevron-down'"></i>
-                </small>
-
-            </h5>
         </div>
-        <div class="card-content" ng-show="pageVM.isCurrentEditingWidget(node.id)">
-            <div class="btn-group-sm">
-                <p>Options Options Options </p>
-                <a class="pull-right btn btn-secondary "  ng-click="remove(this)">
+    </div>
+    <div class="card-content">
+        <div ng-show="pageVM.isCurrentEditingWidget(node.id)">
+            <input ng-model="node.backgroundColor" />
+            <div class="btn-group-sm text-right">
+                <a class="btn btn-secondary " ng-click="remove(this)">
                     Remove
                 </a>
-                <a class="pull-right btn btn-secondary "
+                <a class=" btn btn-secondary "
                    ng-show="pageVM.isChildFriendly(node)"
                    data-nodrag="" ng-click="newSubItem(this)">
                     Add Widget
                 </a>
             </div>
         </div>
+        <ol ui-tree-nodes="" ng-model="node.content">
+            <li class="card" ng-repeat="node in node.content" ui-tree-node
+                data-nodrop-enabled="pageVM.isChildFriendly(node)"
+                ng-include="'/templates/edit/layoutManager.html'"
+                ng-class="pageVM.isCurrentEditingWidget(node.id) ? 'open' : ''">
+
+            </li>
+        </ol>
     </div>
 </div>
 
-<ol ui-tree-nodes="" ng-model="node.content">
-    <li class="card" ng-repeat="node in node.content" ui-tree-node
-        data-nodrop-enabled="pageVM.isChildFriendly(node)"
-        ng-include="'/templates/edit/layoutManager.html'">
-
-    </li>
-</ol>

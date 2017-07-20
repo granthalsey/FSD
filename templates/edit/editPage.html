@@ -33,7 +33,7 @@
                         <li class="card" ng-repeat="node in pageVM.treeLayout" ui-tree-node
                             ng-include="'/templates/edit/layoutManager.html'"
                             data-nodrop-enabled="pageVM.isChildFriendly(node)"
-                           >
+                            ng-class="pageVM.isCurrentEditingWidget(node.id) ? 'open' : ''">
 
 
                         </li>
@@ -72,36 +72,33 @@
                     </section>
 
                 </div>
+
             </div>
+       
 
-            <div class="fs-custom col col-md-10">
-                <div class="shadow bg-white">
-                    <div class="fs-wrap">
-
-
-                        <div ng-repeat="c in pageVM.layout.content">
-                            <content-layout layout="c"></content-layout>
-           </div>
-                            
-
-                        </div>
+        <div class="fs-custom col col-md-10">
+            <div class="shadow bg-white">
+                <div class="fs-wrap">
 
 
-                        
-
-                        <!--{{pageVM.layout | json}}-->
-
-
-
-                        <div class="btn fs-btn-primary">Le Button</div>
-                        <div class="btn fs-btn-primary">Le Button</div>
-                        <div class="btn fs-btn-primary">Le Button</div>
-                        <a href class="fs-link">Link</a>
+                    <div ng-repeat="c in pageVM.layout.content">
+                        <content-layout layout="c"></content-layout>
                     </div>
+
+
                 </div>
+
+
+
+
+                <!--{{pageVM.layout | json}}-->
+
+
+
+
             </div>
         </div>
     </div>
-
-
+</div>
+     </div>
 
