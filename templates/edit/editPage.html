@@ -7,12 +7,11 @@
                         <div class="col">
                             <h5>Event Page</h5>
                             <ul class="nav nav-tabs float-right">
+                              
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Design</a>
+                                    <a class="nav-link active" href="#">Preview</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link active" href="#">Content</a>
-                                </li>
+                         
                                 <li class="ml-auto">
                                     <button class="btn btn-outline-secondary">Cancel</button>
                                     <button class="btn btn-outline-primary">Save</button>
@@ -25,7 +24,15 @@
         </div>
         <div class="row margin-top-20">
             <div class="fs-admin col col-md-2">
-                <h2>Layout</h2>
+
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Design</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Content</a>
+                    </li>
+                </ul>
 
                 <div ui-tree data-drag-enabled="pageVM.enableRearrange"
                      ng-class="pageVM.enableRearrange ? '' : 'no-drag'">
@@ -67,38 +74,32 @@
                             <input ng-model="rule.value"
                                    ng-change="pageVM.updateThemePreview();"
                                    required />
-                            <!--{{rule | json}}-->
+
                         </div>
+
                     </section>
 
                 </div>
 
             </div>
-       
-
-        <div class="fs-custom col col-md-10">
-            <div class="shadow bg-white">
-                <div class="fs-wrap">
 
 
-                    <div ng-repeat="c in pageVM.layout.content">
-                        <content-layout layout="c"></content-layout>
+            <div class="fs-custom col col-md-10">
+                <div class="shadow bg-white">
+                    <div class="fs-wrap">
+
+
+                        <div ng-repeat="c in pageVM.layout.content">
+                            <content-layout layout="c"></content-layout>
+                        </div>
+
+
                     </div>
 
 
                 </div>
-
-
-
-
-                <!--{{pageVM.layout | json}}-->
-
-
-
-
             </div>
         </div>
     </div>
 </div>
-     </div>
 
