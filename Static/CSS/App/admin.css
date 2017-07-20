@@ -2406,4 +2406,13 @@ div.ui-grid-cell-contents.invalid {
 .no-drag .angular-ui-tree-handle {
   cursor: default; }
 
+.angular-ui-tree .card {
+  margin-bottom: .5rem;
+  padding: .5rem; }
+.angular-ui-tree .card-block {
+  padding: 0 0; }
+
+ng-click {
+  cursor: pointer; }
+
 /*# sourceMappingURL=admin.css.map */

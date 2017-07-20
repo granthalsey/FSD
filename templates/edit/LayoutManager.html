@@ -1,9 +1,9 @@
 ﻿<div class="card-block">
 
-    <div ui-tree-handle class="tree-node tree-node-content ">
-        <div angular-ui-tree-handle
+    <div  class="tree-node tree-node-content ">
+        <div ui-tree-handle
              ng-click="pageVM.editWidget(node.id)">
-            <h5 class="card-title">
+            <h5 class="card-title" >
                 {{node.type}}
                 <small class="pull-right">
                     <i class="zmdi " ng-class="pageVM.isCurrentEditingWidget(node.id) ? 'zmdi-chevron-up' : 'zmdi-chevron-down'"></i>
@@ -14,7 +14,7 @@
         <div class="card-content" ng-show="pageVM.isCurrentEditingWidget(node.id)">
             <div class="btn-group-sm">
                 <p>Options Options Options </p>
-                <a class="pull-right btn btn-secondary " data-nodrag="" ng-click="remove(this)">
+                <a class="pull-right btn btn-secondary "  ng-click="remove(this)">
                     Remove
                 </a>
                 <a class="pull-right btn btn-secondary "

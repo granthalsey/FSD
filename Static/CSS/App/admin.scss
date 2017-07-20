@@ -264,4 +264,20 @@
 .no-drag .angular-ui-tree-handle {
     cursor: default;
 }
+
+.angular-ui-tree {
+    .card {
+        margin-bottom: .5rem;
+        padding: .5rem;
+    }
+
+    .card-block {
+        padding: 0 0;
+    }
+}
+
 // end  ui tree customization
+
+ng-click {
+    cursor: pointer;
+}
