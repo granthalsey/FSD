@@ -275,11 +275,19 @@
     }
 
     .card {
+        transition: all .3s;
+
+        &.open {
+            background-color: #fff;
+        }
+
         margin-bottom: .5rem;
+        background-color: #f4f4f4;
 
         .card-header {
             border-bottom: none;
             background: $color_lighter_grey;
+            padding: .5rem .5rem;
         }
 
         .card-content {

@@ -12,7 +12,10 @@
     </div>
     <div>
         <div ng-show="pageVM.isCurrentEditingWidget(node.id)" class="card-content">
-            <input ng-model="node.backgroundColor" />
+            <div class="form-group">
+                <label>Background color</label>
+                <input ng-model="node.backgroundColor" class="form-control" />
+            </div>
             <div class="btn-group-sm text-right">
                 <a class="btn btn-secondary " ng-click="remove(this)">
                     Remove

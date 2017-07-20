@@ -2190,6 +2190,8 @@ div.ui-grid-cell-contents.invalid {
 .fs-custom .fs-sponors .sponsor-img {
   max-height: 110px;
   width: auto; }
+.fs-custom .fs-leaderboard a, .fs-custom .fs-leaderboard a:hover {
+  text-decoration: none; }
 .fs-custom .fs-leaderboard-avatar {
   /*width: 90px;
   height: 90px;*/
@@ -2197,6 +2199,8 @@ div.ui-grid-cell-contents.invalid {
   margin: 0 .5rem .5rem; }
 .fs-custom .fs-leaderboard-caption {
   width: 100%; }
+  .fs-custom .fs-leaderboard-caption .progress {
+    height: 10px; }
   .fs-custom .fs-leaderboard-caption .progress-stats {
     font-size: 1rem; }
     .fs-custom .fs-leaderboard-caption .progress-stats .goal {
@@ -2411,10 +2415,15 @@ div.ui-grid-cell-contents.invalid {
 .angular-ui-tree .btn-group-sm {
   margin-bottom: .5rem; }
 .angular-ui-tree .card {
-  margin-bottom: .5rem; }
+  transition: all .3s;
+  margin-bottom: .5rem;
+  background-color: #f4f4f4; }
+  .angular-ui-tree .card.open {
+    background-color: #fff; }
   .angular-ui-tree .card .card-header {
     border-bottom: none;
-    background: #f4f4f4; }
+    background: #f4f4f4;
+    padding: .5rem .5rem; }
   .angular-ui-tree .card .card-content {
     padding: .5rem 1.25rem; }
   .angular-ui-tree .card .open .card-header {

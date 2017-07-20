@@ -73,6 +73,14 @@
         }
     }
 
+    .fs-leaderboard {
+
+
+        a, a:hover {
+            text-decoration: none;
+        }
+    }
+
     .fs-leaderboard-avatar {
         /*width: 90px;
         height: 90px;*/
@@ -82,6 +90,10 @@
 
     .fs-leaderboard-caption {
         width: 100%;
+
+        .progress {
+            height: 10px;
+        }
 
         .progress-stats {
             font-size: 1rem;

@@ -119,7 +119,6 @@
 
                                   ]
 
-
                               }, {
                                   type: 'container',
                                   backgroundColor: '#22c2d2',
