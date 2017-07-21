@@ -2473,13 +2473,24 @@ div.ui-grid-cell-contents.invalid {
       transition: all .3s;
       color: #939598; }
     .angular-ui-tree .card.open {
-      background-color: #fff; }
+      background-color: #fff;
+      border-left-color: #003e5d;
+      border-left-width: 3px; }
     .angular-ui-tree .card i.zmdi.open {
       transform: rotate(180deg); }
+    .angular-ui-tree .card .card-header.open {
+      color: #292b2c;
+      background: #f4f4f4; }
     .angular-ui-tree .card .card-header {
       border-bottom: none;
       background: #f4f4f4;
-      padding: .5rem .5rem; }
+      padding: .5rem .5rem;
+      border-radius: 0; }
+      .angular-ui-tree .card .card-header:not(.open):hover {
+        color: #fff;
+        background: #19a6df; }
+        .angular-ui-tree .card .card-header:not(.open):hover i {
+          color: #fff; }
     .angular-ui-tree .card .card-content {
       padding: .5rem .5rem;
       transition: all .3s;

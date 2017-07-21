@@ -1,15 +1,16 @@
 ﻿<div class="tree-node tree-node-content ">
     <div ui-tree-handle
          class="card-header"
+         ng-class="pageVM.isCurrentEditingWidget(node.id) ? 'open' : ''"
          ng-click="pageVM.editWidget(node.id)">
         <div>
             {{node.type}}
-            <small class="pull-right">
+            <span class="pull-right">
                 <i ng-hide="pageVM.enableRearrange"
                    class="zmdi zmdi-chevron-down" ng-class="pageVM.isCurrentEditingWidget(node.id) ? 'open' : ''"></i>
 
                 <i ng-show="pageVM.enableRearrange" class="zmdi zmdi-unfold-more"></i>
-            </small>
+            </span>
             <!--ng-class="pageVM.isCurrentEditingWidget(node.id) ? 'zmdi-chevron-up' : '"-->
         </div>
     </div>

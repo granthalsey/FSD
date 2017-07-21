@@ -14,7 +14,6 @@
         bottom: 0;*/
         background: $color_light_grey;
         padding: .5rem .5rem;
-       
     }
 
 
@@ -317,6 +316,8 @@
 
         &.open {
             background-color: #fff;
+            border-left-color: $color_navy_blue;
+            border-left-width: 3px;
         }
 
         i.zmdi.open {
@@ -326,10 +327,26 @@
         margin-bottom: .5rem;
         background-color: #f4f4f4;
 
+        .card-header.open {
+            color: rgb(41, 43, 44);
+            background: $color_lighter_grey;
+
+        }
+
         .card-header {
             border-bottom: none;
             background: $color_lighter_grey;
             padding: .5rem .5rem;
+            border-radius: 0;
+
+            &:not(.open):hover {
+                color: #fff;
+                background: $color_medium_blue;
+
+                i {
+                    color: #fff;
+                }
+            }
         }
 
         .card-content {
