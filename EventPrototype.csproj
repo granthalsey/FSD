@@ -614,6 +614,7 @@
     <Content Include="Scripts\plugins\twitter\twitter-platform.js" />
     <Content Include="Static\JS\common\common.js" />
     <Content Include="Static\JS\common\Layout\App.Layout.js" />
+    <Content Include="Static\JS\common\Layout\autofocus.js" />
     <Content Include="Static\JS\common\Layout\LayoutDirective.js" />
     <Content Include="Static\JS\Edit\libs\angular-sticky.js" />
     <Content Include="Static\JS\Edit\libs\angular-ui-tree.js" />

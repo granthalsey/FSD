@@ -2152,7 +2152,7 @@ div.ui-grid-cell-contents.invalid {
 
 .fs-custom .fs-wrap {
   background-image: linear-gradient(180deg, rgba(233, 243, 255, 0.81), rgba(233, 243, 255, 0.81)), url(https://daks2k3a4ib2z.cloudfront.net/5909fc7f818ecc0900827a34/5942a75cb9c7b610c22de743_5919bfdca6ce0e40ed98746a_iStock-624028878-min.jpg); }
-.fs-custom .fs-widget > * {
+.fs-custom .fs-widget > div {
   padding-bottom: .5rem;
   padding-top: .5rem; }
 .fs-custom .jumbotron {
@@ -2432,22 +2432,6 @@ div.ui-grid-cell-contents.invalid {
   overflow-y: scroll; }
 
 /*we have double borders as a hack so that its visible no matter what*/
-.fs-outline {
-  outline: 1px dashed rgba(255, 255, 255, 0.2);
-  position: relative; }
-  .fs-outline:before {
-    position: absolute;
-    display: block;
-    content: '';
-    outline: 1px dashed rgba(0, 0, 0, 0.2);
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box; }
-
 .no-drag .angular-ui-tree-handle {
   cursor: default; }
 
@@ -2474,13 +2458,14 @@ div.ui-grid-cell-contents.invalid {
       color: #939598; }
     .angular-ui-tree .card.open {
       background-color: #fff;
-      border-left-color: #003e5d;
+      border-left-color: #19a6df;
       border-left-width: 3px; }
     .angular-ui-tree .card i.zmdi.open {
       transform: rotate(180deg); }
     .angular-ui-tree .card .card-header.open {
       color: #292b2c;
-      background: #f4f4f4; }
+      background: #f4f4f4;
+      font-weight: bold; }
     .angular-ui-tree .card .card-header {
       border-bottom: none;
       background: #f4f4f4;
@@ -2509,5 +2494,40 @@ button, [ng-click] {
 @media (min-width: 576px) {
   .sidebar-fixed {
     max-width: 300px; } }
+.btn-round {
+  border-radius: 50%; }
+
+.fs-widget {
+  position: relative; }
+  .fs-widget:hover {
+    outline: 1px dashed rgba(255, 255, 255, 0.2); }
+    .fs-widget:hover:before {
+      position: absolute;
+      display: block;
+      content: '';
+      outline: 1px dashed rgba(0, 0, 0, 0.2);
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box; }
+  .fs-widget .btn-edit {
+    line-height: 1.75;
+    border: 3px solid #fff;
+    opacity: .01;
+    position: absolute;
+    transition: all .3s;
+    top: 10px;
+    left: 10px;
+    background-color: #939598; }
+    .fs-widget .btn-edit:hover {
+      opacity: 1;
+      background-color: #19a6df; }
+  .fs-widget:hover .btn-edit {
+    opacity: .7; }
+    .fs-widget:hover .btn-edit:hover {
+      opacity: 1; }
 
 /*# sourceMappingURL=admin.css.map */

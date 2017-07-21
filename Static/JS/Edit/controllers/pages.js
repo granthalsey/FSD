@@ -1,8 +1,8 @@
 ﻿(function () {
     'use strict';
 
-    angular.module("app").controller('pages', ['themeFactory', 'layoutFactory', '$scope',
-    function (themeFactory, layoutFactory, $scope) {
+    angular.module("app").controller('pages', ['themeFactory', 'layoutFactory', '$scope', '$rootScope',
+    function (themeFactory, layoutFactory, $scope, $rootScope) {
         var pageVM = this;
         pageVM.themeObj = themeFactory.getTheme();
         pageVM.themeCss = themeFactory.getThemeCss();
@@ -64,6 +64,13 @@
         pageVM.isCurrentEditingWidget = function (i) {
             return !!(i === pageVM.editingWidgetIndex);
         }
+
+        $rootScope.$on('editWidget', function (event, i) {
+            pageVM.editWidget(i);
+            //todo angulariize this
+
+            $('.sticky-wrapper').scrollTop($('.sticky-wrapper').scrollTop() + $("#editor" + i).position().top);
+        });
     }]);
 
 })();

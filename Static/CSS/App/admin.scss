@@ -258,22 +258,6 @@
 
 /*we have double borders as a hack so that its visible no matter what*/
 .fs-outline {
-    outline: 1px dashed rgba(255,255,255,.2);
-    position: relative;
-
-    &:before {
-        position: absolute;
-        display: block;
-        content: '';
-        outline: 1px dashed rgba(0,0,0,.2);
-        top: 0;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        -webkit-box-sizing: border-box;
-    }
 }
 //ui tree customization
 
@@ -316,7 +300,7 @@
 
         &.open {
             background-color: #fff;
-            border-left-color: $color_navy_blue;
+            border-left-color: $color_medium_blue;
             border-left-width: 3px;
         }
 
@@ -330,7 +314,7 @@
         .card-header.open {
             color: rgb(41, 43, 44);
             background: $color_lighter_grey;
-
+            font-weight: bold;
         }
 
         .card-header {
@@ -382,5 +366,60 @@ button, [ng-click] {
 @media (min-width: 576px) {
     .sidebar-fixed {
         max-width: 300px;
+    }
+}
+
+
+/////////move to buttons
+
+.btn-round {
+    border-radius: 50%;
+}
+
+.fs-widget {
+    position: relative;
+   
+
+    &:hover {
+         outline: 1px dashed rgba(255,255,255,.2);
+        &:before {
+            position: absolute;
+            display: block;
+            content: '';
+            outline: 1px dashed rgba(0,0,0,.2);
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+        }
+    }
+
+    .btn-edit {
+        line-height: 1.75;
+        border: 3px solid #fff;
+        opacity: .01;
+        position: absolute;
+        transition: all .3s;
+        top: 10px;
+        left: 10px;
+        background-color: $color_grey;
+
+        &:hover {
+            opacity: 1;
+            background-color: $color_medium_blue;
+        }
+    }
+
+    &:hover {
+        .btn-edit {
+            opacity: .7;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
     }
 }

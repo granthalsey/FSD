@@ -8,9 +8,18 @@
             templateUrl: '/templates/edit/LayoutHelper.html',
             restrict: 'EA',
             scope: {
-                layout: '='
+                layout: '=',
+                edit: '='
             },
             replace: true,
+            controller: function ($scope, $rootScope) {
+                $rootScope.$broadcast('hey');
+
+                $scope.editWidget = function (i) {
+                    $rootScope.$broadcast('editWidget', i);
+                };
+
+            },
             link: function (scope, element, attrs) {
                 log('I\'m Helping');
 

@@ -7,7 +7,8 @@
         'layout',
         "themes",
         'hl.sticky',
-        'ui.tree'
+        'ui.tree',
+        'autofocus'
     ]).config(config);
 
 
