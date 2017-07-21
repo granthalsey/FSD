@@ -2218,8 +2218,43 @@ div.ui-grid-cell-contents.invalid {
     margin-left: auto;
     align-self: flex-end; }
 
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  background-color: #F1F1F1; }
+
+::-webkit-scrollbar:hover {
+  border: 2px solid transparent; }
+
+::-webkit-scrollbar-thumb:vertical {
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 100px;
+  background-clip: padding-box;
+  border: 2px solid transparent;
+  min-height: 10px; }
+
+::-webkit-scrollbar-thumb:vertical:active {
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-border-radius: 100px; }
+
+::-webkit-scrollbar-thumb:horizontal {
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 100px;
+  background-clip: padding-box;
+  border: 2px solid transparent;
+  min-height: 10px; }
+
+::-webkit-scrollbar-thumb:horizontal:active {
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-border-radius: 100px; }
+
 .fs-admin {
   font-family: 'Open Sans', sans-serif; }
+  .fs-admin .sidebar-buttons {
+    /*position: fixed;
+    bottom: 0;*/
+    background: #e1e2e3;
+    padding: .5rem .5rem; }
   .fs-admin .nav-tabs {
     border: none; }
     .fs-admin .nav-tabs .btn {
@@ -2392,6 +2427,10 @@ div.ui-grid-cell-contents.invalid {
         border-left: 1px solid #939598;
         background-color: #e1e2e3; }
 
+.sticky-wrapper.is-sticky {
+  max-height: 100vh;
+  overflow-y: scroll; }
+
 /*we have double borders as a hack so that its visible no matter what*/
 .fs-outline {
   outline: 1px dashed rgba(255, 255, 255, 0.2);
@@ -2455,5 +2494,9 @@ button, [ng-click] {
 
 .hide-overflow {
   overflow: hidden; }
+
+@media (min-width: 576px) {
+  .sidebar-fixed {
+    max-width: 300px; } }
 
 /*# sourceMappingURL=admin.css.map */

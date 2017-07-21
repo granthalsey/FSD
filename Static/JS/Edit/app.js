@@ -4,9 +4,9 @@
     angular.module("app", [
         "ui.router",
         'ngAnimate',
-        //Modules
         'layout',
         "themes",
+        'hl.sticky',
         'ui.tree'
     ]).config(config);
 

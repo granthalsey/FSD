@@ -1,84 +1,29 @@
 ﻿<div class="content-edit-wrap margin-top-20">
-    <div class="container-fluid">
+    <div class="container-fluid" >
         <!--<div class="row">
             <div class="fs-admin content-edit-tabs col">
                 <header class="block-header">
                     <div class="row">
                         <div class="col">
                             <h5>Event Page</h5>
-                            <ul class="nav nav-tabs float-right"></ul>
+                            <ul class="nav nav-tabs float-right">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Design</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#">Content</a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </header>
             </div>
         </div>-->
-        <div class="row ">
-            <div class="fs-admin col col-md-2 no-padding">
-
-                <ul class="nav nav-tabs">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Design</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Content</a>
-                    </li>
-                </ul>
-
-                <div ui-tree data-drag-enabled="pageVM.enableRearrange"
-                     ng-class="pageVM.enableRearrange ? '' : 'no-drag'">
-                    <ol ui-tree-nodes="" ng-model="pageVM.treeLayout" id="tree-root">
-                        <li class="card" ng-repeat="node in pageVM.treeLayout" ui-tree-node
-                            ng-include="'/templates/edit/layoutManager.html'"
-                            data-nodrop-enabled="pageVM.isChildFriendly(node)"
-                            ng-class="pageVM.isCurrentEditingWidget(node.id) ? 'open' : ''">
-
-
-                        </li>
-                    </ol>
-
-                </div>
-
-                <small ng-if="pageVM.enableRearrange">
-                    Drag and drop widgets to reorder
-                </small>
-                <div class="btn-group-sm">
-                    <button class="btn btn-link"
-                            ng-click="pageVM.toggleEnableRerrange()">
-                        {{pageVM.enableRearrange ? 'Done' : 'Rearrange Widgets'}}
-                    </button>
-                    <button class="btn btn-outline-primary">
-                        Add Widget
-                    </button>
-                </div>
-
-                <h2>theme</h2>
-                <div ng-repeat="(key, value) in pageVM.themeObj"
-                     class="">
-
-                    <legend>
-                        {{value.displayName || key}}
-                    </legend>
-                    <section>
-                        <div ng-repeat="rule in value.rules">
-                            <label>{{rule.property}}</label>
-                            <input ng-model="rule.value"
-                                   ng-change="pageVM.updateThemePreview();"
-                                   required />
-
-                        </div>
-
-                    </section>
-
-                </div>
-
-                <footer class="nav-footer">
-                    <button class="btn btn-outline-secondary">Cancel</button>
-                    <button class="btn btn-outline-primary">Save</button>
-                </footer>
+        <div class="row flex-nowrap ">
+            <div class="fs-admin col-md-4 col-12 sidebar-fixed no-padding">
+                <ng-include src="'/templates/edit/PageEditSidebar.html'"></ng-include>
             </div>
-
-
-            <div class="fs-custom col col-md-10 no-padding">
+            <div class="fs-custom col-md col-12 main no-padding">
                 <div class="shadow bg-white">
                     <div class="fs-wrap">
 

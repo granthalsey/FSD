@@ -3,11 +3,20 @@
 @import "_angular-growl.min.scss";
 @import "_variables.scss";
 @import "public.scss";
-
+@import "_scrollbars.scss";
 
 
 .fs-admin {
     font-family: 'Open Sans', sans-serif;
+
+    .sidebar-buttons {
+        /*position: fixed;
+        bottom: 0;*/
+        background: $color_light_grey;
+        padding: .5rem .5rem;
+       
+    }
+
 
     .nav-tabs {
         border: none;
@@ -243,6 +252,10 @@
     }
 }
 
+.sticky-wrapper.is-sticky {
+    max-height: 100vh;
+    overflow-y: scroll;
+}
 
 /*we have double borders as a hack so that its visible no matter what*/
 .fs-outline {
@@ -347,4 +360,10 @@ button, [ng-click] {
 
 .hide-overflow {
     overflow: hidden;
+}
+
+@media (min-width: 576px) {
+    .sidebar-fixed {
+        max-width: 300px;
+    }
 }

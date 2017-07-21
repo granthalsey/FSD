@@ -319,6 +319,7 @@
     <Content Include="Static\CSS\App\scss public watch.bat" />
     <Content Include="Static\CSS\App\scss admin watch.bat" />
     <Content Include="Static\CSS\App\public.css.map" />
+    <Content Include="Static\CSS\App\_scrollbars.scss" />
     <None Include="Static\CSS\App\_util.scss" />
     <Content Include="Static\CSS\Bootstrap\datetimepicker.scss">
       <Compile>False</Compile>
@@ -614,6 +615,7 @@
     <Content Include="Static\JS\common\common.js" />
     <Content Include="Static\JS\common\Layout\App.Layout.js" />
     <Content Include="Static\JS\common\Layout\LayoutDirective.js" />
+    <Content Include="Static\JS\Edit\libs\angular-sticky.js" />
     <Content Include="Static\JS\Edit\libs\angular-ui-tree.js" />
     <Content Include="Static\JS\common\Themes\App.Themes.js" />
     <Content Include="Static\JS\common\Layout\LayoutFactory.js" />
@@ -630,6 +632,7 @@
     <Content Include="templates\edit\editPage.html" />
     <Content Include="templates\edit\LayoutHelper.html" />
     <Content Include="templates\edit\LayoutManager.html" />
+    <Content Include="templates\edit\PageEditSidebar.html" />
     <Content Include="templates\edit\pageSelector.html" />
     <Content Include="templates\edit\sample\6.html" />
     <Content Include="templates\edit\sample\8.html" />
