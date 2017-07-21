@@ -20,6 +20,10 @@
                 <label>Background color</label>
                 <input ng-model="node.backgroundColor" autofocus class="form-control" />
             </div>
+            <div class="form-group" ng-if="node.size">
+                <label>Size</label>
+                <input ng-model="node.size" class="form-control" />
+            </div>
             <div class="btn-group-sm text-right">
                 <a class="btn btn-secondary " ng-click="remove(this)">
                     Remove
