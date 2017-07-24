@@ -1,8 +1,8 @@
 ﻿(function () {
     'use strict';
 
-    angular.module("app").controller('pages', ['themeFactory', 'layoutFactory', '$scope', '$rootScope',
-    function (themeFactory, layoutFactory, $scope, $rootScope) {
+    angular.module("app").controller('pages', ['themeFactory', 'layoutFactory', '$scope', '$rootScope', 'uuid2',
+    function (themeFactory, layoutFactory, $scope, $rootScope, uuid2) {
         var pageVM = this;
         pageVM.themeObj = themeFactory.getTheme();
         pageVM.themeCss = themeFactory.getThemeCss();
@@ -71,6 +71,22 @@
 
             $('.sticky-wrapper').scrollTop($('.sticky-wrapper').scrollTop() + $("#editor" + i).position().top);
         });
+        pageVM.newSubItem = function (scope) {
+            var newId = uuid2.newguid();
+            var nodeData = scope.$modelValue;
+            nodeData.content.push({
+                "new": true,
+                id: newId
+            });
+            pageVM.editWidget(newId);
+        };
+        pageVM.availableWidgets = layoutFactory.availableWidgets();
+
+        pageVM.committAddWidget = function (scope) {
+            log('committAddWidget', scope);
+            delete scope.new;
+        };
+
     }]);
 
 })();

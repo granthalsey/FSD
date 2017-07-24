@@ -37,41 +37,42 @@
                 backgroundColor: '#1a5ba4',
                 id: 12,
                 content: [
+                    //{
+
+                    //    content: [
+                    //        //{
+                    //        //    type: 'content',
+                    //        //    size: "sm"
+
+                    //        //}, {
+                    //        //    type: 'content',
+                    //        //    size: 'sm',
+
+                    //        //    id: 4
+                    //        //}//, {
+                    //        //    type: 'container',
+                    //        //    size: 'sm',
+                    //        //    content: [
+                    //        //        {
+                    //        //            type: 'content',
+                    //        //            size: "md",
+                    //        //            id: 8
+                    //        //        }, {
+                    //        //            type: 'content',
+                    //        //            size: 'sm',
+
+                    //        //            id: 9
+                    //        //        }, {
+                    //        //            type: 'content',
+                    //        //            size: 'full',
+
+                    //        //            id: 10
+                    //        //        }
+                    //        //    ]
+                    //        //}
+                    //    ]
+                    //},
                     {
-
-                        content: [
-                            //{
-                            //    type: 'content',
-                            //    size: "sm"
-
-                            //}, {
-                            //    type: 'content',
-                            //    size: 'sm',
-
-                            //    id: 4
-                            //}//, {
-                            //    type: 'container',
-                            //    size: 'sm',
-                            //    content: [
-                            //        {
-                            //            type: 'content',
-                            //            size: "md",
-                            //            id: 8
-                            //        }, {
-                            //            type: 'content',
-                            //            size: 'sm',
-
-                            //            id: 9
-                            //        }, {
-                            //            type: 'content',
-                            //            size: 'full',
-
-                            //            id: 10
-                            //        }
-                            //    ]
-                            //}
-                        ]
-                    }, {
 
                         type: 'content',
                         size: 'sm',
@@ -142,13 +143,18 @@
         ]
 
     };
-    var WIDGETTYPE = {
-        container: { displayName: 'Container', allowsChildren: true },
-        customContent: { displayName: 'Custom Content' },
-        leaderboard: { displayName: 'Leaderboard' },
-        mediaGallery: { displayName: 'Media Gallery' },
-        header: { displayName: 'Header' },
-        footer: { displayName: 'Footer' }
+    var WIDGETTYPES = {
+        'container-fluid': { displayName: 'Full Width Row Container', userSelectable: true },
+        container: { displayName: 'Row Container', userSelectable: true },
+        content: { displayName: 'Content Block', userSelectable: true },
+        hero: { displayName: 'Hero', userSelectable: false },
+        customContent: { displayName: 'Custom Content', userSelectable: true },
+        leaderboard: { displayName: 'Leaderboard', userSelectable: true },
+        mediaGallery: { displayName: 'Media Gallery', userSelectable: true },
+        donations: { displayName: 'Recent Donations', userSelectable: true },
+        facebook: { displayName: 'Facebook Page', userSelectable: true },
+        header: { displayName: 'Header', userSelectable: false },
+        footer: { displayName: 'Footer', userSelectable: false }
 
 
     }
@@ -165,7 +171,12 @@
         return true;
     }
     service.isChildFriendly = function (node) {
+
+        // move this to WIDGETTYPES
         return (node && node.type && (node.type == 'container' || node.type == 'container-fluid'));
+    }
+    service.availableWidgets = function () {
+        return WIDGETTYPES;
     }
 
     return service;

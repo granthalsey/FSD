@@ -39,17 +39,17 @@
     <small ng-if="pageVM.enableRearrange">
         Drag and drop widgets to reorder
     </small>
-    <div class="btn-group-sm">
+    <div class="btn-group-sm text-right">
         <button class="btn btn-link"
                 ng-click="pageVM.toggleEnableRerrange()">
             {{pageVM.enableRearrange ? 'Done' : 'Rearrange Widgets'}}
         </button>
         <button class="btn btn-outline-primary">
-            Add Widget
+            Add Container
         </button>
     </div>
 
-    <h2>theme</h2>
+    <h2>Theme</h2>
     <div ng-repeat="(key, value) in pageVM.themeObj"
          class="">
 

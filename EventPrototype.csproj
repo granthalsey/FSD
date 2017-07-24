@@ -624,6 +624,7 @@
     <Content Include="Static\JS\Edit\controllers\pages.js" />
     <Content Include="Static\JS\Edit\controllers\HomeController.js" />
     <Content Include="Static\JS\Edit\libs\angularjs-color-picker.js" />
+    <Content Include="Static\JS\Edit\libs\UUID2.js" />
     <Content Include="Static\JS\Public\app.js" />
     <Content Include="Static\JS\Edit\controllers\base.controller.js" />
     <Content Include="Static\JS\Edit\libs\ui-grid.js" />

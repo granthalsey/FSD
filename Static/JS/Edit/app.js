@@ -8,7 +8,8 @@
         "themes",
         'hl.sticky',
         'ui.tree',
-        'autofocus'
+        'autofocus',
+        'angularUUID2',
     ]).config(config);
 
 
@@ -29,7 +30,7 @@
                         config.cache.remove(config.url);
                         config.cached = false; // unknown consequences
                         // Warning: if you remove the value form the cache, and the asset is not
-                        //          accessable at the given URL, you will get a 404 error.
+                        //          accessible at the given URL, you will get a 404 error.
                     }
                     return config;
                 }
