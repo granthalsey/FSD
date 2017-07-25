@@ -307,7 +307,7 @@
 
     .card {
         transition: all .3s;
-        margin-bottom: -1px !important;
+        margin-bottom: .5rem;
         border-radius: 0;
         font-size: 14px;
 
@@ -356,6 +356,20 @@
             padding: .5rem .5rem;
             transition: all .3s;
             overflow: hidden;
+
+            label {
+                font-weight: bold;
+                font-size: .8rem;
+                margin-bottom: .2rem;
+            }
+
+            input, select, textarea {
+                font-size: .8rem;
+            }
+
+            .form-group {
+                margin-bottom: .5rem;
+            }
         }
 
         .open {
@@ -402,14 +416,14 @@ button, [ng-click] {
 /////////move to buttons
 
 .btn-round {
-    border-radius: 50%;
+    border-radius: 50% !important;
 }
 
 .fs-widget {
     position: relative;
 
 
-    &:hover {
+    &.active {
         outline: 1px dashed rgba(255,255,255,.2);
 
         &:before {
@@ -452,4 +466,8 @@ button, [ng-click] {
             }
         }
     }
+}
+
+.btn {
+    border-radius: 0 !important;
 }

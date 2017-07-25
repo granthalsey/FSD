@@ -144,19 +144,19 @@
 
     };
     var WIDGETTYPES = {
-        'container-fluid': { displayName: 'Full Width Row Container', userSelectable: true },
-        container: { displayName: 'Row Container', userSelectable: true },
-        content: { displayName: 'Content Block', userSelectable: true },
-        hero: { displayName: 'Hero', userSelectable: false },
-        customContent: { displayName: 'Custom Content', userSelectable: true },
-        leaderboard: { displayName: 'Leaderboard', userSelectable: true },
-        mediaGallery: { displayName: 'Media Gallery', userSelectable: true },
-        donations: { displayName: 'Recent Donations', userSelectable: true },
-        facebook: { displayName: 'Facebook Page', userSelectable: true },
-        header: { displayName: 'Header', userSelectable: false },
-        footer: { displayName: 'Footer', userSelectable: false },
-        video: { displayName: 'Video', userSelectable: true },
-        sponsors: { displayName: 'Video', userSelectable: true }
+        'container-fluid': { displayName: 'Full Width Row Container', userSelectable: true, sizable: false },
+        container: { displayName: 'Row Container', userSelectable: true, sizable: false },
+        content: { displayName: 'Content Block', userSelectable: true, sizable: true },
+        hero: { displayName: 'Hero', userSelectable: false, sizable: false },
+        customContent: { displayName: 'Custom Content', userSelectable: true, sizable: false },
+        leaderboard: { displayName: 'Leaderboard', userSelectable: true, sizable: true },
+        mediaGallery: { displayName: 'Media Gallery', userSelectable: true, sizable: true },
+        donations: { displayName: 'Recent Donations', userSelectable: true, sizable: true },
+        facebook: { displayName: 'Facebook Page', userSelectable: true, sizable: true },
+        header: { displayName: 'Header', userSelectable: false, sizable: true },
+        footer: { displayName: 'Footer', userSelectable: false, sizable: true },
+        video: { displayName: 'Video', userSelectable: true, sizable: true },
+        sponsors: { displayName: 'Video', userSelectable: true, sizable: true }
 
 
     }

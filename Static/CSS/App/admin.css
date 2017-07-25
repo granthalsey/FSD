@@ -2457,7 +2457,7 @@ div.ui-grid-cell-contents.invalid {
     margin-bottom: .5rem; }
   .angular-ui-tree .card {
     transition: all .3s;
-    margin-bottom: -1px !important;
+    margin-bottom: .5rem;
     border-radius: 0;
     font-size: 14px;
     margin-bottom: .5rem;
@@ -2489,6 +2489,14 @@ div.ui-grid-cell-contents.invalid {
       padding: .5rem .5rem;
       transition: all .3s;
       overflow: hidden; }
+      .angular-ui-tree .card .card-content label {
+        font-weight: bold;
+        font-size: .8rem;
+        margin-bottom: .2rem; }
+      .angular-ui-tree .card .card-content input, .angular-ui-tree .card .card-content select, .angular-ui-tree .card .card-content textarea {
+        font-size: .8rem; }
+      .angular-ui-tree .card .card-content .form-group {
+        margin-bottom: .5rem; }
     .angular-ui-tree .card .open .card-header {
       margin-bottom: .75rem; }
   .angular-ui-tree .angular-ui-tree-handle {
@@ -2512,13 +2520,13 @@ button, [ng-click] {
       padding: .5rem .5rem;
       background: #e1e2e3; } }
 .btn-round {
-  border-radius: 50%; }
+  border-radius: 50% !important; }
 
 .fs-widget {
   position: relative; }
-  .fs-widget:hover {
+  .fs-widget.active {
     outline: 1px dashed rgba(255, 255, 255, 0.2); }
-    .fs-widget:hover:before {
+    .fs-widget.active:before {
       position: absolute;
       display: block;
       content: '';
@@ -2546,5 +2554,8 @@ button, [ng-click] {
     opacity: .7; }
     .fs-widget:hover .btn-edit:hover {
       opacity: 1; }
+
+.btn {
+  border-radius: 0 !important; }
 
 /*# sourceMappingURL=admin.css.map */

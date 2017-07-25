@@ -37,11 +37,13 @@
                 </div>
                 <div class="form-group">
                     <label>Background color</label>
+
                     <input ng-model="node.backgroundColor" class="form-control" />
+
                 </div>
-                <div class="form-group" ng-if="!pageVM.isChildFriendly(node)">
+                <div class="form-group" ng-if="pageVM.availableWidgets[node.type].sizable">
                     <label>Size</label>
-                    <select autofocus ng-model="node.size" class="form-control" required>
+                    <select ng-model="node.size" class="form-control" required>
                         <option selected disabled value>- Select Size -</option>
                         <option value="{{k}}"
                                 ng-repeat="(k, v) in pageVM.availableSizes">

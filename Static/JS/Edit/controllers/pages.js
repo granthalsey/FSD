@@ -58,12 +58,13 @@
             } else {
                 pageVM.editingWidgetIndex = i;
             }
-
+            //todo angularize this
+            $(".active.widget").removeClass('active');
             $('html, body').animate({
                 scrollTop: $("#widget" + i).offset().top
             }, function () {
                 $('.sticky-wrapper').scrollTop($('.sticky-wrapper').scrollTop() + $("#editor" + i).position().top);
-
+                $("#widget" + i).addClass('active');
             });
             return pageVM.editingWidgetIndex;
         }
@@ -74,7 +75,7 @@
 
         $rootScope.$on('editWidget', function (event, i) {
             pageVM.editWidget(i);
-            //todo angulariize this
+
 
 
         });
