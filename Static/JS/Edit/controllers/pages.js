@@ -95,6 +95,18 @@
             scope.new ? delete scope.new : false;
         };
 
+        //hacky tab logic - move to ui router tabs
+        pageVM.activeTab = 'content';
+        pageVM.isActiveTab = function (t) { return t === pageVM.activeTab };
+        pageVM.setActiveTab = function (t) { return pageVM.activeTab = t };
+
+
+        // hacky accordion logic
+        pageVM.currentElementIndex = null;
+        pageVM.isCurrentEditingElement = function (i) { return i === pageVM.currentElementIndex };
+        pageVM.setActiveElementIndex = function (i) { return pageVM.currentElementIndex = i };
+
+
     }]);
 
 })();

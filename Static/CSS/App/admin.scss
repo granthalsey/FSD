@@ -21,7 +21,7 @@
             margin-bottom: .5rem;
         }
 
-        .nav-link.nav-link.active {
+        .nav-link.nav-link {
             &:hover, &.active {
                 &:after {
                     bottom: -.5rem !important; //todo clean up alignment
@@ -271,7 +271,7 @@
 }
 
 .sticky-wrapper.is-sticky {
-    max-height: 100vh;
+    height: 100vh;
     overflow-y: scroll;
 }
 
@@ -386,9 +386,18 @@ button, [ng-click] {
 @media (min-width: 576px) {
     .sidebar-fixed {
         max-width: 300px;
+        padding-bottom: 150px;
+
+        .sidebar-footer {
+            position: absolute;
+            bottom: 50px;
+            right: 0;
+            left: 0;
+            padding: .5rem .5rem;
+            background: $color_light_grey;
+        }
     }
 }
-
 
 /////////move to buttons
 

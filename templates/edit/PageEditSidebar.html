@@ -5,10 +5,12 @@
         <div class="sidebar-buttons text-right">
             <ul class="nav nav-tabs float-left">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Design</a>
+                    <a class="nav-link" href ng-click="pageVM.setActiveTab('design')"
+                       ng-class="pageVM.isActiveTab('design') ? 'active' : 'inactive'">Design</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="#">Content</a>
+                    <a class="nav-link " href ng-click="pageVM.setActiveTab('content')"
+                       ng-class="pageVM.isActiveTab('content') ? 'active' : 'inactive'">Content</a>
                 </li>
             </ul>
             <button class="btn btn-link btn-sm">Cancel</button>
@@ -28,54 +30,75 @@
 
     </div>
 
+    <div ng-show="pageVM.isActiveTab('content')">
+
+        <div ui-tree data-drag-enabled="pageVM.enableRearrange"
+             ng-class="pageVM.enableRearrange ? '' : 'no-drag'">
+            <ol ui-tree-nodes="" ng-model="pageVM.treeLayout" id="tree-root">
+                <li class="card" ng-repeat="node in pageVM.treeLayout" ui-tree-node
+                    ng-include="'/templates/edit/layoutManager.html'"
+                    data-nodrop-enabled="pageVM.isChildFriendly(node)"
+                    ng-class="pageVM.isCurrentEditingWidget(node.id) ? 'open' : ''">
 
 
-    <div ui-tree data-drag-enabled="pageVM.enableRearrange"
-         ng-class="pageVM.enableRearrange ? '' : 'no-drag'">
-        <ol ui-tree-nodes="" ng-model="pageVM.treeLayout" id="tree-root">
-            <li class="card" ng-repeat="node in pageVM.treeLayout" ui-tree-node
-                ng-include="'/templates/edit/layoutManager.html'"
-                data-nodrop-enabled="pageVM.isChildFriendly(node)"
-                ng-class="pageVM.isCurrentEditingWidget(node.id) ? 'open' : ''">
+                </li>
+            </ol>
 
+        </div>
 
-            </li>
-        </ol>
-
-    </div>
-
-    <small ng-if="pageVM.enableRearrange">
-        Drag and drop widgets to reorder
-    </small>
-    <div class="btn-group-sm text-right">
-        <button class="btn btn-link"
-                ng-click="pageVM.toggleEnableRerrange()">
-            {{pageVM.enableRearrange ? 'Done' : 'Rearrange Widgets'}}
-        </button>
-        <button class="btn btn-outline-primary">
-            Add Container
-        </button>
-    </div>
-
-    <h2>Theme</h2>
-    <div ng-repeat="(key, value) in pageVM.themeObj"
-         class="">
-
-        <legend>
-            {{value.displayName || key}}
-        </legend>
-        <section>
-            <div ng-repeat="rule in value.rules">
-                <label>{{rule.property}}</label>
-                <input ng-model="rule.value"
-                       ng-change="pageVM.updateThemePreview();"
-                       required />
+        <div class="sidebar-footer">
+            <small ng-if="pageVM.enableRearrange">
+                Drag and drop widgets to reorder
+            </small>
+            <div class="btn-group-sm text-right">
+                <button class="btn btn-link"
+                        ng-click="pageVM.toggleEnableRerrange()">
+                    {{pageVM.enableRearrange ? 'Done' : 'Rearrange Widgets'}}
+                </button>
+                <button class="btn btn-outline-primary">
+                    Add Container
+                </button>
             </div>
-        </section>
+        </div>
     </div>
 
+    <div ng-show="pageVM.isActiveTab('design')">
+
+        <div ui-tree data-drag-enabled='false' class="no-drag">
+
+            <ol ui-tree-nodes="" ng-model="pageVM.themeObj">
+                <li class="card" ng-repeat="(key, value) in pageVM.themeObj" ui-tree-node
+                    ng-class="pageVM.isCurrentEditingElement($index) ? 'open' : ''">
+
+                    <div class="card-header"
+                         ui-tree-handle
+                         ng-class="pageVM.isCurrentEditingElement($index) ? 'open' : ''"
+                         ng-click="pageVM.setActiveElementIndex($index)">
+                        <div>
+                            {{value.displayName || key}}
+
+                            <span class="pull-right">
+                                <i class="zmdi zmdi-chevron-down" ng-class="pageVM.isCurrentEditingElement($index) ? 'open' : ''"></i>
 
 
+                            </span>
+                        </div>
+                    </div>
 
-
+                    <div class="hide-overflow">
+                        <div class="card-content"
+                             ng-if="pageVM.isCurrentEditingElement($index)">
+                            <div ng-repeat="rule in value.rules">
+                                <label>{{rule.property}}</label>
+                                <input ng-model="rule.value"
+                                       ng-change="pageVM.updateThemePreview();"
+                                       required />
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ol>
+        </div>
+    </div>
 </div>
+
