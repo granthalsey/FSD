@@ -13,7 +13,26 @@
         /*position: fixed;
         bottom: 0;*/
         background: $color_light_grey;
-        padding: .5rem .5rem;
+        margin: .5rem 0 -1px 0;
+        border-bottom: 1px solid $color_grey;
+        padding: 0 1rem;
+
+        .btn {
+            margin-bottom: .5rem;
+        }
+
+        .nav-link.nav-link.active {
+            &:hover, &.active {
+                &:after {
+                    bottom: -.5rem !important; //todo clean up alignment
+                }
+            }
+        }
+
+        .nav-link {
+            padding: .25em .25em;
+            font-size: .9rem;
+        }
     }
 
 
@@ -363,6 +382,7 @@ button, [ng-click] {
     overflow: hidden;
 }
 
+
 @media (min-width: 576px) {
     .sidebar-fixed {
         max-width: 300px;
@@ -378,10 +398,11 @@ button, [ng-click] {
 
 .fs-widget {
     position: relative;
-   
+
 
     &:hover {
-         outline: 1px dashed rgba(255,255,255,.2);
+        outline: 1px dashed rgba(255,255,255,.2);
+
         &:before {
             position: absolute;
             display: block;

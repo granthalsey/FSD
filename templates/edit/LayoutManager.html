@@ -17,10 +17,16 @@
         </div>
     </div>
 
-    <div class="hide-overflow" ng-if="node.new">
-        <div class="card-content">
-            <form ng-submit="pageVM.committAddWidget(node)">
-                <div class="form-group">
+
+
+
+
+
+
+    <div class="hide-overflow">
+        <form ng-submit="pageVM.committWidget(node)">
+            <div ng-if="pageVM.isCurrentEditingWidget(node.id)" class="card-content">
+                <div class="form-group" ng-if="node.new">
                     <select autofocus ng-model="node.type" class="form-control" required>
                         <option selected disabled value>- Select Type -</option>
                         <option value="{{k}}"
@@ -29,39 +35,37 @@
                         </option>
                     </select>
                 </div>
-                <div class="text-right btn-group-sm">
+                <div class="form-group">
+                    <label>Background color</label>
+                    <input ng-model="node.backgroundColor" class="form-control" />
+                </div>
+                <div class="form-group" ng-if="!pageVM.isChildFriendly(node)">
+                    <label>Size</label>
+                    <select autofocus ng-model="node.size" class="form-control" required>
+                        <option selected disabled value>- Select Size -</option>
+                        <option value="{{k}}"
+                                ng-repeat="(k, v) in pageVM.availableSizes">
+                            {{v.displayName}}
+                        </option>
+                    </select>
+                </div>
+                <div class="btn-group-sm text-right">
+
+
+                    <a class="btn btn-secondary float-left" ng-click="remove(this)">
+                        Remove
+                    </a>
+
+
                     <button class="btn btn-link">
                         Cancel
                     </button>
                     <button type="submit" class="btn btn-primary">
-                        Add
+                        {{node.new ? 'Add' : 'Save'}}
                     </button>
                 </div>
-            </form>
-        </div>
-    </div>
-    <div class="hide-overflow" ng-if="!node.new">
-        <div ng-if="pageVM.isCurrentEditingWidget(node.id)" class="card-content">
-            <div class="form-group">
-                <label>Background color</label>
-                <input ng-model="node.backgroundColor" autofocus class="form-control" />
             </div>
-            <div class="form-group" ng-if="node.size">
-                <label>Size</label>
-                <input ng-model="node.size" class="form-control" />
-            </div>
-            <div class="btn-group-sm text-right">
-                <a class="btn btn-secondary " ng-click="remove(this)">
-                    Remove
-                </a>
-                <a class=" btn btn-secondary "
-                   ng-show="pageVM.isChildFriendly(node)"
-                   data-nodrag="" ng-click="pageVM.newSubItem(this)">
-                    Add Widget
-                </a>
-            </div>
-        </div>
-
+        </form>
         <ol ui-tree-nodes="" ng-model="node.content" class="card-content"
             ng-show="node.content && node.content.length">
             <li class="card" ng-repeat="node in node.content" ui-tree-node
@@ -70,7 +74,14 @@
                 ng-class="pageVM.isCurrentEditingWidget(node.id) ? 'open' : ''">
 
             </li>
+
         </ol>
+        <div class="card-content" ng-show="pageVM.isChildFriendly(node) && pageVM.isCurrentEditingWidget(node.id)">
+            <a class=" btn btn-secondary btn-block btn-sm"
+               data-nodrag="" ng-click="pageVM.newSubItem(this)">
+                Add Widget
+            </a>
+        </div>
     </div>
 </div>
 

@@ -154,11 +154,21 @@
         donations: { displayName: 'Recent Donations', userSelectable: true },
         facebook: { displayName: 'Facebook Page', userSelectable: true },
         header: { displayName: 'Header', userSelectable: false },
-        footer: { displayName: 'Footer', userSelectable: false }
+        footer: { displayName: 'Footer', userSelectable: false },
+        video: { displayName: 'Video', userSelectable: true },
+        sponsors: { displayName: 'Video', userSelectable: true }
 
 
     }
-    var SIZES = ['sm', 'half', 'full'];
+    var SIZES = {
+        auto: { displayName: 'Auto', classes: '' },
+        sm: { displayName: 'Small', classes: ' col-xs-12 col-xs-3' },
+        lg: { displayName: 'Large', classes: ' col-xs-12 col-xs-9' },
+        half: { displayName: 'Half', classes: ' col-xs-12 col-xs-6' },
+        full: { displayName: 'Full', classes: ' col-xs-12' }
+
+
+    };
 
 
     service.getLayout = function () {
@@ -177,6 +187,9 @@
     }
     service.availableWidgets = function () {
         return WIDGETTYPES;
+    }
+    service.availableSizes = function () {
+        return SIZES;
     }
 
     return service;

@@ -2254,7 +2254,16 @@ div.ui-grid-cell-contents.invalid {
     /*position: fixed;
     bottom: 0;*/
     background: #e1e2e3;
-    padding: .5rem .5rem; }
+    margin: .5rem 0 -1px 0;
+    border-bottom: 1px solid #939598;
+    padding: 0 1rem; }
+    .fs-admin .sidebar-buttons .btn {
+      margin-bottom: .5rem; }
+    .fs-admin .sidebar-buttons .nav-link.nav-link.active:hover:after, .fs-admin .sidebar-buttons .nav-link.nav-link.active.active:after {
+      bottom: -.5rem !important; }
+    .fs-admin .sidebar-buttons .nav-link {
+      padding: .25em .25em;
+      font-size: .9rem; }
   .fs-admin .nav-tabs {
     border: none; }
     .fs-admin .nav-tabs .btn {

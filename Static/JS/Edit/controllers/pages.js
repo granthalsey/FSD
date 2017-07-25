@@ -58,6 +58,13 @@
             } else {
                 pageVM.editingWidgetIndex = i;
             }
+
+            $('html, body').animate({
+                scrollTop: $("#widget" + i).offset().top
+            }, function () {
+                $('.sticky-wrapper').scrollTop($('.sticky-wrapper').scrollTop() + $("#editor" + i).position().top);
+
+            });
             return pageVM.editingWidgetIndex;
         }
 
@@ -69,7 +76,7 @@
             pageVM.editWidget(i);
             //todo angulariize this
 
-            $('.sticky-wrapper').scrollTop($('.sticky-wrapper').scrollTop() + $("#editor" + i).position().top);
+
         });
         pageVM.newSubItem = function (scope) {
             var newId = uuid2.newguid();
@@ -81,10 +88,11 @@
             pageVM.editWidget(newId);
         };
         pageVM.availableWidgets = layoutFactory.availableWidgets();
+        pageVM.availableSizes = layoutFactory.availableSizes();
 
-        pageVM.committAddWidget = function (scope) {
+        pageVM.committWidget = function (scope) {
             log('committAddWidget', scope);
-            delete scope.new;
+            scope.new ? delete scope.new : false;
         };
 
     }]);
