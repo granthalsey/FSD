@@ -54,7 +54,9 @@
                 <div class="btn-group-sm text-right">
 
 
-                    <a class="btn btn-secondary float-left" ng-click="remove(this)">
+                    <a class="btn btn-secondary float-left"
+                       ng-if="!pageVM.availableWidgets[node.type].required"
+                       ng-click="remove(this)">
                         Remove
                     </a>
 
@@ -81,7 +83,7 @@
         <div class="card-content" ng-show="pageVM.isChildFriendly(node) && pageVM.isCurrentEditingWidget(node.id)">
             <a class=" btn btn-secondary btn-block btn-sm"
                data-nodrag="" ng-click="pageVM.newSubItem(this)">
-                Add Widget
+                <i class="zmdi zmdi-plus"></i> Add Widget
             </a>
         </div>
     </div>

@@ -34,6 +34,12 @@
 
         <div ui-tree data-drag-enabled="pageVM.enableRearrange"
              ng-class="pageVM.enableRearrange ? '' : 'no-drag'">
+            <!--<div class="card">
+                <select class="form-control">
+                    <option>English</option>
+                    <option>Français</option>
+                </select>
+            </div>-->
             <ol ui-tree-nodes="" ng-model="pageVM.treeLayout" id="tree-root">
                 <li class="card" ng-repeat="node in pageVM.treeLayout" ui-tree-node
                     ng-include="'/templates/edit/layoutManager.html'"
@@ -56,7 +62,7 @@
                     {{pageVM.enableRearrange ? 'Done' : 'Rearrange Widgets'}}
                 </button>
                 <button class="btn btn-outline-primary">
-                    Add Container
+                    <i class="zmdi zmdi-plus"></i> Add Container
                 </button>
             </div>
         </div>

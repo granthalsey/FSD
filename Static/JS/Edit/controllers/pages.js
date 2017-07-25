@@ -53,6 +53,7 @@
         }
         pageVM.editingWidgetIndex = null;
         pageVM.editWidget = function (i) {
+            pageVM.setActiveTab('content');
             if (i === pageVM.editingWidgetIndex) {
                 pageVM.editingWidgetIndex = null;
             } else {
@@ -75,8 +76,6 @@
 
         $rootScope.$on('editWidget', function (event, i) {
             pageVM.editWidget(i);
-
-
 
         });
         pageVM.newSubItem = function (scope) {
