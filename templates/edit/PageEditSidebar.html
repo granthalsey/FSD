@@ -94,10 +94,14 @@
                         <div class="card-content"
                              ng-if="pageVM.isCurrentEditingElement($index)">
                             <div ng-repeat="rule in value.rules">
-                                <label>{{rule.property}}</label>
-                                <input ng-model="rule.value"
-                                       ng-change="pageVM.updateThemePreview();"
-                                       required />
+
+                                <div class="form-group">
+                                    <label>{{rule.property}}</label>
+                                    <input ng-model="rule.value"
+                                           ng-change="pageVM.updateThemePreview();"
+                                           class="form-control"
+                                           required />
+                                </div>
                             </div>
                         </div>
                     </div>

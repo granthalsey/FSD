@@ -10,6 +10,7 @@
         'ui.tree',
         'autofocus',
         'angularUUID2',
+        'ui.select'
     ]).config(config);
 
 

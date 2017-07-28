@@ -4,10 +4,15 @@
 @import "_variables.scss";
 @import "public.scss";
 @import "_scrollbars.scss";
+@import "lib/select.scss";
 
 
 .fs-admin {
     font-family: 'Open Sans', sans-serif;
+
+    .btn {
+        border-radius: 0 !important;
+    }
 
     .sidebar-buttons {
         /*position: fixed;
@@ -466,8 +471,4 @@ button, [ng-click] {
             }
         }
     }
-}
-
-.btn {
-    border-radius: 0 !important;
 }

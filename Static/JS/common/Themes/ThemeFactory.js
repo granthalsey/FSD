@@ -4,41 +4,50 @@
         textDecoration: 'text-decoration',
         color: 'color',
         backgroundImage: 'background-image',
-        backgroundPosition: 'background-position'
+        backgroundPosition: 'background-position',
+        fontFamily: 'font-family'
     };
     var TYPES = {
         color: 'color',
-        textDecoration: 'text-decoration'
+        textDecoration: 'text-decoration',
+        fontFamily: 'font-family'
     };
 
+    var customFontQueue = [];
     var hardCodedTestTheme = {
         wrap: {
             rules:
             [
-                { property: PROPERTIES.backgroundColor, type: TYPES.color, value: '#ececec' }
+                { property: PROPERTIES.backgroundColor, type: TYPES.color, value: '#ececec' },
+                { property: PROPERTIES.fontFamily, type: TYPES.fontFamily, value: 'Roboto' }
             ],
-            displayName: 'Body'
+            displayName: 'Page'
         },
         link: {
             rules: [
                 { property: PROPERTIES.color, type: TYPES.color, value: '#1BA6DF' },
-                { property: PROPERTIES.textDecoration, type: TYPES.textDecoration, value: 'none' }],
+                { property: PROPERTIES.textDecoration, type: TYPES.textDecoration, value: 'none' }
+            ],
             states: {
-                hover: [{
-                    property: PROPERTIES.textDecoration, type: TYPES.textDecoration, value: 'underline'
-                }]
-            },// todo hover, active, disabled etc,
+                hover: [
+                    {
+                        property: PROPERTIES.textDecoration,
+                        type: TYPES.textDecoration,
+                        value: 'underline'
+                    }
+                ]
+            }, // todo hover, active, disabled etc,
             displayName: 'Text Links'
 
         },
-        header: {
-
-        },
         'primary-btn': {
-            rules: [{
-                property: PROPERTIES.backgroundColor, type: TYPES.color, value: '#f27221'
+            rules: [
+                {
+                    property: PROPERTIES.backgroundColor,
+                    type: TYPES.color,
+                    value: '#f27221'
 
-            }
+                }
             ]
 
 
@@ -55,25 +64,34 @@
                 { property: PROPERTIES.color, type: TYPES.color, value: '#fff' }
             ],
             displayName: 'Header Navigation'
+        },
+        'heading': {
+            rules: [{ property: PROPERTIES.fontFamily, type: TYPES.fontFamily, value: 'Coming Soon' }],
+            displayName: 'Headings'
         }
 
 
     };
 
-
-
-
-
-
     var service = {}
 
 
     var rulesToString = function (rule, prefix, key) {
+        log('key', key);
         var tempStr = prefix + key;
+
+        if (rule.property === PROPERTIES.fontFamily) //load font and wrap in quotes
+        {
+            customFontQueue.push(rule.value);
+            // rule.value = "'" + rule.value + "'";
+            // todo move this somewhere good
+
+        }
         tempStr += '{';
         tempStr += rule.property + ": " + rule.value;
         tempStr += '}';
         tempStr += '\n';
+
         return tempStr;
     }
 
@@ -83,16 +101,23 @@
 
 
         angular.forEach(d, function (value, key) {
+            if (key === 'heading') { //todo make this data driven with a mapping of mapped keys
+                // don't use the heading and use h1 - h5 instead
+                for (var f = 1; f <= 5; ++f) {
+                    angular.forEach(value.rules, function (rule) {
+                        strTheme = strTheme += rulesToString(rule, '', 'h' + f);
+                    });
+                }
 
-            //extract rules from definition
-            angular.forEach(value.rules, function (rule) {
-                log('rts', rulesToString(rule, prefix, key));
-                strTheme = strTheme += rulesToString(rule, prefix, key);
-            });
+            } else {
+                //extract rules from definition
+                angular.forEach(value.rules, function (rule) {
+                    strTheme = strTheme += rulesToString(rule, prefix, key);
+                });
+            }
 
             //extract states from definition
             angular.forEach(value.states, function (stateRules, stateName) {
-                console.log('state', stateRules);
                 angular.forEach(stateRules, function (rule) {
                     //we add each rule twice, for the class and the pseudo selector
                     var pseudoSelector = key + ':' + stateName;
@@ -105,8 +130,6 @@
 
         });
 
-
-        console.log(strTheme);
         return strTheme;
     }
 
@@ -122,6 +145,14 @@
             s.appendChild(document.createTextNode(css));
         }
         head.appendChild(s);
+
+        //todo load font web font js
+        //todo dedupe array
+        WebFont.load({
+            google: {
+                families: customFontQueue
+            }
+        });
     }
 
     var theme = hardCodedTestTheme;
@@ -130,13 +161,13 @@
     }
     service.getThemeCss = function () {
         var css = themeToCss(theme);
-        log('returning theme CSS', css);
+        //  log('returning theme CSS', css);
         return css;
     }
 
     service.saveTheme = function (newTheme) {
         theme = newTheme;
-        log('theme saved', theme);
+        //  log('theme saved', theme);
         return theme;
     }
     service.applyTheme = function (theme) {

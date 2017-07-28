@@ -312,6 +312,8 @@
     <Content Include="Static\CSS\App\lib\angular-ui-tree.css" />
     <Content Include="Static\CSS\App\lib\angularjs-color-picker-bootstrap.css" />
     <Content Include="Static\CSS\App\lib\angularjs-color-picker.css" />
+    <None Include="Static\CSS\App\lib\select.scss" />
+    <Content Include="Static\JS\Edit\libs\select.js" />
     <Content Include="Static\CSS\App\public.css">
       <DependentUpon>public.scss</DependentUpon>
     </Content>

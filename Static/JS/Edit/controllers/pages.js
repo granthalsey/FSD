@@ -5,9 +5,9 @@
     function (themeFactory, layoutFactory, $scope, $rootScope, uuid2) {
         var pageVM = this;
         pageVM.themeObj = themeFactory.getTheme();
-        pageVM.themeCss = themeFactory.getThemeCss();
+        //        pageVM.themeCss = themeFactory.getThemeCss();
         var applied = themeFactory.applyTheme(pageVM.themeObj);
-        log('theme applied', applied);
+
         pageVM.updateThemePreview = function () {
             log('theme change!');
             themeFactory.saveTheme(pageVM.themeObj);
