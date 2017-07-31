@@ -112,7 +112,20 @@
         pageVM.colorPickerOptions.alpha = true;
         pageVM.colorPickerOptions.format = 'rgb';
         pageVM.colorPickerOptions.swatchBootstrap = true;
-        pageVM.colorPickerOptions.inline = true;
+        pageVM.colorPickerOptions.swatch = true;
+        pageVM.colorPickerOptions.hue = true;
+        pageVM.colorPickerOptions.saturation = true;
+        pageVM.colorPickerOptions.swatchPos = 'right';
+        pageVM.colorPickerOptions.clear = {
+            show: true,
+            label: 'Clear',
+            class: 'btn btn-sm'
+        },
+        pageVM.colorPickerOptions.reset = {
+            show: true,
+            label: 'Reset',
+            class: 'btn btn-sm'
+        }
     }]);
 
 })();

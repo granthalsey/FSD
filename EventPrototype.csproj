@@ -311,8 +311,11 @@
     <Content Include="Static\CSS\App\angular-ui-tree.css" />
     <Content Include="Static\CSS\App\lib\angular-ui-tree.css" />
     <None Include="Static\CSS\App\lib\select.scss" />
-    <Content Include="Static\CSS\App\lib\angularjs-color-picker-bootstrap.css" />
-    <Content Include="Static\CSS\App\lib\angularjs-color-picker.css" />
+    <None Include="Static\CSS\App\lib\angularjs-color-picker-bootstrap.scss" />
+    <None Include="Static\CSS\App\lib\angularjs-color-picker.scss" />
+    <Content Include="Static\CSS\App\lib\angularjs-color-picker.css">
+      <DependentUpon>angularjs-color-picker.scss</DependentUpon>
+    </Content>
     <Content Include="Static\JS\common\Layout\LayoutService.js" />
     <Content Include="Static\JS\common\libs\video.js" />
     <Content Include="Static\JS\Edit\libs\z-angularjs-color-picker.js" />
