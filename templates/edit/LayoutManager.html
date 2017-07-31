@@ -38,10 +38,46 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label>Background color</label>
-                    <color-picker ng-model="node.backgroundColor"
+                    <legend>Appearance</legend>
+                    <label>Background color </label>
+                    <color-picker class="" ng-model="node.backgroundColor"
                                   options="pageVM.colorPickerOptions"></color-picker>
+
+
                 </div>
+
+                <div class="form-group" ng-if="node.logo">
+                    <label>Logo</label>
+                    <div class="form-group">
+                        <img ng-src="{{node.logo}}"
+                             class="img-thumbnail" />
+                    </div>
+                    <div class="btn-group-sm text-right">
+                        <a class="btn btn-secondary" ng-click="node.logo='none'">Remove Image</a>
+                        <a class="btn btn-secondary">Change Image</a>
+                    </div>
+                </div>
+                <div class="form-group" ng-if="node.backgroundImage">
+
+                    <!--todo: check rules to see if this node ALLOWS background images rather than has one-->
+
+                    <label>Background Image</label>
+                    <a href ng-if="node.backgroundImage==='none'"
+                       class="btn btn-secondary btn-block btn-sm">
+                        Add Image
+
+                    </a>
+                    <div ng-if="node.backgroundImage!=='none'">
+                        <div class="form-group">
+                            <img class="img-thumbnail" ng-src="{{node.backgroundImage}}" />
+                        </div>
+                        <div class="btn-group-sm text-right">
+                            <a class="btn btn-secondary" ng-click="node.backgroundImage='none'">Remove Image</a>
+                            <a class="btn btn-secondary">Change Image</a>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="form-group" ng-if="pageVM.availableWidgets[node.type].sizable">
                     <label>Size</label>
                     <select ng-model="node.size" class="form-control" required>
@@ -52,16 +88,51 @@
                         </option>
                     </select>
                 </div>
+                <div ng-if="node.progressBar">
+                    <legend>Progress Bar</legend>
+                    <div class="form-group">
+                        <div class="checkbox">
+                            <input type="checkbox"
+                                   name="enableProgressBar"
+                                   ng-model="node.progressBar.enabled"
+                                   id="enableProgressBar"
+                                   ng-checked="node.progressBar.enabled" />
+                            <label for="enableProgressBar">Enable Progress Bar</label>
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox"
+                                   name="includeUnverified"
+                                   ng-model="node.progressBar.includeUnverified"
+                                   id="includeUnverified"
+                                   ng-checked="node.progressBar.includeUnverified" />
+                            <label for="includeUnverified">Include unverified donations</label>
+                        </div>
+                    </div>
+                </div>
+                <div ng-if="node.buttons">
+                    <legend>Calls to Action</legend>
+                    <div ng-repeat="(key, button) in node.buttons">
+                        <div class="form-group">
+                            <div class="checkbox">
+                                <input type="checkbox"
+                                       name="{{key}}"
+                                       ng-model="button.enabled"
+                                       id="{{key}}"
+                                       ng-checked="button.enabled" />
+                                <label for="{{key}}">Enable {{key}} Button</label>
+                            </div>
+
+                            <label>{{key}} Button Text</label>
+                            <input ng-model="button.text[pageVM.currentLanguage]" required class="form-control" />
+                        </div>
+                    </div>
+                </div>
                 <div class="btn-group-sm text-right">
-
-
                     <a class="btn btn-secondary float-left"
                        ng-if="!pageVM.availableWidgets[node.type].required"
                        ng-click="remove(this)">
                         Remove
                     </a>
-
-
                     <button class="btn btn-link">
                         Cancel
                     </button>

@@ -9,7 +9,8 @@
             restrict: 'EA',
             scope: {
                 layout: '=',
-                edit: '='
+                edit: '=',
+                language:'='
             },
             replace: true,
             controller: function ($scope, $rootScope) {

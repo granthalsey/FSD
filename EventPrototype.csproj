@@ -316,8 +316,10 @@
     <Content Include="Static\CSS\App\lib\angularjs-color-picker.css">
       <DependentUpon>angularjs-color-picker.scss</DependentUpon>
     </Content>
+    <Content Include="Static\JS\common\Layout\contenteditable.js" />
     <Content Include="Static\JS\common\Layout\LayoutService.js" />
     <Content Include="Static\JS\common\libs\video.js" />
+    <Content Include="Static\JS\Edit\libs\camelCase.js" />
     <Content Include="Static\JS\Edit\libs\z-angularjs-color-picker.js" />
     <Content Include="Static\JS\Edit\libs\select.js" />
     <Content Include="Static\CSS\App\public.css">
@@ -328,6 +330,8 @@
     <Content Include="Static\CSS\App\scss admin watch.bat" />
     <Content Include="Static\CSS\App\public.css.map" />
     <Content Include="Static\CSS\App\_scrollbars.scss" />
+    <Content Include="Static\CSS\App\_brand.scss" />
+    <Content Include="Static\CSS\App\_fs_forms.scss" />
     <None Include="Static\CSS\App\_util.scss" />
     <Content Include="Static\CSS\Bootstrap\datetimepicker.scss">
       <Compile>False</Compile>

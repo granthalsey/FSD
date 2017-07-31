@@ -26,16 +26,10 @@
             <div class="fs-custom col-md col-12 main no-padding">
                 <div class="shadow bg-white">
                     <div class="fs-wrap">
-
-
                         <div ng-repeat="c in pageVM.layout.content">
-                            <content-layout edit="true" layout="c"></content-layout>
+                            <content-layout language="pageVM.currentLanguage" edit="true" layout="c"></content-layout>
                         </div>
-
-
                     </div>
-
-
                 </div>
             </div>
         </div>

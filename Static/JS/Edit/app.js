@@ -11,7 +11,9 @@
         'autofocus',
         'angularUUID2',
         'ui.select',
-        'color.picker'
+        'color.picker',
+        'camelCaseToHuman'
+
     //    'youtubeEmbedUtils'
     ]).config(config);
 

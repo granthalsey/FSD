@@ -134,6 +134,12 @@
             }
         }
     }
+
+    .css-rule {
+        label {
+            text-transform: capitalize;
+        }
+    }
 }
 
 .content-edit-wrap {
@@ -293,8 +299,7 @@
 
 .angular-ui-tree {
     margin-bottom: 10px;
-    overflow: hidden;
-
+    // overflow: hidden;
     .ng-hide-add, .ng-hide-remove {
         transition: all 0.3s linear;
     }
@@ -364,9 +369,10 @@
             transition: all .3s;
 
             label {
-                font-weight: bold;
+                // font-weight: bold;
                 font-size: .8rem;
                 margin-bottom: .2rem;
+                text-transform: capitalize;
             }
 
             input, select, textarea {
@@ -472,4 +478,13 @@ button, [ng-click] {
             }
         }
     }
+}
+
+.color-picker-swatch-only {
+    height: 30px;
+    background-color: transparent;
+}
+
+.ng-animate {
+    overflow: hidden;
 }

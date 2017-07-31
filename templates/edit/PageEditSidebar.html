@@ -90,17 +90,24 @@
                         </div>
                     </div>
 
-                    <div class="hide-overflow">
+                    <div class="">
                         <div class="card-content"
                              ng-if="pageVM.isCurrentEditingElement($index)">
                             <div ng-repeat="rule in value.rules">
 
-                                <div class="form-group">
-                                    <label>{{rule.property}}</label>
-                                    <input ng-model="rule.value"
-                                           ng-change="pageVM.updateThemePreview();"
-                                           class="form-control"
-                                           required />
+                                <div class="form-group css-rule">
+                                    <label>{{rule.property | camelCaseToHuman}}</label> <!--todo enum mapping to display name-->
+                                    <div ng-switch on="rule.type">
+                                        <color-picker ng-switch-when="color"S
+                                                      ng-model="rule.value"
+                                                      options="pageVM.colorPickerOptions"></color-picker>
+
+                                        <input ng-switch-default
+                                               ng-model="rule.value"
+                                               ng-change="pageVM.updateThemePreview();"
+                                               class="form-control"
+                                               required />
+                                    </div>
                                 </div>
                             </div>
                         </div>

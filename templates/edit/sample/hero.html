@@ -5,22 +5,17 @@
         <h1 class="display-3">Do it for Dads Walk</h1>
         <p class="lead">Sunday, June 18th 2017</p>
 
-        <div class="row">
-            <div class="col col-sm-3">
-                <!--I'm empty inside-->
-            </div>
-            <div class="col col-sm-3">
-
-                <button class="btn fs-primary-btn fs-button btn-lg btn-block">Find Your Walk</button>
-            </div>
-            <div class="col col-sm-3">
-                <button class="btn fs-primary-btn fs-button btn-lg btn-block">Donate</button>
-            </div>
-            <div class="col col-sm-3">
-                <!--I'm empty inside-->
+        <div class="row justify-content-center">
+            <div class="col col-sm-3" ng-repeat="button in layout.buttons"
+                 ng-show="button.enabled">
+                <button class="btn fs-primary-btn fs-button btn-lg btn-block"
+                        contenteditable
+                        ng-model="button.text['english']">
+                    {{button.text['english']}}
+                </button>
             </div>
         </div>
-        <div class="row progress-wrap">
+        <div class="row progress-wrap" ng-if="layout.progressBar && layout.progressBar.enabled">
             <div class="col col-sm-3">
                 <!--I'm empty inside-->
             </div>

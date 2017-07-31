@@ -1,3 +1,25 @@
-﻿<iframe width="730" height="400" src="https://www.youtube.com/embed/Dn2MDJqiK4s" frameborder="0" allowfullscreen></iframe>
+﻿<div id="videoWrap"></div>
 
-<!--todo get width of container and all that-->
+
+
+<!--todo get width of container and all that
+
+hack for demo
+    -->
+<script>
+    
+    var insertVideo = function () {
+        var width = $('#videoWrap').width();
+        var height = (9 / 16) * width;
+
+        var videoHtml = '<iframe width="' + width + '" height="' + height + '" src="https://www.youtube.com/embed/Dn2MDJqiK4s" frameborder="0" allowfullscreen></iframe>';
+
+        $('#videoWrap').html(videoHtml);
+
+    };
+    insertVideo();
+    $(document).scroll(function () {
+   //     insertVideo();
+    });
+
+</script>

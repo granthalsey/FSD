@@ -7,140 +7,165 @@
         type: 'container-fluid',
         background: 'transparent',
         content: [
-          { type: 'header', backgroundColor: 'rgb(26,91,164)', id: 10 },
             {
-                type: 'hero',
-                backgroundImage: 'https://gallery.mailchimp.com/381dca877e43c44046caa6dd1/images/4ec6fcae-1f88-4090-9165-a052103f6cdb.jpg'
-
+                type: 'header', backgroundColor: 'rgb(26,91,164)', id: 10,
+                logo: 'https://daks2k3a4ib2z.cloudfront.net/5909fc7f818ecc0900827a34/5942984ffe536204a1cc6557_logo_compressed.png'
             },
-            {
-                type: 'container',
-                backgroundColor: '#fff',
-                id: 11,
-                content: [
-                    {
-                        type: 'content',
-                        size: 'full',
+        {
+            type: 'hero',
+            backgroundImage: 'https://gallery.mailchimp.com/381dca877e43c44046caa6dd1/images/4ec6fcae-1f88-4090-9165-a052103f6cdb.jpg',
+            progressBar:
+                {
+                    enabled: true,
+                    includeUnverified: 'true'
+                },
+            buttons: {
+                donate: {
+                    text: {
+                        english: "Give Now",
+                        french: "Donner maintenant"
+                    },
+                    enabled: true
+                },
+                register: {
+                    text: {
+                        english: "Find Your Walk",
+                        french: "Trouvez votre promenade"
+                    },
+                    enabled: true
 
-                        id: 3
-                    }
-                ]
-
-
-            },
-
-
-
-
-
-            {
-                type: 'container',
-                backgroundColor: '#1a5ba4',
-                id: 12,
-                content: [
-                    //{
-
-                    //    content: [
-                    //        //{
-                    //        //    type: 'content',
-                    //        //    size: "sm"
-
-                    //        //}, {
-                    //        //    type: 'content',
-                    //        //    size: 'sm',
-
-                    //        //    id: 4
-                    //        //}//, {
-                    //        //    type: 'container',
-                    //        //    size: 'sm',
-                    //        //    content: [
-                    //        //        {
-                    //        //            type: 'content',
-                    //        //            size: "md",
-                    //        //            id: 8
-                    //        //        }, {
-                    //        //            type: 'content',
-                    //        //            size: 'sm',
-
-                    //        //            id: 9
-                    //        //        }, {
-                    //        //            type: 'content',
-                    //        //            size: 'full',
-
-                    //        //            id: 10
-                    //        //        }
-                    //        //    ]
-                    //        //}
-                    //    ]
-                    //},
-                    {
-
-                        type: 'content',
-                        size: 'sm',
-
-
-                        id: 6
-                    }, {
-                        type: 'content',
-                        size: 'full',
-
-
-                        id: 7
-                    }
-                ]
-            },
-
-
-
-                              {
-                                  type: 'container',
-                                  backgroundColor: 'rgba(255, 255, 255, 0.5)',
-                                  id: 13,
-                                  content: [
-                                      {
-                                          type: 'leaderboard',
-                                          source: 'individual',
-                                          size: 'half',
-                                          members: fakeFundraisers,
-                                          heading: 'Top Individuals',
-                                          bodyColor: '#444b55',
-                                          id: 14
-
-
-                                      },
-                                        {
-                                            type: 'leaderboard',
-                                            source: 'team',
-                                            size: 'half',
-                                            heading: 'Top Teams',
-                                            members: fakeTeams,
-                                            bodyColor: '#444b55',
-                                            id: 15
-
-                                        }
-
-                                  ]
-
-                              }, {
-                                  type: 'container',
-                                  backgroundColor: '#22c2d2',
-                                  id: 16,
-                                  content: [
-                                      {
-                                          type: 'sponsors',
-
-                                          id: 3
-                                      }
-                                  ]
-
-
-                              },
-            {
-                type: 'footer',
-
-                id: 17,
-                backgroundColor: '#353535'
+                }
             }
+
+        },
+{
+    type: 'container',
+    backgroundColor: '#fff',
+    id: 11,
+    content: [
+        {
+            type: 'content',
+            size: 'full',
+
+            id: 3
+        }
+    ]
+
+
+},
+
+
+
+
+
+{
+    type: 'container',
+    backgroundColor: '#1a5ba4',
+    id: 12,
+    content: [
+        //{
+
+        //    content: [
+        //        //{
+        //        //    type: 'content',
+        //        //    size: "sm"
+
+        //        //}, {
+        //        //    type: 'content',
+        //        //    size: 'sm',
+
+        //        //    id: 4
+        //        //}//, {
+        //        //    type: 'container',
+        //        //    size: 'sm',
+        //        //    content: [
+        //        //        {
+        //        //            type: 'content',
+        //        //            size: "md",
+        //        //            id: 8
+        //        //        }, {
+        //        //            type: 'content',
+        //        //            size: 'sm',
+
+        //        //            id: 9
+        //        //        }, {
+        //        //            type: 'content',
+        //        //            size: 'full',
+
+        //        //            id: 10
+        //        //        }
+        //        //    ]
+        //        //}
+        //    ]
+        //},
+        {
+
+            type: 'content',
+            size: 'sm',
+
+
+            id: 6
+        }, {
+            type: 'content',
+            size: 'full',
+
+
+            id: 7
+        }
+    ]
+},
+
+
+
+{
+    type: 'container',
+    backgroundColor: 'rgba(255, 255, 255, 0.5)',
+    id: 13,
+    content: [
+        {
+            type: 'leaderboard',
+            source: 'individual',
+            size: 'half',
+            members: fakeFundraisers,
+            heading: 'Top Individuals',
+            bodyColor: '#444b55',
+            id: 14
+
+
+        },
+          {
+              type: 'leaderboard',
+              source: 'team',
+              size: 'half',
+              heading: 'Top Teams',
+              members: fakeTeams,
+              bodyColor: '#444b55',
+              id: 15
+
+          }
+
+    ]
+
+}, {
+    type: 'container',
+    backgroundColor: '#22c2d2',
+    id: 16,
+    content: [
+        {
+            type: 'sponsors',
+
+            id: 3
+        }
+    ]
+
+
+},
+{
+    type: 'footer',
+
+    id: 17,
+    backgroundColor: '#353535'
+}
         ]
 
     };

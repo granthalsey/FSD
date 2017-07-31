@@ -14,6 +14,15 @@
             themeFactory.applyTheme(pageVM.themeObj);
         };
 
+        //todo fill from event settings or somewhere
+        pageVM.availableLanguges =
+        {
+            english: "English",
+            french: "French"
+
+        }
+        pageVM.currentLanguage = 'english';
+
         pageVM.layout = {};
 
         pageVM.layout = layoutFactory.getLayout();
@@ -115,7 +124,9 @@
         pageVM.colorPickerOptions.swatch = true;
         pageVM.colorPickerOptions.hue = true;
         pageVM.colorPickerOptions.saturation = true;
-        pageVM.colorPickerOptions.swatchPos = 'right';
+        pageVM.colorPickerOptions.round = false;
+        // pageVM.colorPickerOptions.swatchOnly = true;
+        pageVM.colorPickerOptions.swatchPos = 'left';
         pageVM.colorPickerOptions.clear = {
             show: true,
             label: 'Clear',
@@ -124,7 +135,7 @@
         pageVM.colorPickerOptions.reset = {
             show: true,
             label: 'Reset',
-            class: 'btn btn-sm'
+            'class': 'btn btn-sm'
         }
     }]);
 
