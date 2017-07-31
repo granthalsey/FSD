@@ -105,7 +105,7 @@
                 // don't use the heading and use h1 - h5 instead
                 for (var f = 1; f <= 5; ++f) {
                     angular.forEach(value.rules, function (rule) {
-                        strTheme = strTheme += rulesToString(rule, '', 'h' + f);
+                        strTheme = strTheme += rulesToString(rule, '.fs-custom ', 'h' + f);
                     });
                 }
 

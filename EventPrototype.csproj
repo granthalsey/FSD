@@ -310,9 +310,12 @@
     <Content Include="Static\CSS\App\angular-ui-grid\ui-grid.svg" />
     <Content Include="Static\CSS\App\angular-ui-tree.css" />
     <Content Include="Static\CSS\App\lib\angular-ui-tree.css" />
+    <None Include="Static\CSS\App\lib\select.scss" />
     <Content Include="Static\CSS\App\lib\angularjs-color-picker-bootstrap.css" />
     <Content Include="Static\CSS\App\lib\angularjs-color-picker.css" />
-    <None Include="Static\CSS\App\lib\select.scss" />
+    <Content Include="Static\JS\common\Layout\LayoutService.js" />
+    <Content Include="Static\JS\common\libs\video.js" />
+    <Content Include="Static\JS\Edit\libs\z-angularjs-color-picker.js" />
     <Content Include="Static\JS\Edit\libs\select.js" />
     <Content Include="Static\CSS\App\public.css">
       <DependentUpon>public.scss</DependentUpon>
@@ -625,7 +628,7 @@
     <Content Include="Static\JS\common\Themes\ThemeFactory.js" />
     <Content Include="Static\JS\Edit\controllers\pages.js" />
     <Content Include="Static\JS\Edit\controllers\HomeController.js" />
-    <Content Include="Static\JS\Edit\libs\angularjs-color-picker.js" />
+    <Content Include="Static\JS\Edit\libs\tinycolor.js" />
     <Content Include="Static\JS\Edit\libs\UUID2.js" />
     <Content Include="Static\JS\Public\app.js" />
     <Content Include="Static\JS\Edit\controllers\base.controller.js" />
@@ -672,7 +675,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="Static\JS\common\libs\" />
+    <Folder Include="Static\JS\common\Layout\Directives\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

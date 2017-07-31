@@ -5,6 +5,8 @@
  * License: MIT
  */
 @import url(lib/angular-ui-tree.css);
+@import url(lib/angular-ui-tree.css);
+@import url(lib/angularjs-color-picker-bootstrap.css);
 .datetimepicker {
   border-radius: 4px;
   direction: ltr;

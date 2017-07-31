@@ -106,7 +106,13 @@
         pageVM.isCurrentEditingElement = function (i) { return i === pageVM.currentElementIndex };
         pageVM.setActiveElementIndex = function (i) { return pageVM.currentElementIndex = i };
 
-
+        //
+        pageVM.colorPickerOptions = {};
+        pageVM.colorPickerOptions.allowEmpty = true;
+        pageVM.colorPickerOptions.alpha = true;
+        pageVM.colorPickerOptions.format = 'rgb';
+        pageVM.colorPickerOptions.swatchBootstrap = true;
+        pageVM.colorPickerOptions.inline = true;
     }]);
 
 })();

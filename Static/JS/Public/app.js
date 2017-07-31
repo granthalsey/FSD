@@ -5,7 +5,8 @@
 
         //Modules
         'layout',
-        "themes"
+        "themes",
+        'youtubeEmbedUtils'
     ]).config(config);
 
 

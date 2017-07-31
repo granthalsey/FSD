@@ -135,3 +135,4 @@ c:\artez\event\bin\System.Web.Http.xml
 c:\artez\event\bin\System.Web.Http.WebHost.xml
 c:\artez\event\obj\Debug\MvcApplication1.dll
 c:\artez\event\obj\Debug\MvcApplication1.pdb
+c:\artez\Event\obj\Debug\EventPrototype.csprojResolveAssemblyReference.cache
