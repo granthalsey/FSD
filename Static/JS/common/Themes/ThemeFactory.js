@@ -10,7 +10,8 @@
     var TYPES = {
         color: 'color',
         textDecoration: 'text-decoration',
-        fontFamily: 'font-family'
+        fontFamily: 'font-family',
+        image: 'image'
     };
 
     var customFontQueue = [];
@@ -19,7 +20,11 @@
             rules:
             [
                 { property: PROPERTIES.backgroundColor, type: TYPES.color, value: '#ececec' },
-                { property: PROPERTIES.fontFamily, type: TYPES.fontFamily, value: 'Roboto' }
+                        { property: PROPERTIES.backgroundImage, type: TYPES.image, value: 'url(https://daks2k3a4ib2z.cloudfront.net/5909fc7f818ecc0900827a34/5942a75cb9c7b610c22de743_5919bfdca6ce0e40ed98746a_iStock-624028878-min.jpg)' },
+
+                               { property: PROPERTIES.color, type: TYPES.color, value: 'rgb(39, 47, 54)' },
+                                { property: PROPERTIES.fontFamily, type: TYPES.fontFamily, value: 'Roboto' }
+
             ],
             displayName: 'Page'
         },
@@ -47,18 +52,38 @@
                     type: TYPES.color,
                     value: '#f27221'
 
+                },
+                 {
+                     property: PROPERTIES.color,
+                     type: TYPES.color,
+                     value: '#ffffff'
+
+                 },
+                {
+                    property: PROPERTIES.fontFamily,
+                    type: TYPES.fontFamily,
+                    value: 'Roboto'
                 }
-            ]
+            ],
+            displayName: 'Primary Buttons'
 
 
         },
         'secondary-btn': {
+            rules: [
+               {
+                   property: PROPERTIES.backgroundColor,
+                   type: TYPES.color,
+                   value: '#f27221'
+
+               }],
+            displayName: 'Seconday Buttons'
 
         },
-        'button': {
-            displayName: 'button',
-            rules: []
-        },
+        //'button': {
+        //    displayName: 'button',
+        //    rules: []
+        //},
         'header-link': {
             rules: [
                 { property: PROPERTIES.color, type: TYPES.color, value: '#fff' }

@@ -8,8 +8,43 @@
         background: 'transparent',
         content: [
             {
-                type: 'header', backgroundColor: 'rgb(26,91,164)', id: 10,
-                logo: 'https://daks2k3a4ib2z.cloudfront.net/5909fc7f818ecc0900827a34/5942984ffe536204a1cc6557_logo_compressed.png'
+                type: 'header', backgroundColor: 'rgb(26,91,164)',
+                linkColor: '#ffffff',
+                id: 10,
+                logo: 'https://daks2k3a4ib2z.cloudfront.net/5909fc7f818ecc0900827a34/5942984ffe536204a1cc6557_logo_compressed.png',
+                buttons: {
+                    signIn: {
+                        text: {
+                            english: "Sign In",
+                            french: "French Signin"
+                        },
+                        enabled: true
+                    },
+                    share: {
+                        text: {
+                            english: "Share",
+                            french: "French Share"
+                        },
+                        enabled: true
+
+                    },
+                    search: {
+                        text: {
+                            english: "Search",
+                            french: "Search"
+                        },
+                        enabled: true
+
+                    },
+                    donate: {
+                        text: {
+                            english: "Donate",
+                            french: "Le Donate"
+                        },
+                        enabled: false
+
+                    }
+                }
             },
         {
             type: 'hero',
@@ -40,7 +75,7 @@
         },
 {
     type: 'container',
-    backgroundColor: '#fff',
+    //  backgroundColor: '#fff',
     id: 11,
     content: [
         {
@@ -106,8 +141,8 @@
 
             id: 6
         }, {
-            type: 'content',
-            size: 'full',
+            type: 'video',
+            size: 'lg',
 
 
             id: 7
@@ -153,19 +188,19 @@
     content: [
         {
             type: 'sponsors',
-
-            id: 3
+            size: 'full',
+            id: 3333
         }
     ]
 
 
 },
-{
-    type: 'footer',
+    {
+        type: 'footer',
 
-    id: 17,
-    backgroundColor: '#353535'
-}
+        id: 17,
+        backgroundColor: '#353535'
+    }
         ]
 
     };
@@ -182,15 +217,15 @@
         header: { displayName: 'Header', userSelectable: false, sizable: false, required: true },
         footer: { displayName: 'Footer', userSelectable: false, sizable: false, required: true },
         video: { displayName: 'Video', userSelectable: true, sizable: true },
-        sponsors: { displayName: 'Video', userSelectable: true, sizable: true }
+        sponsors: { displayName: 'Sponsors', userSelectable: true, sizable: true }
 
 
     }
     var SIZES = {
         auto: { displayName: 'Auto', classes: '' },
-        sm: { displayName: 'Small', classes: ' col-xs-12 col-xs-3' },
-        lg: { displayName: 'Large', classes: ' col-xs-12 col-xs-9' },
-        half: { displayName: 'Half', classes: ' col-xs-12 col-xs-6' },
+        sm: { displayName: 'Small', classes: ' col-xs-12 col-sm-3' },
+        lg: { displayName: 'Large', classes: ' col-xs-12 col-sm-9' },
+        half: { displayName: 'Half', classes: ' col-xs-12 col-sm-6' },
         full: { displayName: 'Full', classes: ' col-xs-12' }
 
 

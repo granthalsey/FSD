@@ -37,14 +37,6 @@
                         </option>
                     </select>
                 </div>
-                <div class="form-group">
-                    <legend>Appearance</legend>
-                    <label>Background color </label>
-                    <color-picker class="" ng-model="node.backgroundColor"
-                                  options="pageVM.colorPickerOptions"></color-picker>
-
-
-                </div>
 
                 <div class="form-group" ng-if="node.logo">
                     <label>Logo</label>
@@ -57,6 +49,26 @@
                         <a class="btn btn-secondary">Change Image</a>
                     </div>
                 </div>
+
+                <div class="form-group">
+                    <legend>Appearance</legend>
+                    <label>Background color </label>
+                    <color-picker class="" ng-model="node.backgroundColor"
+                                  options="pageVM.colorPickerOptions"></color-picker>
+
+
+                </div>
+                <div class="form-group" ng-if="node.linkColor">
+
+                    <label>Background color </label>
+                    <color-picker class="" ng-model="node.linkColor"
+                                  options="pageVM.colorPickerOptions"></color-picker>
+
+
+                </div>
+
+
+
                 <div class="form-group" ng-if="node.backgroundImage">
 
                     <!--todo: check rules to see if this node ALLOWS background images rather than has one-->

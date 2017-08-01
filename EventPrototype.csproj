@@ -653,7 +653,7 @@
     <Content Include="templates\edit\pageSelector.html" />
     <Content Include="templates\edit\sample\6.html" />
     <Content Include="templates\edit\sample\8.html" />
-    <Content Include="templates\edit\sample\7.html" />
+    <Content Include="templates\edit\sample\video.html" />
     <Content Include="templates\edit\sample\5.html" />
     <Content Include="templates\edit\sample\4.html" />
     <Content Include="templates\edit\sample\3.html" />

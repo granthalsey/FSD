@@ -105,18 +105,28 @@
                                                   options="pageVM.colorPickerOptions"></color-picker>
 
                                     <div ng-if="rule.type == 'font-family'">
-                                        <ui-select ng-model="rule.value" theme="bootstrap4"
-                                                   
-                                                   on-select="pageVM.updateThemePreview();">
+                                        <ui-select ng-model="rule.value" theme="bootstrap4">
                                             <ui-select-match placeholder="Find A Font">{{$select.selected.family}}</ui-select-match>
                                             <ui-select-choices repeat="font.family as font in pageVM.availableFonts">
                                                 <div>
-                                                    <span style="font-family:'{{font.family}}'">{{font.family}}</span>
+                                                    <span style="font-family: '{{font.family}}'">{{font.family}}</span>
                                                 </div>
 
                                             </ui-select-choices>
                                         </ui-select>
 
+                                    </div>
+                                    <div ng-if="rule.type == 'image'">
+                                        <div class="form-group">
+                                            <div class="img-thumbnail" style="height: 50px; background-image: {{rule.value}}">
+
+                                            </div>
+
+                                        </div>
+                                        <div class="btn-group-sm text-right">
+                                            <a class="btn btn-secondary" ng-click="rule.value='none'">Remove Image</a>
+                                            <a class="btn btn-secondary">Change Image</a>
+                                        </div>
                                     </div>
 
                                     <!--<input ng-switch-default

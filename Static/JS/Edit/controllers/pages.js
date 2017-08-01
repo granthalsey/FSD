@@ -10,10 +10,11 @@
         var applied = themeFactory.applyTheme(pageVM.themeObj);
 
         pageVM.updateThemePreview = function () {
-            log('theme change!');
             themeFactory.saveTheme(pageVM.themeObj);
             themeFactory.applyTheme(pageVM.themeObj);
         };
+
+
 
         //todo fill from event settings or somewhere
         pageVM.availableLanguges =
@@ -45,6 +46,14 @@
                    }, true
                );
 
+
+        $scope.$watch(
+              "pageVM.themeObj",
+              function handleChange(newValue, oldValue) {
+                  log('fired watch, syncing theme');
+                  newValue !== oldValue ? pageVM.updateThemePreview() : false;
+              }, true
+          );
 
 
 
@@ -144,12 +153,9 @@
         pageVM.findFont = function () {
             var apiUrl = [];
             apiUrl.push('https://www.googleapis.com/webfonts/v1/webfonts?');
-
             apiUrl.push('key=AIzaSyAqK4YTd1_hhVjJ8ZgbqIjrkRJIMSAXPeI');
             apiUrl.push('&sort=popularity');
-
             var url = apiUrl.join('');
-            log('url', url);
             $http({
                 method: 'GET',
                 url: url
@@ -163,8 +169,6 @@
                     fontsToLoad.push(pageVM.availableFonts[i].family);
 
                 }
-              
-
                 WebFont.load({
                     google: {
                         families: fontsToLoad
@@ -176,6 +180,7 @@
             });
         }
         pageVM.findFont();
+        pageVM.setActiveTab('design');
     }]);
 
 })();

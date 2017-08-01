@@ -456,8 +456,6 @@ body .alert.alert-info {
 .btn-ok {
   margin-left: 5px; }
 
-.fs-custom .fs-wrap {
-  background-image: linear-gradient(180deg, rgba(233, 243, 255, 0.81), rgba(233, 243, 255, 0.81)), url(https://daks2k3a4ib2z.cloudfront.net/5909fc7f818ecc0900827a34/5942a75cb9c7b610c22de743_5919bfdca6ce0e40ed98746a_iStock-624028878-min.jpg); }
 .fs-custom .fs-widget > div {
   padding-bottom: .5rem;
   padding-top: .5rem; }

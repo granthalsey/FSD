@@ -1,6 +1,7 @@
 ﻿<div class="fs-outline fs-widget"
      id="widget{{layout.id}}"
-     ng-class="layout.size == 'sm'? ' col col-sm-4': layout.size == 'md' ? ' col col-sm-8' : layout.size == 'full' ? ' col col-xs-12' : layout.size == 'half' ? ' col col-xs-6' :'noop' ">
+     style="background-color: {{layout.backgroundColor}}"
+     ng-class="layout.size == 'sm'? ' col col-sm-4': layout.size == 'md' ? ' col col-sm-8' : layout.size == 'full' ? ' col col-xs-12' : layout.size == 'half' ? ' col col-sm-6' :layout.size == 'lg' ? 'col col-sm-8' :'noop' ">
 
     <!--todo use available widget-->
     <!--not using a switch because it messes up the markup-->
@@ -53,9 +54,12 @@
     </div>
 
 
-    <div ng-if="layout.type=='leaderboard'" class="fs-leaderboard" style="background-color: {{layout.backgroundColor}}">
+    <div ng-if="layout.type=='leaderboard'" class="fs-leaderboard" style="background-color: { {layout.backgroundColor}}">
 
         <ng-include src="'/templates/edit/sample/leaderboard.html'"></ng-include>
+    </div>
+    <div ng-if="layout.type=='video'" class="fs-leaderboard" style="background-color: {{layout.video}}">
+        <ng-include src="'/templates/edit/sample/video.html'"></ng-include>
     </div>
 
     <button ng-if="edit"
