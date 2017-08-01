@@ -316,10 +316,14 @@
     <Content Include="Static\CSS\App\lib\angularjs-color-picker.css">
       <DependentUpon>angularjs-color-picker.scss</DependentUpon>
     </Content>
-    <Content Include="Static\JS\common\Layout\contenteditable.js" />
+    <Content Include="Static\CSS\App\lib\select.css">
+      <DependentUpon>select.scss</DependentUpon>
+    </Content>
+    <Content Include="Static\JS\common\Layout\Directives\contenteditable.js" />
     <Content Include="Static\JS\common\Layout\LayoutService.js" />
     <Content Include="Static\JS\common\libs\video.js" />
     <Content Include="Static\JS\Edit\libs\camelCase.js" />
+    <Content Include="Static\JS\Edit\libs\LocalStorage.js" />
     <Content Include="Static\JS\Edit\libs\z-angularjs-color-picker.js" />
     <Content Include="Static\JS\Edit\libs\select.js" />
     <Content Include="Static\CSS\App\public.css">
@@ -626,7 +630,6 @@
     <Content Include="Scripts\plugins\twitter\twitter-platform.js" />
     <Content Include="Static\JS\common\common.js" />
     <Content Include="Static\JS\common\Layout\App.Layout.js" />
-    <Content Include="Static\JS\common\Layout\autofocus.js" />
     <Content Include="Static\JS\common\Layout\LayoutDirective.js" />
     <Content Include="Static\JS\Edit\libs\angular-sticky.js" />
     <Content Include="Static\JS\Edit\libs\angular-ui-tree.js" />
@@ -682,7 +685,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="Static\JS\common\Layout\Directives\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

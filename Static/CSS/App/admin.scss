@@ -300,15 +300,13 @@
 .angular-ui-tree {
     margin-bottom: 10px;
     // overflow: hidden;
-    .ng-hide-add, .ng-hide-remove {
+    /*.ng-hide-add, .ng-hide-remove {
         transition: all 0.3s linear;
-    }
-
-    .ng-hide {
+    }*/
+    /*.ng-hide {
         margin-top: -100px;
         //   display: initial !important;
-    }
-
+    }*/
     .angular-ui-tree-nodes .angular-ui-tree-nodes {
         padding-left: 0;
     }
@@ -368,7 +366,7 @@
             padding: .5rem .5rem;
             transition: all .3s;
 
-            label {
+            label, .ui-select-container {
                 // font-weight: bold;
                 font-size: .8rem;
                 margin-bottom: .2rem;
@@ -485,6 +483,7 @@ button, [ng-click] {
     background-color: transparent;
 }
 
-.ng-animate {
+/*.ng-animate {
     overflow: hidden;
-}
+}*/
+

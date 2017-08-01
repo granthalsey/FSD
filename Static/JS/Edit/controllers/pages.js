@@ -1,10 +1,11 @@
 ﻿(function () {
     'use strict';
 
-    angular.module("app").controller('pages', ['themeFactory', 'layoutFactory', '$scope', '$rootScope', 'uuid2',
-    function (themeFactory, layoutFactory, $scope, $rootScope, uuid2) {
+    angular.module("app").controller('pages', ['themeFactory', 'layoutFactory', '$scope', '$rootScope', 'uuid2', '$http',
+    function (themeFactory, layoutFactory, $scope, $rootScope, uuid2, $http) {
         var pageVM = this;
         pageVM.themeObj = themeFactory.getTheme();
+        pageVM.availableFonts = [];
         //        pageVM.themeCss = themeFactory.getThemeCss();
         var applied = themeFactory.applyTheme(pageVM.themeObj);
 
@@ -137,6 +138,44 @@
             label: 'Reset',
             'class': 'btn btn-sm'
         }
+
+
+        // font nonsense - move to  them service
+        pageVM.findFont = function () {
+            var apiUrl = [];
+            apiUrl.push('https://www.googleapis.com/webfonts/v1/webfonts?');
+
+            apiUrl.push('key=AIzaSyAqK4YTd1_hhVjJ8ZgbqIjrkRJIMSAXPeI');
+            apiUrl.push('&sort=popularity');
+
+            var url = apiUrl.join('');
+            log('url', url);
+            $http({
+                method: 'GET',
+                url: url
+            }).then(function successCallback(response) {
+                response.data && response.data.items ? pageVM.availableFonts = response.data.items : response.items = [];
+                pageVM.availableFonts = pageVM.availableFonts.slice(0, 200);
+
+                var fontsToLoad = [];
+
+                for (var i = 0; i < pageVM.availableFonts.length; i++) {
+                    fontsToLoad.push(pageVM.availableFonts[i].family);
+
+                }
+              
+
+                WebFont.load({
+                    google: {
+                        families: fontsToLoad
+                    }
+                });
+
+            }, function errorCallback(response) {
+
+            });
+        }
+        pageVM.findFont();
     }]);
 
 })();

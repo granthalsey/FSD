@@ -8,7 +8,6 @@
         "themes",
         'hl.sticky',
         'ui.tree',
-        'autofocus',
         'angularUUID2',
         'ui.select',
         'color.picker',

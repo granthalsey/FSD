@@ -1,6 +1,6 @@
 ﻿(function () {
 
-    angular.module('layout', []).directive('contentLayout', directive);
+    angular.module("layout").directive('contentLayout', directive);
 
 
     function directive() {

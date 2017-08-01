@@ -98,11 +98,11 @@ $state-danger-border: darken(adjust-hue($state-danger-bg, -10), 5%) !default;
     }
 }
 
-[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak],
+/*[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak],
 .ng-cloak, .x-ng-cloak,
 .ng-hide:not(.ng-hide-animate) {
     display: none !important;
-}
+}*/
 
 ng\:form {
     display: block;

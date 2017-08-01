@@ -92,22 +92,39 @@
 
                     <div class="">
                         <div class="card-content"
-                             ng-if="pageVM.isCurrentEditingElement($index)">
+                             ng-show="pageVM.isCurrentEditingElement($index)">
                             <div ng-repeat="rule in value.rules">
 
                                 <div class="form-group css-rule">
                                     <label>{{rule.property | camelCaseToHuman}}</label> <!--todo enum mapping to display name-->
-                                    <div ng-switch on="rule.type">
-                                        <color-picker ng-switch-when="color"S
-                                                      ng-model="rule.value"
-                                                      options="pageVM.colorPickerOptions"></color-picker>
 
-                                        <input ng-switch-default
-                                               ng-model="rule.value"
-                                               ng-change="pageVM.updateThemePreview();"
-                                               class="form-control"
-                                               required />
+
+
+                                    <color-picker ng-if="rule.type == 'color'"
+                                                  ng-model="rule.value"
+                                                  options="pageVM.colorPickerOptions"></color-picker>
+
+                                    <div ng-if="rule.type == 'font-family'">
+                                        <ui-select ng-model="rule.value" theme="bootstrap4"
+                                                   
+                                                   on-select="pageVM.updateThemePreview();">
+                                            <ui-select-match placeholder="Find A Font">{{$select.selected.family}}</ui-select-match>
+                                            <ui-select-choices repeat="font.family as font in pageVM.availableFonts">
+                                                <div>
+                                                    <span style="font-family:'{{font.family}}'">{{font.family}}</span>
+                                                </div>
+
+                                            </ui-select-choices>
+                                        </ui-select>
+
                                     </div>
+
+                                    <!--<input ng-switch-default
+                                           ng-model="rule.value"
+                                           ng-change="pageVM.updateThemePreview();"
+                                           class="form-control"
+                                           required />-->
+
                                 </div>
                             </div>
                         </div>
