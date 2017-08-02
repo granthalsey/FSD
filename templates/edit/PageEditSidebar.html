@@ -103,18 +103,6 @@
                                     {{pageVM.isReadable(value.rules[value.validate[0]].value, value.rules[value.validate[1]].value)}}
                                 </span>
                             </div>
-                            <div class="form-group" ng-if="value.states">
-                                <div ng-repeat="(stateName, state) in value.states" class="form-group">
-                                    <legend>{{stateName | camelCaseToHuman}}</legend>
-                                    <div ng-repeat="rule in state">
-                                        <ng-include src="'/templates/edit/ruleEditor.html'"></ng-include>
-                                    </div>
-
-
-                                </div>
-
-                            </div>
-
                         </div>
                     </div>
                 </li>

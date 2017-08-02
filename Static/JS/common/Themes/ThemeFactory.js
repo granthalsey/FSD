@@ -29,19 +29,20 @@
         },
         a: {
             rules: [
-                { property: PROPERTIES.color, type: TYPES.color, value: '#1BA6DF' },
-                { property: PROPERTIES.textDecoration, type: TYPES.textDecoration, value: 'none' }
-            ],
-            states: {
-                hover: [
-                     { property: PROPERTIES.color, type: TYPES.color, value: '#0f6386' },
-                    {
-                        property: PROPERTIES.textDecoration,
-                        type: TYPES.textDecoration,
-                        value: 'underline'
+                {
+                    property: PROPERTIES.color, type: TYPES.color, value: '#1BA6DF',
+                    states: {
+                        hover: '#0f6386'
                     }
-                ]
-            }, // todo hover, active, disabled etc,
+                },
+                {
+                    property: PROPERTIES.textDecoration, type: TYPES.textDecoration, value: 'none',
+                    states: {
+                        hover: 'underline'
+                    }
+                }
+            ],
+
             displayName: 'Text Links'
 
         },
@@ -50,13 +51,20 @@
                 {
                     property: PROPERTIES.backgroundColor,
                     type: TYPES.color,
-                    value: '#f27221'
+                    value: '#f27221',
+                    states: {
+                        hover: '#ffffff'
+
+                    }
 
                 },
                  {
                      property: PROPERTIES.color,
                      type: TYPES.color,
-                     value: '#ffffff'
+                     value: '#ffffff',
+                     states: {
+                         hover: '#f27221'
+                     }
 
                  },
                 {
@@ -66,13 +74,8 @@
                 }
             ],
             displayName: 'Primary Buttons',
-            validate: [0, 1],
-            states: {
-                hover: [
-                         { property: PROPERTIES.color, type: TYPES.color, value: '#f27221' },
-                { property: PROPERTIES.backgroundColor, type: TYPES.color, value: '#ffffff' }]
+            validate: [0, 1]
 
-            }
 
 
         },
@@ -109,20 +112,27 @@
 
 
     var rulesToString = function (rule, prefix, key) {
-        log('key', key);
         var tempStr = prefix + key;
-
         if (rule.property === PROPERTIES.fontFamily) //load font and wrap in quotes
-        {
-            customFontQueue.push(rule.value);
-            // rule.value = "'" + rule.value + "'";
-            // todo move this somewhere good
 
-        }
+            customFontQueue.push(rule.value);
         tempStr += '{';
         tempStr += rule.property + ": " + rule.value;
         tempStr += '}';
         tempStr += '\n';
+
+        // build a rule for each state, if included
+        angular.forEach(rule.states, function (value, stateKey) {
+            var stateRule = {
+                property: rule.property,
+                value: value,
+                type: rule.type
+            };
+            // add each state rule twice, once with the psuedo selector and one with the dot class. 
+            tempStr += rulesToString(stateRule, prefix, key + ':' + stateKey) + '\n';
+            tempStr += rulesToString(stateRule, prefix, key + '.' + stateKey) + '\n';
+
+        });
 
         return tempStr;
     }
@@ -148,20 +158,6 @@
                     });
                     break;
             }
-
-
-            //extract states from definition
-            angular.forEach(value.states, function (stateRules, stateName) {
-                angular.forEach(stateRules, function (rule) {
-                    //we add each rule twice, for the class and the pseudo selector
-                    var pseudoSelector = key + ':' + stateName;
-                    var classSelector = key + '.' + stateName;
-                    strTheme = strTheme += rulesToString(rule, prefix, pseudoSelector);
-                    strTheme = strTheme += rulesToString(rule, prefix, classSelector);
-                });
-            });
-
-
         });
 
         return strTheme;
@@ -190,18 +186,14 @@
     }
 
     var isReadable = function (color_one, color_two) {
-        log('hey ' + color_one, color_two);
         var r = true;
-        var THRESHOLD = .5;
-
         if (tinycolor) {
             var c1 = tinycolor(color_one);
             var c2 = tinycolor(color_two);
-            log(c1, c2);
-            // if (c1.isValid() && c2.isValid()) {
-            log(c1.isValid(), c2.isValid());
-            r = tinycolor.isReadable(color_one, color_two, { level: "AA", size: "large" });
-            //}
+            if (c1.isValid() && c2.isValid()) {
+
+                r = tinycolor.isReadable(color_one, color_two, { level: "AA", size: "large" });
+            }
 
 
 

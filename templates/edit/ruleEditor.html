@@ -4,8 +4,8 @@
     <div ng-switch="rule.type">
 
         <color-picker ng-switch-when="color"
-        ng-model="rule.value"
-        options="pageVM.colorPickerOptions"></color-picker>
+                      ng-model="rule.value"
+                      options="pageVM.colorPickerOptions"></color-picker>
 
         <div ng-switch-when="font-family">
             <ui-select ng-model="rule.value" theme="bootstrap4">
@@ -34,9 +34,25 @@
 
         <input ng-switch-default
                ng-model="rule.value"
-               ng-change="pageVM.updateThemePreview();"
                class="form-control"
                required />
+
+        <div ng-repeat="(stateName,stateValue) in rule.states">
+            <label>{{(stateName)}} {{rule.property | camelCaseToHuman}}</label>
+            <div ng-switch="rule.type">
+
+
+                <color-picker ng-switch-when="color"
+                              ng-model="rule.states[stateName]"
+                              options="pageVM.colorPickerOptions"></color-picker>
+
+            </div>
+
+            <input ng-switch-default
+                   ng-model="rule.states[stateName]"
+                   class="form-control"
+                   required />
+    </div>
 
     </div>
 
