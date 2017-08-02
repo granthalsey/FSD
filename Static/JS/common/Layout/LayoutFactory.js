@@ -1,7 +1,10 @@
 ﻿angular.module("layout").factory('layoutFactory', function ($http, $q) {
 
-    var fakeFundraisers = [{ "first_name": "Dane", "last_name": "Jezzard", "amount raised": "694.56" }, { "first_name": "Jake", "last_name": "Bachman", "amount raised": "921.00" }, { "first_name": "Audy", "last_name": "Berntsson", "amount raised": "721.07" }, { "first_name": "Alf", "last_name": "Fitzroy", "amount raised": "534.15" }, { "first_name": "Friederike", "last_name": "Wyrill", "amount raised": "902.30" }, { "first_name": "Melloney            ", "last_name": "Ainslie", "amount raised": "995.51" }, { "first_name": "Ashlie", "last_name": "Ashfold", "amount raised": "903.65" }, { "first_name": "Boone", "last_name": "Hendriksen", "amount raised": "870.75" }, { "first_name": "Nicolais            ", "last_name": "Tombleson           ", "amount raised": "776.74" }, { "first_name": "Justino", "last_name": "Drogan", "amount raised": "738.59" }];
-    var fakeTeams = [{ "team_name": "Team Pagac, Rempel and Quigley", "amount raised": "3296.11" }, { "team_name": "Von-Kutch", "amount raised": "1673.98" }, { "team_name": "Team Halvorson-Cassin", "amount raised": "2748.48" }, { "team_name": "Team Leffler LLC", "amount raised": "1680.12" }, { "team_name": "Team Champlin Group", "amount raised": "3265.80" }, { "team_name": "Team Von-O'Hara", "amount raised": "4180.92" }, { "team_name": "Team Treutel, Koss and Casper", "amount raised": "4136.59" }, { "team_name": "Lubowitz, Wyman and Hand", "amount raised": "1439.66" }, { "team_name": "Barton and Sons", "amount raised": "2349.20" }, { "team_name": "Team Bartoletti-Kuhic", "amount raised": "2454.21" }];
+    var fakeFundraisers = [{ "first_name": "Dane", "last_name": "Jezzard", "amount raised": "694.56" }, { "first_name": "Jake", "last_name": "Bachman", "amount raised": "921.00" },
+        { "first_name": "Audy", "last_name": "Berntsson", "amount raised": "721.07" }, { "first_name": "Alf", "last_name": "Fitzroy", "amount raised": "534.15" },
+        { "first_name": "Friederike", "last_name": "Wyrill", "amount raised": "902.30" }];
+    var fakeTeams = [{ "team_name": "Team Pagac, Rempel and Quigley", "amount raised": "3296.11" }, { "team_name": "Von-Kutch", "amount raised": "1673.98" }, { "team_name": "Team Halvorson-Cassin", "amount raised": "2748.48" },
+        { "team_name": "Team Leffler LLC", "amount raised": "1680.12" }, { "team_name": "Team Champlin Group", "amount raised": "3265.80" }];
     var service = {};
     var layout = {
         type: 'container-fluid',
@@ -75,7 +78,7 @@
         },
 {
     type: 'container',
-    //  backgroundColor: '#fff',
+    backgroundColor: 'rgba(255,255,255,.7)',
     id: 11,
     content: [
         {
@@ -154,7 +157,7 @@
 
 {
     type: 'container',
-    backgroundColor: 'rgba(255, 255, 255, 0.5)',
+    backgroundColor: 'rgba(255, 255, 255, 0.7)',
     id: 13,
     content: [
         {

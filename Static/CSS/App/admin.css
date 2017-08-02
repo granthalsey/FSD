@@ -3799,21 +3799,24 @@ button, [ng-click] {
   border-radius: 50% !important; }
 
 .fs-widget {
-  position: relative; }
-  .fs-widget.active {
-    outline: 1px dashed rgba(255, 255, 255, 0.2); }
-    .fs-widget.active:before {
-      position: absolute;
-      display: block;
-      content: '';
-      outline: 1px dashed rgba(0, 0, 0, 0.2);
-      top: 0;
-      bottom: 0;
-      right: 0;
-      left: 0;
-      box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      -webkit-box-sizing: border-box; }
+  position: relative;
+    /*&.active {
+        outline: 1px dashed rgba(255,255,255,.2);
+
+        &:before {
+            position: absolute;
+            display: block;
+            content: '';
+            outline: 1px dashed rgba(0,0,0,.2);
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+        }
+    }*/ }
   .fs-widget .btn-edit {
     line-height: 1.75;
     border: 3px solid #fff;

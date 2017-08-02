@@ -6,7 +6,7 @@
             <ul class="nav nav-tabs float-left">
                 <li class="nav-item">
                     <a class="nav-link" href ng-click="pageVM.setActiveTab('design')"
-                       ng-class="pageVM.isActiveTab('design') ? 'active' : 'inactive'">Design</a>
+                       ng-class="pageVM.isActiveTab('design') ? 'active' : 'inactive'">Theme</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link " href ng-click="pageVM.setActiveTab('content')"
@@ -95,48 +95,26 @@
                              ng-show="pageVM.isCurrentEditingElement($index)">
                             <div ng-repeat="rule in value.rules">
 
-                                <div class="form-group css-rule">
-                                    <label>{{rule.property | camelCaseToHuman}}</label> <!--todo enum mapping to display name-->
 
-
-
-                                    <color-picker ng-if="rule.type == 'color'"
-                                                  ng-model="rule.value"
-                                                  options="pageVM.colorPickerOptions"></color-picker>
-
-                                    <div ng-if="rule.type == 'font-family'">
-                                        <ui-select ng-model="rule.value" theme="bootstrap4">
-                                            <ui-select-match placeholder="Find A Font">{{$select.selected.family}}</ui-select-match>
-                                            <ui-select-choices repeat="font.family as font in pageVM.availableFonts">
-                                                <div>
-                                                    <span style="font-family: '{{font.family}}'">{{font.family}}</span>
-                                                </div>
-
-                                            </ui-select-choices>
-                                        </ui-select>
-
-                                    </div>
-                                    <div ng-if="rule.type == 'image'">
-                                        <div class="form-group">
-                                            <div class="img-thumbnail" style="height: 50px; background-image: {{rule.value}}">
-
-                                            </div>
-
-                                        </div>
-                                        <div class="btn-group-sm text-right">
-                                            <a class="btn btn-secondary" ng-click="rule.value='none'">Remove Image</a>
-                                            <a class="btn btn-secondary">Change Image</a>
-                                        </div>
+                                <ng-include src="'/templates/edit/ruleEditor.html'"></ng-include>
+                            </div>
+                            <div ng-if="value.validate">
+                                <span class="fs-error">
+                                    {{pageVM.isReadable(value.rules[value.validate[0]].value, value.rules[value.validate[1]].value)}}
+                                </span>
+                            </div>
+                            <div class="form-group" ng-if="value.states">
+                                <div ng-repeat="(stateName, state) in value.states" class="form-group">
+                                    <legend>{{stateName | camelCaseToHuman}}</legend>
+                                    <div ng-repeat="rule in state">
+                                        <ng-include src="'/templates/edit/ruleEditor.html'"></ng-include>
                                     </div>
 
-                                    <!--<input ng-switch-default
-                                           ng-model="rule.value"
-                                           ng-change="pageVM.updateThemePreview();"
-                                           class="form-control"
-                                           required />-->
 
                                 </div>
+
                             </div>
+
                         </div>
                     </div>
                 </li>

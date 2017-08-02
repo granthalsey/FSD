@@ -16,25 +16,25 @@
 
     var customFontQueue = [];
     var hardCodedTestTheme = {
-        wrap: {
+        '.fs-wrap': {
             rules:
             [
                 { property: PROPERTIES.backgroundColor, type: TYPES.color, value: '#ececec' },
-                        { property: PROPERTIES.backgroundImage, type: TYPES.image, value: 'url(https://daks2k3a4ib2z.cloudfront.net/5909fc7f818ecc0900827a34/5942a75cb9c7b610c22de743_5919bfdca6ce0e40ed98746a_iStock-624028878-min.jpg)' },
-
-                               { property: PROPERTIES.color, type: TYPES.color, value: 'rgb(39, 47, 54)' },
-                                { property: PROPERTIES.fontFamily, type: TYPES.fontFamily, value: 'Roboto' }
-
+                { property: PROPERTIES.backgroundImage, type: TYPES.image, value: 'url(https://daks2k3a4ib2z.cloudfront.net/5909fc7f818ecc0900827a34/5942a75cb9c7b610c22de743_5919bfdca6ce0e40ed98746a_iStock-624028878-min.jpg)' },
+                { property: PROPERTIES.color, type: TYPES.color, value: 'rgb(39, 47, 54)' },
+                { property: PROPERTIES.fontFamily, type: TYPES.fontFamily, value: 'Roboto' }
             ],
+
             displayName: 'Page'
         },
-        link: {
+        a: {
             rules: [
                 { property: PROPERTIES.color, type: TYPES.color, value: '#1BA6DF' },
                 { property: PROPERTIES.textDecoration, type: TYPES.textDecoration, value: 'none' }
             ],
             states: {
                 hover: [
+                     { property: PROPERTIES.color, type: TYPES.color, value: '#0f6386' },
                     {
                         property: PROPERTIES.textDecoration,
                         type: TYPES.textDecoration,
@@ -45,7 +45,7 @@
             displayName: 'Text Links'
 
         },
-        'primary-btn': {
+        '.fs-primary-btn': {
             rules: [
                 {
                     property: PROPERTIES.backgroundColor,
@@ -65,11 +65,18 @@
                     value: 'Roboto'
                 }
             ],
-            displayName: 'Primary Buttons'
+            displayName: 'Primary Buttons',
+            validate: [0, 1],
+            states: {
+                hover: [
+                         { property: PROPERTIES.color, type: TYPES.color, value: '#f27221' },
+                { property: PROPERTIES.backgroundColor, type: TYPES.color, value: '#ffffff' }]
+
+            }
 
 
         },
-        'secondary-btn': {
+        '.fs-secondary-btn': {
             rules: [
                {
                    property: PROPERTIES.backgroundColor,
@@ -77,7 +84,7 @@
                    value: '#f27221'
 
                }],
-            displayName: 'Seconday Buttons'
+            displayName: 'Secondary Buttons'
 
         },
         //'button': {
@@ -122,24 +129,26 @@
 
     var themeToCss = function (d) {
         var strTheme = '';
-        var prefix = '.fs-custom .fs-';
+        var prefix = '.fs-custom ';
 
 
         angular.forEach(d, function (value, key) {
-            if (key === 'heading') { //todo make this data driven with a mapping of mapped keys
-                // don't use the heading and use h1 - h5 instead
-                for (var f = 1; f <= 5; ++f) {
-                    angular.forEach(value.rules, function (rule) {
-                        strTheme = strTheme += rulesToString(rule, '.fs-custom ', 'h' + f);
-                    });
-                }
 
-            } else {
-                //extract rules from definition
-                angular.forEach(value.rules, function (rule) {
-                    strTheme = strTheme += rulesToString(rule, prefix, key);
-                });
+            switch (key) {//todo make this data driven with a mapping of mapped keys
+                case 'heading':
+                    for (var f = 1; f <= 5; ++f) {
+                        angular.forEach(value.rules, function (rule) {
+                            strTheme = strTheme += rulesToString(rule, '.fs-custom ', 'h' + f);
+                        });
+                    }
+                    break;
+                default:
+                    angular.forEach(value.rules, function (rule) {
+                        strTheme = strTheme += rulesToString(rule, prefix, key);
+                    });
+                    break;
             }
+
 
             //extract states from definition
             angular.forEach(value.states, function (stateRules, stateName) {
@@ -180,6 +189,29 @@
         });
     }
 
+    var isReadable = function (color_one, color_two) {
+        log('hey ' + color_one, color_two);
+        var r = true;
+        var THRESHOLD = .5;
+
+        if (tinycolor) {
+            var c1 = tinycolor(color_one);
+            var c2 = tinycolor(color_two);
+            log(c1, c2);
+            // if (c1.isValid() && c2.isValid()) {
+            log(c1.isValid(), c2.isValid());
+            r = tinycolor.isReadable(color_one, color_two, { level: "AA", size: "large" });
+            //}
+
+
+
+        }
+        return r;
+
+
+    };
+
+
     var theme = hardCodedTestTheme;
     service.getTheme = function () {
         return theme;
@@ -203,6 +235,8 @@
     };
     service.types = TYPES;
     service.properties = PROPERTIES;
+    service.isReadable = isReadable;
+
 
     return service;
 })

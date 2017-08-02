@@ -651,6 +651,7 @@
     <Content Include="templates\edit\LayoutManager.html" />
     <Content Include="templates\edit\PageEditSidebar.html" />
     <Content Include="templates\edit\pageSelector.html" />
+    <Content Include="templates\edit\ruleEditor.html" />
     <Content Include="templates\edit\sample\6.html" />
     <Content Include="templates\edit\sample\8.html" />
     <Content Include="templates\edit\sample\video.html" />

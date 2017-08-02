@@ -181,6 +181,7 @@
         }
         pageVM.findFont();
         pageVM.setActiveTab('design');
+        pageVM.isReadable = themeFactory.isReadable;
     }]);
 
 })();

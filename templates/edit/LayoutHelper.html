@@ -9,7 +9,7 @@
 
 
 
-    <div ng-if="layout.type=='container'" style="background-color: {{layout.backgroundColor}}">
+    <div ng-if="layout.type=='container'">
         <div class="container">
             <div class="row">
                 <content-layout edit="edit" language="language" ng-repeat="c in layout.content" layout="c"></content-layout>
@@ -17,7 +17,7 @@
             </div>
         </div>
     </div>
-    <div ng-if="layout.type=='container-fluid'" class="container-fluid" style="background-color: {{layout.backgroundColor}}">
+    <div ng-if="layout.type=='container-fluid'" class="container-fluid">
         <div class="row">
             <div ng-repeat="c in layout.content">
 
@@ -27,38 +27,38 @@
     </div>
     <div ng-if="layout.type=='hero'"
          class="fs-hero"
-         style="background-image: url({{layout.backgroundImage}}); background-color: {{layout.backgroundColor}}">
+         style="background-image: url({{layout.backgroundImage}}); ">
         <ng-include src="'/templates/edit/sample/hero.html'"></ng-include>
     </div>
     <div ng-if="layout.type=='header'"
-         style="background-color: {{layout.backgroundColor}}">
+         style="">
 
         <ng-include src="'/templates/edit/sample/header.html'"></ng-include>
 
     </div>
 
-    <footer class="footer" ng-if="layout.type=='footer'" style="background-color: {{layout.backgroundColor}}">
+    <footer class="footer" ng-if="layout.type=='footer'">
         <div class="container">
             <span class="text-muted">Place sticky footer content here.</span>
         </div>
     </footer>
     <div ng-if="layout.type=='content'">
-        <div style="background-color: {{layout.backgroundColor}}">
+        <div>
             <ng-include src="'/templates/edit/sample/'+layout.id+'.html'"></ng-include>
         </div>
     </div>
     <div ng-if="layout.type=='sponsors'" class="fs-sponors">
-        <div style="background-color: {{layout.backgroundColor}}">
+        <div>
             <ng-include src="'/templates/edit/sample/sponsors.html'"></ng-include>
         </div>
     </div>
 
 
-    <div ng-if="layout.type=='leaderboard'" class="fs-leaderboard" style="background-color: { {layout.backgroundColor}}">
+    <div ng-if="layout.type=='leaderboard'" class="fs-leaderboard">
 
         <ng-include src="'/templates/edit/sample/leaderboard.html'"></ng-include>
     </div>
-    <div ng-if="layout.type=='video'" class="fs-leaderboard" style="background-color: {{layout.video}}">
+    <div ng-if="layout.type=='video'" class="fs-leaderboard">
         <ng-include src="'/templates/edit/sample/video.html'"></ng-include>
     </div>
 

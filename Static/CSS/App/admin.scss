@@ -136,7 +136,7 @@
     }
 
     .css-rule {
-        label {
+        label, legend {
             text-transform: capitalize;
         }
     }
@@ -431,9 +431,7 @@ button, [ng-click] {
 
 .fs-widget {
     position: relative;
-
-
-    &.active {
+    /*&.active {
         outline: 1px dashed rgba(255,255,255,.2);
 
         &:before {
@@ -449,8 +447,7 @@ button, [ng-click] {
             -moz-box-sizing: border-box;
             -webkit-box-sizing: border-box;
         }
-    }
-
+    }*/
     .btn-edit {
         line-height: 1.75;
         border: 3px solid #fff;
