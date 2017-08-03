@@ -3594,7 +3594,7 @@ body > .ui-select-bootstrap4.open {
         color: #fff; }
       .fs-admin .hero .breadcrumb .breadcrumb-item:before {
         color: rgba(255, 255, 255, 0.8); }
-  .fs-admin .css-rule label {
+  .fs-admin .css-rule label, .fs-admin .css-rule legend {
     text-transform: capitalize; }
 
 .content-edit-wrap {
@@ -3841,5 +3841,21 @@ button, [ng-click] {
 /*.ng-animate {
     overflow: hidden;
 }*/
+.fs-swatch {
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  color: #555;
+  text-align: center;
+  background-color: transparent;
+  border: 1px solid #ccc;
+  width: 32px;
+  margin: -5px 3px -5px -9px;
+  height: 26px;
+  display: none; }
+
+.active .fs-swatch {
+  display: inline-block; }
 
 /*# sourceMappingURL=admin.css.map */

@@ -40,21 +40,51 @@
         <div ng-repeat="(stateName,stateValue) in rule.states">
             <label>{{(stateName)}} {{rule.property | camelCaseToHuman}}</label>
             <div ng-switch="rule.type">
+                <div class="btn-group-sm">
+                    <div class="btn btn-secondary"
+                         ng-class=" rule.states[stateName] == pageVM.brighten(rule.value) ? 'active': ''"
+                         ng-click="rule.states[stateName] = pageVM.brighten(rule.value)">
+                        <div class="fs-swatch pull-left" style="background-color: {{pageVM.brighten(rule.value)}}">
+
+                        </div>
+                        Brighten
+                    </div>
+                    <div class="btn btn-secondary"
+                         ng-click="rule.states[stateName] = pageVM.darken(rule.value)"
+                         ng-class=" rule.states[stateName] == pageVM.darken(rule.value) ? 'active': ''">
+                        <div class="fs-swatch pull-left" style="background-color: {{pageVM.darken(rule.value)}}">
 
 
-                <color-picker ng-switch-when="color"
-                              ng-model="rule.states[stateName]"
-                              options="pageVM.colorPickerOptions"></color-picker>
+                        </div>
+                        Darken
+                    </div>
+                    <div class="dropdown btn btn-secondary "
+                         ng-class=" rule.states[stateName] !== pageVM.darken(rule.value) && rule.states[stateName] !== pageVM.brighten(rule.value) ? 'active': ''">
 
+
+                        <div class="dropdown-toggle" data-toggle="dropdown">
+                            <div class="fs-swatch pull-left" style="background-color: {{rule.value}}"></div>
+                            Custom
+                        </div>
+
+
+                        <div class="dropdown-menu">
+                            <color-picker ng-switch-when="color"
+                                          ng-model="rule.states[stateName]"
+                                          options="pageVM.colorPickerOptions"></color-picker>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <input ng-switch-default
-                   ng-model="rule.states[stateName]"
-                   class="form-control"
-                   required />
-    </div>
 
-    </div>
+        </div>
 
+        <input ng-switch-default
+               ng-model="rule.states[stateName]"
+               class="form-control"
+               required />
+    </div>
+</div>
 
 </div>

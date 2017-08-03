@@ -14,6 +14,10 @@
         image: 'image'
     };
 
+    var darkenColor = function (strColor) { return tinycolor(strColor).darken().toString(); }
+    var brightenColor = function (strColor) { return tinycolor(strColor).brighten().toString(); }
+
+
     var customFontQueue = [];
     var hardCodedTestTheme = {
         '.fs-wrap': {
@@ -228,6 +232,8 @@
     service.types = TYPES;
     service.properties = PROPERTIES;
     service.isReadable = isReadable;
+    service.brightenColor = brightenColor;
+    service.darkenColor = darkenColor;
 
 
     return service;

@@ -182,6 +182,9 @@
         pageVM.findFont();
         pageVM.setActiveTab('design');
         pageVM.isReadable = themeFactory.isReadable;
+        pageVM.brighten = themeFactory.brightenColor;
+        pageVM.darken = themeFactory.darkenColor;
+
     }]);
 
 })();
