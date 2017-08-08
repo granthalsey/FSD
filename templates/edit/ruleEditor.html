@@ -40,7 +40,9 @@
         <div ng-repeat="(stateName,stateValue) in rule.states">
             <label>{{(stateName)}} {{rule.property | camelCaseToHuman}}</label>
             <div ng-switch="rule.type">
-                <div class="btn-group-sm">
+
+                <div ng-switch-when="color"
+                     class="btn-group-sm">
                     <div class="btn btn-secondary"
                          ng-class=" rule.states[stateName] == pageVM.brighten(rule.value) ? 'active': ''"
                          ng-click="rule.states[stateName] = pageVM.brighten(rule.value)">
@@ -63,14 +65,13 @@
 
 
                         <div class="dropdown-toggle" data-toggle="dropdown">
-                            <div class="fs-swatch pull-left" style="background-color: {{rule.value}}"></div>
+                            <div class="fs-swatch pull-left" style="background-color: {{rule.states[stateName]}}"></div>
                             Custom
                         </div>
 
 
                         <div class="dropdown-menu">
-                            <color-picker ng-switch-when="color"
-                                          ng-model="rule.states[stateName]"
+                            <color-picker ng-model="rule.states[stateName]"
                                           options="pageVM.colorPickerOptions"></color-picker>
                         </div>
                     </div>
@@ -85,6 +86,4 @@
                class="form-control"
                required />
     </div>
-</div>
-
 </div>

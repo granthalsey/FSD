@@ -319,6 +319,12 @@
     <Content Include="Static\CSS\App\lib\select.css">
       <DependentUpon>select.scss</DependentUpon>
     </Content>
+    <Content Include="Static\CSS\Bootstrap\BS4\bootstrap-reboot.css">
+      <DependentUpon>bootstrap-reboot.scss</DependentUpon>
+    </Content>
+    <Content Include="Static\CSS\Bootstrap\BS4\bootstrap.css">
+      <DependentUpon>bootstrap.scss</DependentUpon>
+    </Content>
     <Content Include="Static\JS\common\Layout\Directives\contenteditable.js" />
     <Content Include="Static\JS\common\Layout\LayoutService.js" />
     <Content Include="Static\JS\common\libs\video.js" />
@@ -367,6 +373,91 @@
     <Content Include="Static\CSS\App\angular-ui-grid\ui-grid.woff" />
     <Content Include="Static\CSS\App\_variables.scss" />
     <Content Include="Static\CSS\App\public.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\.scss-lint.yml" />
+    <Content Include="Static\CSS\Bootstrap\BS4\bootstrap-grid.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\bootstrap-reboot.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\bootstrap.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\mixins\_alert.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\mixins\_background-variant.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\mixins\_badge.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\mixins\_border-radius.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\mixins\_breakpoints.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\mixins\_buttons.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\mixins\_cards.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\mixins\_clearfix.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\mixins\_float.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\mixins\_forms.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\mixins\_gradients.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\mixins\_grid-framework.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\mixins\_grid.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\mixins\_hover.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\mixins\_image.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\mixins\_list-group.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\mixins\_lists.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\mixins\_nav-divider.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\mixins\_navbar-align.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\mixins\_pagination.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\mixins\_reset-text.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\mixins\_resize.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\mixins\_screen-reader.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\mixins\_size.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\mixins\_table-row.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\mixins\_text-emphasis.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\mixins\_text-hide.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\mixins\_text-truncate.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\mixins\_transforms.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\mixins\_visibility.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\utilities\_align.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\utilities\_background.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\utilities\_borders.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\utilities\_clearfix.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\utilities\_display.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\utilities\_flex.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\utilities\_float.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\utilities\_position.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\utilities\_screenreaders.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\utilities\_sizing.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\utilities\_spacing.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\utilities\_text.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\utilities\_visibility.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\_alert.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\_badge.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\_breadcrumb.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\_button-group.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\_buttons.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\_card.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\_carousel.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\_close.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\_code.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\_custom-forms.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\_custom.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\_dropdown.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\_forms.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\_grid.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\_images.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\_input-group.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\_jumbotron.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\_list-group.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\_media.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\_mixins.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\_modal.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\_nav.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\_navbar.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\_normalize.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\_pagination.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\_popover.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\_print.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\_progress.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\_reboot.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\_responsive-embed.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\_tables.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\_tooltip.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\_transitions.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\_type.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\_utilities.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\_variables.scss" />
+    <Content Include="Static\CSS\Bootstrap\BS4\scss public watch.bat" />
+    <Content Include="Static\CSS\Bootstrap\BS4\bootstrap.css.map" />
     <None Include="Static\CSS\Bootstrap\ui-bootstrap-custom-2.5.0-csp.scss">
       <Compile>False</Compile>
       <Minify>True</Minify>
