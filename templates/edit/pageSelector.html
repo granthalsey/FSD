@@ -1,19 +1,23 @@
 ﻿<div class="row">
     <div class=" col page-selector">
 
-        <a href class="active">
+        <a ui-sref-active="active"
+           ui-sref="pages({page:'event'})">
             <i class="zmdi zmdi-calendar-check"></i>
             <span>
                 Event
             </span>
         </a>
-        <a href>
-            <i class="zmdi zmdi-pin"></i>
+        <a ui-sref-active="active"
+           ui-sref="pages({page:'location'})">
+            <i class=" zmdi zmdi-pin">
+            </i>
             <span>
                 Location
             </span>
         </a>
-        <a href>
+        <a href
+           ng-click="pageVM.toggleActivePage('team')">
             <i class="zmdi zmdi-accounts-alt"></i>
             <span>
                 Team

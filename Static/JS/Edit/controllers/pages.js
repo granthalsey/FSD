@@ -1,8 +1,8 @@
 ﻿(function () {
     'use strict';
 
-    angular.module("app").controller('pages', ['themeFactory', 'layoutFactory', '$scope', '$rootScope', 'uuid2', '$http',
-    function (themeFactory, layoutFactory, $scope, $rootScope, uuid2, $http) {
+    angular.module("app").controller('pages', ['themeFactory', 'layoutFactory', '$scope', '$rootScope', 'uuid2', '$http', '$stateParams',
+    function (themeFactory, layoutFactory, $scope, $rootScope, uuid2, $http, $stateParams) {
         var pageVM = this;
         pageVM.themeObj = themeFactory.getTheme();
         pageVM.availableFonts = [];
@@ -13,7 +13,6 @@
             themeFactory.saveTheme(pageVM.themeObj);
             themeFactory.applyTheme(pageVM.themeObj);
         };
-
 
 
         //todo fill from event settings or somewhere
@@ -27,13 +26,24 @@
 
         pageVM.layout = {};
 
-        pageVM.layout = layoutFactory.getLayout();
-        pageVM.treeLayout = []; //used for tree layout for d&d
-        //push content into 
-        for (var x in pageVM.layout.content) {
-            log(pageVM.layout.content[x]);
-            pageVM.treeLayout.push(pageVM.layout.content[x]);
+        var initLayout = function () {
+
+            pageVM.layout = layoutFactory.getLayout(activePage);
+            pageVM.treeLayout = []; //used for tree layout for d&d
+            //push content into 
+            for (var x in pageVM.layout.content) {
+                log(pageVM.layout.content[x]);
+                pageVM.treeLayout.push(pageVM.layout.content[x]);
+            }
         }
+        var activePage = $stateParams.page;
+        pageVM.toggleActivePage = function (p) {
+            log(p);
+            activePage = p;
+            initLayout();
+
+        }
+        pageVM.toggleActivePage(activePage);
 
         pageVM.isChildFriendly = layoutFactory.isChildFriendly;
 

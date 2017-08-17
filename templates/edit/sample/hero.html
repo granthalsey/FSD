@@ -2,8 +2,10 @@
 <div class="jumbotron jumbotron-fluid">
 
     <div class="container">
-        <h1 class="display-3">Do it for Dads Walk</h1>
-        <p class="lead">Sunday, June 18th 2017</p>
+        <h1 class="display-3">Run Walk to Break the Silence on Ovarian Cancer</h1>
+
+        <p class="lead"
+           ng-show="layout.location">{{layout.location}} | {{layout.date}}</p>
 
         <div class="row justify-content-center">
             <div class="col col-sm-3" ng-repeat="button in layout.buttons"

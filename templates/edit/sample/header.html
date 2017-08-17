@@ -11,7 +11,7 @@
         <ul class="navbar-nav ml-auto">
             <li class="nav-item" ng-repeat="button in layout.buttons"
                 ng-show="button.enabled">
-                <a class="nav-link fs-header-link"
+                <a class="nav-link fs-header-link {{button.cssClass}}"
                    style="color: {{layout.linkColor}}"
                    href="#"
                    contenteditable

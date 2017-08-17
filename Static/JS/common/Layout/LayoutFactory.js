@@ -6,52 +6,84 @@
     var fakeTeams = [{ "team_name": "Team Pagac, Rempel and Quigley", "amount raised": "3296.11" }, { "team_name": "Von-Kutch", "amount raised": "1673.98" }, { "team_name": "Team Halvorson-Cassin", "amount raised": "2748.48" },
         { "team_name": "Team Leffler LLC", "amount raised": "1680.12" }, { "team_name": "Team Champlin Group", "amount raised": "3265.80" }];
     var service = {};
-    var layout = {
+    var layouts = {}
+    var header = {
+        type: 'header', backgroundColor: 'rgb(0, 154, 166)',
+        linkColor: '#ffffff',
+        id: 10,
+        logo: 'http://ovarian.org/templates/nocc/images/logo.png',
+        buttons: {
+            custom3: {
+                text: {
+                    english: "About Us",
+                    french: "Le Donate"
+                },
+                enabled: true
+
+            },
+            signIn: {
+                text: {
+                    english: "Sign In",
+                    french: "French Signin"
+                },
+                enabled: false
+            },
+            share: {
+                text: {
+                    english: "Share",
+                    french: "French Share"
+                },
+                enabled: false
+
+            },
+            search: {
+                text: {
+                    english: "Search",
+                    french: "Search"
+                },
+                enabled: false
+
+            },
+            custom1: {
+                text: {
+                    english: "Sponsorship Opportunities",
+                    french: "Le Donate"
+                },
+                enabled: true
+
+            },
+            custom2: {
+                text: {
+                    english: "Volunteer",
+                    french: "Le Donate"
+                },
+                enabled: true
+
+            },
+
+            donate: {
+                text: {
+                    english: "Donate",
+                    french: "Le Donate"
+                },
+                enabled: true,
+                cssClass: 'btn fs-primary-btn fs-button'
+
+            }
+        }
+    };
+    layouts.location = {};
+    layouts.team = {};
+    layouts.indvidual = {};
+
+    layouts.event = {
         type: 'container-fluid',
         background: 'transparent',
         content: [
-            {
-                type: 'header', backgroundColor: 'rgb(26,91,164)',
-                linkColor: '#ffffff',
-                id: 10,
-                logo: 'https://daks2k3a4ib2z.cloudfront.net/5909fc7f818ecc0900827a34/5942984ffe536204a1cc6557_logo_compressed.png',
-                buttons: {
-                    signIn: {
-                        text: {
-                            english: "Sign In",
-                            french: "French Signin"
-                        },
-                        enabled: true
-                    },
-                    share: {
-                        text: {
-                            english: "Share",
-                            french: "French Share"
-                        },
-                        enabled: true
-
-                    },
-                    search: {
-                        text: {
-                            english: "Search",
-                            french: "Search"
-                        },
-                        enabled: true
-
-                    },
-                    donate: {
-                        text: {
-                            english: "Donate",
-                            french: "Le Donate"
-                        },
-                        enabled: false
-
-                    }
-                }
-            },
+          header,
         {
             type: 'hero',
-            backgroundImage: 'https://gallery.mailchimp.com/381dca877e43c44046caa6dd1/images/4ec6fcae-1f88-4090-9165-a052103f6cdb.jpg',
+            backgroundImage: 'https://media2.charityengine.net/CMS/_templates/863/NOCC_2017_5K_RW_Banner7.png',
             progressBar:
                 {
                     enabled: true,
@@ -98,44 +130,9 @@
 
 {
     type: 'container',
-    backgroundColor: '#1a5ba4',
+    backgroundColor: 'rgb(0,154,166)',
     id: 12,
     content: [
-        //{
-
-        //    content: [
-        //        //{
-        //        //    type: 'content',
-        //        //    size: "sm"
-
-        //        //}, {
-        //        //    type: 'content',
-        //        //    size: 'sm',
-
-        //        //    id: 4
-        //        //}//, {
-        //        //    type: 'container',
-        //        //    size: 'sm',
-        //        //    content: [
-        //        //        {
-        //        //            type: 'content',
-        //        //            size: "md",
-        //        //            id: 8
-        //        //        }, {
-        //        //            type: 'content',
-        //        //            size: 'sm',
-
-        //        //            id: 9
-        //        //        }, {
-        //        //            type: 'content',
-        //        //            size: 'full',
-
-        //        //            id: 10
-        //        //        }
-        //        //    ]
-        //        //}
-        //    ]
-        //},
         {
 
             type: 'content',
@@ -201,12 +198,136 @@
     {
         type: 'footer',
 
-        id: 17,
-        backgroundColor: '#353535'
-    }
-        ]
-
+        id: 17
+        // backgroundColor: '#353535'
+    }]
     };
+
+    layouts.location = {
+        type: 'container-fluid',
+        background: 'transparent',
+        content: [
+          header,
+        {
+            type: 'hero',
+            backgroundImage: 'https://media2.charityengine.net/WF/_transactionServerFiles/863/2016/12/15/2017_DCMETRO_BANNER.PNG',
+            location: "Washington, D.C.",
+            date: "May 7, 2018",
+            progressBar:
+                {
+                    enabled: true,
+                    includeUnverified: 'true'
+                },
+            buttons: {
+                donate: {
+                    text: {
+                        english: "Donate",
+                        french: "Donner maintenant"
+                    },
+                    enabled: true
+                },
+                register: {
+                    text: {
+                        english: "Register",
+                        french: "Trouvez votre promenade"
+                    },
+                    enabled: true
+
+                }
+            }
+
+        },
+{
+    type: 'container',
+    id: 11,
+    content: [
+    {
+        type: 'container',
+        size: 'lg',
+        backgroundColor: '#fff',
+        content:
+        [
+             {
+                 type: 'content',
+                 size: 'full',
+                 id: 9
+             },
+             {
+                 type: 'video',
+                 size: 'full',
+
+
+                 id: 7
+             },
+        {
+
+            type: 'content',
+            size: 'full',
+            id: 10
+        }
+
+        ]
+    }, {
+
+        type: 'container',
+        size: 'sm',
+
+        content: [
+       {
+           type: 'leaderboard',
+           source: 'individual',
+           size: 'full',
+           members: fakeFundraisers,
+           heading: 'Top Individuals',
+           bodyColor: '#444b55',
+           id: 14
+
+
+       },
+         {
+             type: 'leaderboard',
+             source: 'team',
+             size: 'full',
+             heading: 'Top Teams',
+             members: fakeTeams,
+             bodyColor: '#444b55',
+             id: 15
+
+         }
+
+        ]
+    }
+    ]
+
+
+}, {
+    type: 'container',
+    id: 13
+
+
+}, {
+    type: 'container',
+    backgroundColor: '#22c2d2',
+    id: 16,
+    content: [
+        {
+            type: 'sponsors',
+            size: 'full',
+            id: 3333
+        }
+    ]
+
+
+},
+    {
+        type: 'footer',
+
+        id: 17
+        // backgroundColor: '#353535'
+    }]
+    };
+
+
     var WIDGETTYPES = {
         'container-fluid': { displayName: 'Full Width Row Container', userSelectable: true, sizable: false },
         container: { displayName: 'Row Container', userSelectable: true, sizable: false },
@@ -235,8 +356,9 @@
     };
 
 
-    service.getLayout = function () {
-        return layout;
+    service.getLayout = function (i) {
+
+        return layouts[i];
     }
 
 
@@ -254,19 +376,5 @@
     service.availableSizes = function () {
         return SIZES;
     }
-    //service.getLayout = function () {
-    //    return $http({
-    //        method: 'GET',
-    //        url: 'http://mockbin.org/bin/8d423d95-53a2-4fe9-ad29-7b910e48b24b'
-    //    }).then(function (response) {
-    //        return response.data;
-    //    }).catch(function (response) {
-    //        return $q.reject(response.data);
-    //    });
-    //};
-
-
-
-
     return service;
 })

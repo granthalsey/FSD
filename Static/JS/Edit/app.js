@@ -49,7 +49,7 @@
         });
         states.push({
             name: 'pages',
-            url: '/pages',
+            url: '/pages/:page',
             //parent: 'home',
             // controller: 'pages',
             views: {

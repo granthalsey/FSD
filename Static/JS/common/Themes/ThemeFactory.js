@@ -23,8 +23,8 @@
         '.fs-wrap': {
             rules:
             [
-                { property: PROPERTIES.backgroundColor, type: TYPES.color, value: '#ececec' },
-                { property: PROPERTIES.backgroundImage, type: TYPES.image, value: 'url(https://daks2k3a4ib2z.cloudfront.net/5909fc7f818ecc0900827a34/5942a75cb9c7b610c22de743_5919bfdca6ce0e40ed98746a_iStock-624028878-min.jpg)' },
+                { property: PROPERTIES.backgroundColor, type: TYPES.color, value: 'rgb(240,249,249)' },
+                { property: PROPERTIES.backgroundImage, type: TYPES.image, value: 'none' },
                 { property: PROPERTIES.color, type: TYPES.color, value: 'rgb(39, 47, 54)' },
                 { property: PROPERTIES.fontFamily, type: TYPES.fontFamily, value: 'Roboto' }
             ],
@@ -34,13 +34,17 @@
         a: {
             rules: [
                 {
-                    property: PROPERTIES.color, type: TYPES.color, value: '#1BA6DF',
+                    property: PROPERTIES.color,
+                    type: TYPES.color,
+                    value: 'rgb(51, 122, 183)',
                     states: {
-                        hover: '#0f6386'
+                        hover: 'rgb(35, 82, 124)'
                     }
                 },
                 {
-                    property: PROPERTIES.textDecoration, type: TYPES.textDecoration, value: 'none',
+                    property: PROPERTIES.textDecoration,
+                    type: TYPES.textDecoration,
+                    value: 'none',
                     states: {
                         hover: 'underline'
                     }
@@ -49,8 +53,19 @@
 
             displayName: 'Text Links'
 
+        }, '.progress-bar': {
+            rules: [
+                {
+                    property: PROPERTIES.backgroundColor,
+                    type: TYPES.color,
+                    value: 'rgb(0, 154, 166)'
+                }
+            ],
+            displayName: 'Progress Bar'
+
+
         },
-        '.fs-primary-btn': {
+        '.btn.fs-primary-btn': {
             rules: [
                 {
                     property: PROPERTIES.backgroundColor,
@@ -88,9 +103,21 @@
                {
                    property: PROPERTIES.backgroundColor,
                    type: TYPES.color,
-                   value: '#f27221'
+                   value: 'rgb(0, 154, 166)',
+                   states: {
+                       hover: "#fff"
+                   }
 
-               }],
+               },
+             {
+                 property: PROPERTIES.color,
+                 type: TYPES.color,
+                 value: '#ffffff',
+                 states: {
+                     hover: 'rgb(0, 154, 166);'
+                 }
+
+             }],
             displayName: 'Secondary Buttons'
 
         },
@@ -105,7 +132,7 @@
             displayName: 'Header Navigation'
         },
         'heading': {
-            rules: [{ property: PROPERTIES.fontFamily, type: TYPES.fontFamily, value: 'Coming Soon' }],
+            rules: [{ property: PROPERTIES.fontFamily, type: TYPES.fontFamily, value: 'Lato' }],
             displayName: 'Headings'
         }
 

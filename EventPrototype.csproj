@@ -743,8 +743,11 @@
     <Content Include="templates\edit\PageEditSidebar.html" />
     <Content Include="templates\edit\pageSelector.html" />
     <Content Include="templates\edit\ruleEditor.html" />
+    <Content Include="templates\edit\sample\10.html" />
     <Content Include="templates\edit\sample\6.html" />
+    <Content Include="templates\edit\sample\9.html" />
     <Content Include="templates\edit\sample\8.html" />
+    <Content Include="templates\edit\sample\footer.html" />
     <Content Include="templates\edit\sample\video.html" />
     <Content Include="templates\edit\sample\5.html" />
     <Content Include="templates\edit\sample\4.html" />

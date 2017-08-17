@@ -5,12 +5,12 @@
 
 
         $scope.themeObj = themeFactory.getTheme();
-     
+
         var applied = themeFactory.applyTheme($scope.themeObj);
-//        log('theme applied', applied);
+        //        log('theme applied', applied);
 
 
-        $scope.layout = layoutFactory.getLayout();
+        $scope.layout = layoutFactory.getLayout('event');
 
 
     }]);
