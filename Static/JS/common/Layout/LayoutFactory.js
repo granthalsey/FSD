@@ -10,7 +10,7 @@
     var header = {
         type: 'header', backgroundColor: 'rgb(0, 154, 166)',
         linkColor: '#ffffff',
-        id: 10,
+        id: 'header',
         logo: 'http://ovarian.org/templates/nocc/images/logo.png',
         buttons: {
             custom3: {
@@ -84,6 +84,7 @@
         {
             type: 'hero',
             backgroundImage: 'https://media2.charityengine.net/CMS/_templates/863/NOCC_2017_5K_RW_Banner7.png',
+            id: 'hero',
             progressBar:
                 {
                     enabled: true,
@@ -213,11 +214,13 @@
             backgroundImage: 'https://media2.charityengine.net/WF/_transactionServerFiles/863/2016/12/15/2017_DCMETRO_BANNER.PNG',
             location: "Washington, D.C.",
             date: "May 7, 2018",
+            id: 'hero',
+            width: 'full',
             progressBar:
-                {
-                    enabled: true,
-                    includeUnverified: 'true'
-                },
+    {
+        enabled: true,
+        includeUnverified: 'true'
+    },
             buttons: {
                 donate: {
                     text: {
@@ -255,16 +258,15 @@
              {
                  type: 'video',
                  size: 'full',
-
-
+                 backgroundColor: 'rgb(0, 154, 166)',
                  id: 7
-             },
-        {
+             }, {
 
-            type: 'content',
-            size: 'full',
-            id: 10
-        }
+                 type: 'content',
+                 size: 'full',
+                 id: 10,
+                 backgroundColor: '#f0f0f0'
+             }
 
         ]
     }, {
