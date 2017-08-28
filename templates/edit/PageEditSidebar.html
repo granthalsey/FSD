@@ -52,18 +52,25 @@
 
         </div>
 
+        <div class="sidebar-footer-placeholder">
+        </div>
         <div class="sidebar-footer">
             <small ng-if="pageVM.enableRearrange">
                 Drag and drop widgets to reorder
             </small>
-            <div class="btn-group-sm text-right">
-                <button class="btn btn-link"
+            <div class="btn-group-sm">
+                <div class="float-left">
+                    <button class="btn btn-outline-primary btn-sm active">EN</button>
+                    <button class="btn btn-outline-primary btn-sm">FR</button>
+                </div>
+
+                <button class="btn btn-link float-right"
                         ng-click="pageVM.toggleEnableRerrange()">
                     {{pageVM.enableRearrange ? 'Done' : 'Rearrange Widgets'}}
                 </button>
-                <button class="btn btn-outline-primary">
+                <!--<button class="btn btn-outline-primary">
                     <i class="zmdi zmdi-plus"></i> Add Container
-                </button>
+                </button>-->
             </div>
         </div>
     </div>
@@ -107,6 +114,24 @@
                     </div>
                 </li>
             </ol>
+        </div>
+        <div class="sidebar-footer-placeholder">
+        </div>
+        <div class="sidebar-footer">
+            <small ng-if="pageVM.enableRearrange">
+                Drag and drop widgets to reorder
+            </small>
+            <div class="btn-group-sm">
+                <div class="float-left">
+                    <button class="btn btn-outline-primary btn-sm active">EN</button>
+                    <button class="btn btn-outline-primary btn-sm">FR</button>
+                </div>
+
+       
+                <!--<button class="btn btn-outline-primary">
+                <i class="zmdi zmdi-plus"></i> Add Container
+            </button>-->
+            </div>
         </div>
     </div>
 </div>
