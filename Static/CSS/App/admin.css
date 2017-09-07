@@ -2669,6 +2669,10 @@ body .alert.alert-info {
     flex-direction: row;
     margin-left: auto;
     align-self: flex-end; }
+.fs-custom .fs-share {
+  font-size: 1.8rem; }
+  .fs-custom .fs-share a:hover {
+    text-decoration: none; }
 
 ::-webkit-scrollbar {
   width: 10px;

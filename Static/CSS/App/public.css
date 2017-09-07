@@ -521,5 +521,9 @@ body .alert.alert-info {
     flex-direction: row;
     margin-left: auto;
     align-self: flex-end; }
+.fs-custom .fs-share {
+  font-size: 1.8rem; }
+  .fs-custom .fs-share a:hover {
+    text-decoration: none; }
 
 /*# sourceMappingURL=public.css.map */

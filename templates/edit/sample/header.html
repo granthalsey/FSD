@@ -1,4 +1,6 @@
-﻿<div class="navbar navbar-toggleable-md">
+﻿<!-- Go to www.addthis.com/dashboard to customize your tools -->
+
+<div class="navbar navbar-toggleable-md">
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -19,7 +21,21 @@
                     {{button.text['english']}}
                 </a>
             </li>
+            <li class="nav-item addthis_share fs-share">
+
+                <a href>
+                    <span class="addthis_share_button fs-header-link" style="color: {{layout.linkColor}}" data-service="facebook" data-url="http://www.addthis.com" data-title="Share title"><i class="zmdi zmdi-facebook-box"></i></span>
+                    <span class="  addthis_share_button fs-header-link" style="color: {{layout.linkColor}}" data-service="twitter" data-url="http://www.addthis.com" data-title="Share title"><i class="zmdi zmdi-twitter-box"></i></span>
+                </a>
+
+            </li>
 
         </ul>
     </div>
 </div>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=firstgiving456"></script>
+<script>
+    window.onload = function () {
+        addthis.share();
+    }
+</script>
