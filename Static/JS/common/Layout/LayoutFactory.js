@@ -13,27 +13,20 @@
         id: 'header',
         logo: 'http://ovarian.org/templates/nocc/images/logo.png',
         buttons: {
-            custom3: {
-                text: {
-                    english: "About Us",
-                    french: "Le Donate"
-                },
-                enabled: true
 
-            },
             signIn: {
                 text: {
                     english: "Sign In",
-                    french: "French Signin"
+                    french: "French Sign in"
                 },
-                enabled: false
+                enabled: true
             },
             share: {
                 text: {
                     english: "Share",
                     french: "French Share"
                 },
-                enabled: false
+                enabled: true
 
             },
             search: {
@@ -41,35 +34,20 @@
                     english: "Search",
                     french: "Search"
                 },
-                enabled: false
-
-            },
-            custom1: {
-                text: {
-                    english: "Sponsorship Opportunities",
-                    french: "Le Donate"
-                },
                 enabled: true
-
-            },
-            custom2: {
-                text: {
-                    english: "Volunteer",
-                    french: "Le Donate"
-                },
-                enabled: true
-
-            },
-
-            donate: {
-                text: {
-                    english: "Donate",
-                    french: "Le Donate"
-                },
-                enabled: true,
-                cssClass: 'btn fs-primary-btn fs-button'
-
             }
+            //},
+
+
+            //donate: {
+            //    text: {
+            //        english: "Donate",
+            //        french: "Le Donate"
+            //    },
+            //    enabled: true,
+            //    cssClass: 'btn fs-primary-btn fs-button'
+
+            //}
         }
     };
     layouts.location = {};
