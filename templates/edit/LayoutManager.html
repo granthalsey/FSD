@@ -37,6 +37,29 @@
                         </option>
                     </select>
                 </div>
+                <!--{{node.type}}-->
+                <div class="form-group form-group-sm" ng-if="node.type=='video'">
+                    <small>Enter the web address of your public YouTube or Vimeo video.</small>
+                    <p>
+                        <img class="img-thumbnail"
+                             src="https://i.vimeocdn.com/video/23566238_320.jpg">
+                    </p>
+                    <p class="input-group ">
+
+                        <span class="input-group-addon">EN</span>
+                        <input class="form-control" placeholder="English video URL" />
+                    </p>
+                    <p>
+                        <img class="img-thumbnail"
+                             src="https://i.vimeocdn.com/video/23566238_320.jpg">
+                    </p>
+                    <p class="input-group">
+
+                        <span class="input-group-addon">FR</span>
+                        <input class="form-control" placeholder="French video URL" />
+                    </p>
+
+                </div>
 
                 <div class="form-group" ng-if="node.logo">
                     <label>Logo</label>
@@ -51,7 +74,6 @@
                 </div>
 
                 <div class="form-group">
-                    <legend>Appearance</legend>
                     <label>Background color </label>
                     <color-picker class="" ng-model="node.backgroundColor"
                                   options="pageVM.colorPickerOptions"></color-picker>

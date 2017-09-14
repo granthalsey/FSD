@@ -373,7 +373,7 @@
                 text-transform: capitalize;
             }
 
-            input, select, textarea {
+            input, select, textarea, .input-group-addon {
                 font-size: .8rem;
             }
 
@@ -410,7 +410,7 @@ button, [ng-click] {
 @media (min-width: 576px) {
     .sidebar-fixed {
         max-width: 300px;
-       
+
 
         .sidebar-footer-placeholder {
             height: 150px;

@@ -319,6 +319,7 @@
     <Content Include="Static\CSS\App\lib\select.css">
       <DependentUpon>select.scss</DependentUpon>
     </Content>
+    <Content Include="Static\CSS\App\lib\smart-area.js" />
     <Content Include="Static\CSS\Bootstrap\BS4\bootstrap-reboot.css">
       <DependentUpon>bootstrap-reboot.scss</DependentUpon>
     </Content>
@@ -330,6 +331,7 @@
     <Content Include="Static\JS\common\libs\video.js" />
     <Content Include="Static\JS\Edit\libs\camelCase.js" />
     <Content Include="Static\JS\Edit\libs\LocalStorage.js" />
+    <Content Include="Static\JS\Edit\libs\smart-area.js" />
     <Content Include="Static\JS\Edit\libs\z-angularjs-color-picker.js" />
     <Content Include="Static\JS\Edit\libs\select.js" />
     <Content Include="Static\CSS\App\public.css">

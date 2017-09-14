@@ -3773,7 +3773,7 @@ body > .ui-select-bootstrap4.open {
         font-size: .8rem;
         margin-bottom: .2rem;
         text-transform: capitalize; }
-      .angular-ui-tree .card .card-content input, .angular-ui-tree .card .card-content select, .angular-ui-tree .card .card-content textarea {
+      .angular-ui-tree .card .card-content input, .angular-ui-tree .card .card-content select, .angular-ui-tree .card .card-content textarea, .angular-ui-tree .card .card-content .input-group-addon {
         font-size: .8rem; }
       .angular-ui-tree .card .card-content .form-group {
         margin-bottom: .5rem; }

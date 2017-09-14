@@ -122,6 +122,8 @@
         }, {
             type: 'video',
             size: 'lg',
+            videoSource: 'youtube',
+            videoId: 'm0LT_hHzoZc',
 
 
             id: 7
