@@ -87,29 +87,29 @@
             }
 
         },
+//{
+//    type: 'container',
+//    backgroundColor: 'rgba(255,255,255,.7)',
+//    id: 11,
+//    content: [
+//        {
+//            type: 'content',
+//            size: 'full',
+
+//            id: 3
+//        }
+//    ]
+
+
+//},
+
+
+
+
+
 {
     type: 'container',
-    backgroundColor: 'rgba(255,255,255,.7)',
-    id: 11,
-    content: [
-        {
-            type: 'content',
-            size: 'full',
-
-            id: 3
-        }
-    ]
-
-
-},
-
-
-
-
-
-{
-    type: 'container',
-    backgroundColor: 'rgb(0,154,166)',
+    backgroundColor: 'rgb(0,154,166,.8)',
     id: 12,
     content: [
         {
