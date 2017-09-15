@@ -3794,13 +3794,14 @@ button, [ng-click] {
     .sidebar-fixed .sidebar-footer-placeholder {
       height: 150px; }
     .sidebar-fixed .sidebar-footer {
-      position: absolute;
-      bottom: 45px;
-      right: 0;
+      position: fixed;
+      bottom: 0;
+      width: 300px;
       left: 0;
       padding: .5rem .5rem;
       height: 45px;
-      background: #e1e2e3; } }
+      background: #e1e2e3;
+      border-top: 1px solid #939598; } }
 .btn-round {
   border-radius: 50% !important; }
 
