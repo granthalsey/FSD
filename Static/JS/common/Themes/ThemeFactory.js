@@ -53,7 +53,8 @@
 
             displayName: 'Text Links'
 
-        }, '.progress-bar': {
+        },
+        '.progress-bar': {
             rules: [
                 {
                     property: PROPERTIES.backgroundColor,
@@ -77,15 +78,15 @@
                     }
 
                 },
-                 {
-                     property: PROPERTIES.color,
-                     type: TYPES.color,
-                     value: '#ffffff',
-                     states: {
-                         hover: '#f27221'
-                     }
+                {
+                    property: PROPERTIES.color,
+                    type: TYPES.color,
+                    value: '#ffffff',
+                    states: {
+                        hover: '#f27221'
+                    }
 
-                 },
+                },
                 {
                     property: PROPERTIES.fontFamily,
                     type: TYPES.fontFamily,
@@ -96,28 +97,28 @@
             validate: [0, 1]
 
 
-
         },
         '.fs-secondary-btn': {
             rules: [
-               {
-                   property: PROPERTIES.backgroundColor,
-                   type: TYPES.color,
-                   value: 'rgb(0, 154, 166)',
-                   states: {
-                       hover: "#fff"
-                   }
+                {
+                    property: PROPERTIES.backgroundColor,
+                    type: TYPES.color,
+                    value: 'rgb(0, 154, 166)',
+                    states: {
+                        hover: "#fff"
+                    }
 
-               },
-             {
-                 property: PROPERTIES.color,
-                 type: TYPES.color,
-                 value: '#ffffff',
-                 states: {
-                     hover: 'rgb(0, 154, 166);'
-                 }
+                },
+                {
+                    property: PROPERTIES.color,
+                    type: TYPES.color,
+                    value: '#ffffff',
+                    states: {
+                        hover: 'rgb(0, 154, 166);'
+                    }
 
-             }],
+                }
+            ],
             displayName: 'Secondary Buttons'
 
         },
@@ -132,7 +133,12 @@
             displayName: 'Header Navigation'
         },
         'heading': {
-            rules: [{ property: PROPERTIES.fontFamily, type: TYPES.fontFamily, value: 'Lato' }],
+            rules: [
+            { property: PROPERTIES.fontFamily, type: TYPES.fontFamily, value: 'Lato' },
+            {
+                property: PROPERTIES.color, type: TYPES.color, value: 'rgb(0, 154, 166)'
+            }
+            ],
             displayName: 'Headings'
         }
 
