@@ -2650,7 +2650,8 @@ body .alert.alert-info {
   border-radius: 50%;
   margin: 0 .5rem .5rem; }
 .fs-custom .fs-leaderboard-caption {
-  width: 100%; }
+  width: 100%;
+  margin: 10px 0; }
   .fs-custom .fs-leaderboard-caption .progress {
     height: 10px; }
   .fs-custom .fs-leaderboard-caption .progress-stats {
