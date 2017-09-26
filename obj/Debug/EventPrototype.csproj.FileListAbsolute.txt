@@ -93,7 +93,6 @@ c:\artez\event\bin\Antlr3.Runtime.dll
 c:\artez\event\bin\EntityFramework.dll
 c:\artez\event\bin\EntityFramework.SqlServer.dll
 c:\artez\event\bin\Microsoft.Web.Infrastructure.dll
-c:\artez\event\bin\Newtonsoft.Json.dll
 c:\artez\event\bin\System.Data.DataSetExtensions.dll
 c:\artez\event\bin\System.Data.dll
 c:\artez\event\bin\System.Net.Http.dll
@@ -119,7 +118,6 @@ c:\artez\event\bin\WebGrease.dll
 c:\artez\event\bin\Antlr3.Runtime.pdb
 c:\artez\event\bin\EntityFramework.xml
 c:\artez\event\bin\EntityFramework.SqlServer.xml
-c:\artez\event\bin\Newtonsoft.Json.xml
 c:\artez\event\bin\System.Web.Helpers.xml
 c:\artez\event\bin\System.Web.Mvc.xml
 c:\artez\event\bin\System.Web.Optimization.xml
@@ -135,4 +133,6 @@ c:\artez\event\bin\System.Web.Http.xml
 c:\artez\event\bin\System.Web.Http.WebHost.xml
 c:\artez\event\obj\Debug\MvcApplication1.dll
 c:\artez\event\obj\Debug\MvcApplication1.pdb
-c:\artez\Event\obj\Debug\EventPrototype.csprojResolveAssemblyReference.cache
+c:\artez\event\bin\Newtonsoft.Json.dll
+c:\artez\event\bin\Newtonsoft.Json.xml
+c:\artez\event\obj\Debug\EventPrototype.csprojResolveAssemblyReference.cache
