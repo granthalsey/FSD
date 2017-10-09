@@ -161,7 +161,21 @@
                         </div>
                     </div>
                 </div>
-                <div class="btn-group-sm text-right">
+                <div ng-show="pageVM.layout.pageType==='location'"
+                     class="btn-group btn-group-sm btn-group-justified">
+                    <a href class="btn btn-secondary active">
+                        <i class="zmdi zmdi-globe-lock"></i> Locked
+                    </a>
+                    <a href class="btn btn-secondary disabled">
+                        <i class="zmdi zmdi-lock-open"></i> Editable
+                    </a>
+
+                </div>
+
+                <div ng-show="pageVM.layout.pageType"
+                     class="btn-group-sm text-right">
+
+
                     <a class="btn btn-secondary float-left"
                        ng-if="!pageVM.availableWidgets[node.type].required"
                        ng-click="remove(this)">

@@ -435,6 +435,12 @@ button, [ng-click] {
     border-radius: 50% !important;
 }
 
+.btn-transparent {
+    color: rgb(41, 43, 44);
+    background: none;
+    border: none;
+}
+
 .fs-widget {
     position: relative;
     /*&.active {
@@ -507,4 +513,22 @@ button, [ng-click] {
 
 .active .fs-swatch {
     display: inline-block;
+}
+
+.btn-group-justified {
+    display: flex;
+    width: 100%;
+
+    .btn,
+    .btn-group {
+        flex: 1;
+
+        .btn {
+            width: 100%;
+        }
+
+        .dropdown-menu {
+            left: auto;
+        }
+    }
 }

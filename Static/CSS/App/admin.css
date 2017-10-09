@@ -3806,6 +3806,11 @@ button, [ng-click] {
 .btn-round {
   border-radius: 50% !important; }
 
+.btn-transparent {
+  color: #292b2c;
+  background: none;
+  border: none; }
+
 .fs-widget {
   position: relative;
     /*&.active {
@@ -3865,5 +3870,18 @@ button, [ng-click] {
 
 .active .fs-swatch {
   display: inline-block; }
+
+.btn-group-justified {
+  display: flex;
+  width: 100%; }
+  .btn-group-justified .btn,
+  .btn-group-justified .btn-group {
+    flex: 1; }
+    .btn-group-justified .btn .btn,
+    .btn-group-justified .btn-group .btn {
+      width: 100%; }
+    .btn-group-justified .btn .dropdown-menu,
+    .btn-group-justified .btn-group .dropdown-menu {
+      left: auto; }
 
 /*# sourceMappingURL=admin.css.map */

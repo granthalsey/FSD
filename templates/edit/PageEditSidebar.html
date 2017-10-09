@@ -2,6 +2,7 @@
 
 <div hl-sticky="" class="sticky-wrapper ">
     <div hl-sticky="">
+       
         <div class="sidebar-buttons text-right">
             <ul class="nav nav-tabs float-left">
                 <li class="nav-item">
@@ -27,7 +28,21 @@
 
             </ul>-->
         </div>
+        <div ng-show="pageVM.layout.pageType==='location'">
+            <div class="dropdown">
+                <a class="btn btn-sm btn-block btn-transparent  dropdown-toggle" href id="dropdownMenuLink" data-toggle="dropdown"
+                   style="margin:5px 5px;"
+                   aria-haspopup="true" aria-expanded="false">
+                    <i class="zmdi zmdi-globe"></i> Location Master Page
+                </a>
 
+                <div class="dropdown-menu btn-sm btn-block" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" href="#"><i class="zmdi zmdi-globe"></i>  Location Template</a>
+                    <a class="dropdown-item" href="#"><i class="zmdi zmdi-pin"></i> Another action</a>
+                    <a class="dropdown-item" href="#"><i class="zmdi zmdi-pin"></i> Something else here</a>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div ng-show="pageVM.isActiveTab('content')">

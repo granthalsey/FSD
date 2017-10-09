@@ -185,6 +185,7 @@
     };
 
     layouts.location = {
+        pageType: 'location',
         type: 'container-fluid',
         background: 'transparent',
         content: [
