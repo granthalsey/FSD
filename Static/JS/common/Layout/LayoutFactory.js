@@ -310,7 +310,8 @@
     }]
     };
 
-
+    layouts.singlelocation = layouts.location;
+    layouts.singlelocation.pageType = 'singlelocation';
     var WIDGETTYPES = {
         'container-fluid': { displayName: 'Full Width Row Container', userSelectable: true, sizable: false },
         container: { displayName: 'Row Container', userSelectable: true, sizable: false },
