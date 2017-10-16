@@ -753,6 +753,7 @@
     <Content Include="templates\edit\sample\9.html" />
     <Content Include="templates\edit\sample\8.html" />
     <Content Include="templates\edit\sample\footer.html" />
+    <Content Include="templates\edit\sample\donations.html" />
     <Content Include="templates\edit\sample\video.html" />
     <Content Include="templates\edit\sample\5.html" />
     <Content Include="templates\edit\sample\4.html" />

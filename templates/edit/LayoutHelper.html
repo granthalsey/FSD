@@ -58,7 +58,11 @@
 
         <ng-include src="'/templates/edit/sample/leaderboard.html'"></ng-include>
     </div>
-    <div ng-if="layout.type=='video'" class="fs-leaderboard">
+    <div ng-if="layout.type=='donations'" class="fs-leaderboard">
+
+        <ng-include src="'/templates/edit/sample/donations.html'"></ng-include>
+    </div>
+    <div ng-if="layout.type=='video'">
         <ng-include src="'/templates/edit/sample/video.html'"></ng-include>
     </div>
 

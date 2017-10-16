@@ -5,6 +5,8 @@
         { "first_name": "Friederike", "last_name": "Wyrill", "amount raised": "902.30" }];
     var fakeTeams = [{ "team_name": "Team Pagac, Rempel and Quigley", "amount raised": "3296.11" }, { "team_name": "Von-Kutch", "amount raised": "1673.98" }, { "team_name": "Team Halvorson-Cassin", "amount raised": "2748.48" },
         { "team_name": "Team Leffler LLC", "amount raised": "1680.12" }, { "team_name": "Team Champlin Group", "amount raised": "3265.80" }];
+    var fakeDonations = [{ "full_name": "Larisa Hanscomb", "amount": "$8.56" }, { "full_name": "Sheila-kathryn Risso", "amount": "$2.49" }, { "full_name": "Giulio Zielinski", "amount": "$4.73" }, { "full_name": "Moyra Coggins", "amount": null }, { "full_name": "Herculie Wapplington", "amount": "$1.48" }, { "full_name": "Freddie Longstaffe", "amount": "$0.54" }, { "full_name": "Rudolph Cleve", "amount": "$3.92" }, { "full_name": "Julee Ealles", "amount": "$4.14" }, { "full_name": "Valentijn Muir", "amount": "$8.22" }, { "full_name": "Valera Stonall", "amount": "$6.50" }, { "full_name": "Davon O'Gaven", "amount": "$6.82" }, { "full_name": "Birk Szepe", "amount": "$7.53" }, { "full_name": "Lenard Jan", "amount": "$7.84" }, { "full_name": "Jamal Devon", "amount": "$6.69" }, { "full_name": "Idaline Lafuente", "amount": null }, { "full_name": "Martie Iacovacci", "amount": "$2.05" }, { "full_name": "Angelico Frenchum", "amount": null }, { "full_name": "Fredra Berdale", "amount": "$3.08" }, { "full_name": "Boone Scriviner", "amount": "$3.16" }, { "full_name": "Anastasia Callf", "amount": null }];
+
     var service = {};
     var layouts = {}
     var header = {
@@ -141,7 +143,7 @@
         {
             type: 'leaderboard',
             source: 'individual',
-            size: 'half',
+            size: 'sm',
             members: fakeFundraisers,
             heading: 'Top Individuals',
             bodyColor: '#444b55',
@@ -152,11 +154,21 @@
           {
               type: 'leaderboard',
               source: 'team',
-              size: 'half',
+              size: 'sm',
               heading: 'Top Teams',
               members: fakeTeams,
               bodyColor: '#444b55',
               id: 15
+
+          }
+          ,
+          {
+              type: 'donations',
+              size: 'sm',
+              heading: 'Recent Donations',
+              donations: fakeDonations,
+              bodyColor: '#444b55',
+              id: 999999
 
           }
 
@@ -171,6 +183,19 @@
             type: 'sponsors',
             size: 'full',
             id: 3333
+        }
+    ]
+
+
+}, {
+    type: 'container',
+    backgroundColor: '#22c2d2',
+    id: 16,
+    content: [
+        {
+            type: 'donors',
+            size: 'half',
+            id: 44444
         }
     ]
 
@@ -270,7 +295,7 @@
          {
              type: 'leaderboard',
              source: 'team',
-             size: 'full',
+             size: 'sm',
              heading: 'Top Teams',
              members: fakeTeams,
              bodyColor: '#444b55',
