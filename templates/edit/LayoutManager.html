@@ -175,7 +175,8 @@
 
 
                     <a class="btn btn-secondary float-left"
-                       ng-if="!pageVM.availableWidgets[node.type].required"
+                       ng-hide="pageVM.layout.pageType === 'singlelocation'"
+                       ng-if=" !pagevm.availablewidgets[node.type].required"
                        ng-click="remove(this)">
                         Remove
                     </a>
@@ -198,7 +199,7 @@
             </li>
 
         </ol>
-        <div class="card-content" ng-show="pageVM.isChildFriendly(node)">
+        <div class="card-content" ng-show="pageVM.isChildFriendly(node) &&  pageVM.layout.pageType !='singlelocation'">
             <a class=" btn btn-secondary btn-block btn-sm"
                data-nodrag="" ng-click="pageVM.newSubItem(this)">
                 <i class="zmdi zmdi-plus"></i> Add Widget
