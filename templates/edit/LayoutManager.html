@@ -20,11 +20,6 @@
     </div>
 
 
-
-
-
-
-
     <div class="">
         <form ng-submit="pageVM.committWidget(node)">
             <div ng-if="pageVM.isCurrentEditingWidget(node.id)" class="card-content">
@@ -37,8 +32,7 @@
                         </option>
                     </select>
                 </div>
-                <!--{{node.type}}-->
-                <div class="form-group form-group-sm" ng-if="node.type=='video'">
+                <div class=" form-group form-group-sm" ng-if="node.type=='video'">
                     <small>Enter the web address of your public YouTube or Vimeo video.</small>
                     <p>
                         <img class="img-thumbnail"
@@ -61,7 +55,8 @@
 
                 </div>
 
-                <div class="form-group" ng-if="node.logo">
+                <div class="form-group" ng-if="node.logo"
+                     ng-hide="pageVM.layout.pageType==='location' || pageVM.layout.pageType==='singlelocation'">
                     <label>Logo</label>
                     <div class="form-group">
                         <img ng-src="{{node.logo}}"
@@ -73,16 +68,19 @@
                     </div>
                 </div>
 
-                <div class="form-group">
+                <div class="form-group"
+                     ng-hide="(pageVM.layout.pageType==='location' || pageVM.layout.pageType==='singlelocation') && (node.type =='header' || node.type=='footer' )">
                     <label>Background color </label>
                     <color-picker class="" ng-model="node.backgroundColor"
                                   options="pageVM.colorPickerOptions"></color-picker>
 
 
                 </div>
-                <div class="form-group" ng-if="node.linkColor">
+                <div class="form-group" ng-if="node.linkColor"
+                     ng-hide="(pageVM.layout.pageType==='location' || pageVM.layout.pageType==='singlelocation') && (node.type =='header' || node.type=='footer' )">
+                    >
 
-                    <label>Background color </label>
+                    <label>Link color </label>
                     <color-picker class="" ng-model="node.linkColor"
                                   options="pageVM.colorPickerOptions"></color-picker>
 

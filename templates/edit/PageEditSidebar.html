@@ -5,7 +5,8 @@
 
         <div class="sidebar-buttons text-right">
             <ul class="nav nav-tabs float-left">
-                <li class="nav-item">
+                <li class="nav-item"
+                    ng-hide="pageVM.layout.pageType==='location' || pageVM.layout.pageType==='singlelocation'">
                     <a class="nav-link" href ng-click="pageVM.setActiveTab('design')"
                        ng-class="pageVM.isActiveTab('design') ? 'active' : 'inactive'">Theme</a>
                 </li>
@@ -34,7 +35,7 @@
                    style="margin: 5px 5px;"
                    aria-haspopup="true" aria-expanded="false">
                     <span ng-show="pageVM.layout.pageType==='location'">
-                        <i class="zmdi zmdi-globe"></i> Location Master Page
+                        <i class="zmdi zmdi-globe"></i> Location Template
                     </span>
                     <span ng-show="pageVM.layout.pageType==='singlelocation'">
                         <i class="zmdi zmdi-pin"></i> Washington, D.C.

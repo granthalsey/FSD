@@ -750,6 +750,7 @@
     <Content Include="templates\edit\ruleEditor.html" />
     <Content Include="templates\edit\sample\10.html" />
     <Content Include="templates\edit\sample\6.html" />
+    <Content Include="templates\edit\sample\7.html" />
     <Content Include="templates\edit\sample\9.html" />
     <Content Include="templates\edit\sample\8.html" />
     <Content Include="templates\edit\sample\footer.html" />

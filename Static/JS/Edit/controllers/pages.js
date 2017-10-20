@@ -190,7 +190,7 @@
             });
         }
         pageVM.findFont();
-        pageVM.setActiveTab('design');
+        pageVM.layout.pageType === 'event' ? pageVM.setActiveTab('design') : pageVM.setActiveTab('content');
         pageVM.isReadable = themeFactory.isReadable;
         pageVM.brighten = themeFactory.brightenColor;
         pageVM.darken = themeFactory.darkenColor;
