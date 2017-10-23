@@ -55,6 +55,97 @@
 
                 </div>
 
+                <div class="form-group" ng-if="node.type === 'sponsors'">
+                    <label>Heading</label>
+                    <div class="form-group">
+                        <input type="text" class="form-control" value="Generous Partners" />
+                        <label>Content Alignment</label>
+                    </div>
+                    <div class="form-group">
+                        <select class="form-control">
+                            <option selected>Left</option>
+                            <option>Center</option>
+                            <option>Right</option>
+                        </select>
+                    </div>
+
+                    <legend>Sponsors</legend>
+
+                    <div ng-repeat="sponsor in node.sponsors" ng-init="sponsor.editing=false">
+                        <div ng-show="!sponsor.editing" class="row sponsor-entry"
+                             ng-click="sponsor.editing=true"
+                             style="padding: 10px 0;">
+                            <div class=" col col-4">
+                                <img class="img-fluid" ng-src="{{sponsor.imageURL}}" />
+                            </div>
+                            <div class="col col-8 " style="padding-left: 0;">
+                                <small>
+                                    <i class="zmdi zmdi-link"></i> {{sponsor.linkUrl}}<br />
+                                    <i class="zmdi zmdi-comment-alt-text"></i> {{sponsor.altText.english}} <br />
+                                    <i class="zmdi zmdi-comment-alt-text"></i> {{sponsor.altText.french}}
+                                </small>
+                            </div>
+                            <div class="col col-12 text-right">
+                                <small>
+                                    <div class="btn-group">
+                                        <a href="" class="btn btn-sm btn-secondary" title="Move Up"><i class="zmdi zmdi-chevron-up"></i></a>
+                                        <a href="" class="btn btn-sm btn-secondary" title="Move Down"><i class="zmdi zmdi-chevron-down"></i></a>
+                                    </div>
+                                    <a href="" class="btn btn-sm btn-secondary">Edit</a>
+                                </small>
+
+                            </div>
+
+                        </div>
+                        <div ng-show="sponsor.editing" class="row"
+                             style="background: #f1f1f1; padding: 10px 0; box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 32px 0px; position: relative;
+                                                                                                                                                                                   z-index: 99;">
+                            <div class="col col-3">
+                                <img class="img-fluid" ng-src="{{sponsor.imageURL}}" />
+                            </div>
+                            <div class="col col-9" style="padding-left: 0;">
+                                <p class="input-group">
+                                    <span class="input-group-addon"><i class="zmdi zmdi-link"></i></span>
+                                    <input type="text" class="form-control" ng-model="sponsor.linkUrl"
+                                           placeholder="Link URL" />
+                                </p>
+                                <p class="input-group">
+                                    <span class="input-group-addon">EN</span>
+                                    <input type="text" class="form-control" ng-model="sponsor[altText][english]"
+                                           placeholder="English Alt Text" />
+                                </p>
+                                <p class="input-group">
+                                    <span class="input-group-addon">FR</span>
+                                    <input type="text" class="form-control" ng-model="sponsor[altText][french]"
+                                           placeholder="French Alt Text" />
+                                </p>
+                                <div>
+                                    <a href="" class="btn btn-sm">Replace Image</a>
+                                    <a href="" class="btn btn-sm">Remove</a>
+                                    <button class="btn btn-sm btn-secondary float-right" ng-click="sponsor.editing=false">Done</button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <style>
+                        .sponsor-entry:hover {
+                            background: rgba(0,0,0,.05);
+                            box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 32px 0px;
+                            position: relative;
+                            z-index: 99;
+                            transition: all .3s;
+                        }
+                    </style>
+                    <div class="col-12">
+                        <a class=" btn btn-secondary btn-block btn-sm">
+                            <i class="zmdi zmdi-plus"></i> Add Sponsor
+                        </a>
+                    </div>
+
+                </div>
                 <div class="form-group" ng-if="node.logo"
                      ng-hide="pageVM.layout.pageType==='location' || pageVM.layout.pageType==='singlelocation'">
                     <label>Logo</label>
@@ -78,7 +169,7 @@
                 </div>
                 <div class="form-group" ng-if="node.linkColor"
                      ng-hide="(pageVM.layout.pageType==='location' || pageVM.layout.pageType==='singlelocation') && (node.type =='header' || node.type=='footer' )">
-                    >
+
 
                     <label>Link color </label>
                     <color-picker class="" ng-model="node.linkColor"

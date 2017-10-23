@@ -182,6 +182,19 @@
         {
             type: 'sponsors',
             size: 'full',
+            sponsors: [
+                {
+                    imageURL: 'https://daks2k3a4ib2z.cloudfront.net/5909fc7f818ecc0900827a34/5919e9504bf606312482e8ed_kontact.jpg',
+                    altText: { english: "English alt", french: "French alt" }, linkUrl: 'https://www.sampleurl.com'
+                }, {
+                    imageURL: 'https://daks2k3a4ib2z.cloudfront.net/5909fc7f818ecc0900827a34/5919e95c5bcb5f4e41d706e5_mccann.jpg',
+                    altText: { english: "English alt", french: "French alt" }, linkUrl: 'https://www.sampleurl.com'
+                },
+                  { imageURL: 'https://daks2k3a4ib2z.cloudfront.net/5909fc7f818ecc0900827a34/5919e872f3548e218f58763a_mediacity.jpg', altText: { english: "English alt", french: "French alt" }, linkUrl: 'https://www.sampleurl.com' },
+                   { imageURL: 'https://daks2k3a4ib2z.cloudfront.net/5909fc7f818ecc0900827a34/5919e880d981d311e4c50597_newad.jpg', altText: { english: "English alt", french: "French alt" }, linkUrl: 'https://www.sampleurl.com' }
+
+
+            ],
             id: 3333
         }
     ]
@@ -201,12 +214,12 @@
 
 
 },
-    {
-        type: 'footer',
+{
+    type: 'footer',
 
-        id: 17
-        // backgroundColor: '#353535'
-    }]
+    id: 17
+    // backgroundColor: '#353535'
+}]
     };
 
     layouts.location = {
@@ -246,87 +259,87 @@
             }
 
         },
-{
-    type: 'container',
-    id: 11,
-    content: [
     {
         type: 'container',
-        size: 'lg',
-        backgroundColor: '#fff',
-        content:
-        [
-             {
-                 type: 'content',
-                 size: 'full',
-                 id: 9
-             },
-             {
-                 type: 'video',
-                 size: 'full',
-                 backgroundColor: 'rgb(0, 154, 166)',
-                 id: 7
-             }, {
+        id: 11,
+        content: [
+        {
+            type: 'container',
+            size: 'lg',
+            backgroundColor: '#fff',
+            content:
+            [
+                 {
+                     type: 'content',
+                     size: 'full',
+                     id: 9
+                 },
+                 {
+                     type: 'video',
+                     size: 'full',
+                     backgroundColor: 'rgb(0, 154, 166)',
+                     id: 7
+                 }, {
 
-                 type: 'content',
-                 size: 'full',
-                 id: 10,
-                 backgroundColor: '#f0f0f0'
+                     type: 'content',
+                     size: 'full',
+                     id: 10,
+                     backgroundColor: '#f0f0f0'
+                 }
+
+            ]
+        }, {
+
+            type: 'container',
+            size: 'sm',
+
+            content: [
+           {
+               type: 'leaderboard',
+               source: 'individual',
+               size: 'full',
+               members: fakeFundraisers,
+               heading: 'Top Individuals',
+               bodyColor: '#444b55',
+               id: 14
+
+
+           },
+             {
+                 type: 'leaderboard',
+                 source: 'team',
+                 size: 'sm',
+                 heading: 'Top Teams',
+                 members: fakeTeams,
+                 bodyColor: '#444b55',
+                 id: 15
+
              }
 
-        ]
-    }, {
-
-        type: 'container',
-        size: 'sm',
-
-        content: [
-       {
-           type: 'leaderboard',
-           source: 'individual',
-           size: 'full',
-           members: fakeFundraisers,
-           heading: 'Top Individuals',
-           bodyColor: '#444b55',
-           id: 14
-
-
-       },
-         {
-             type: 'leaderboard',
-             source: 'team',
-             size: 'sm',
-             heading: 'Top Teams',
-             members: fakeTeams,
-             bodyColor: '#444b55',
-             id: 15
-
-         }
-
-        ]
-    }
-    ]
-
-
-}, {
-    type: 'container',
-    id: 13
-
-
-}, {
-    type: 'container',
-    backgroundColor: '#22c2d2',
-    id: 16,
-    content: [
-        {
-            type: 'sponsors',
-            size: 'full',
-            id: 3333
+            ]
         }
-    ]
+        ]
 
 
-},
+    }, {
+        type: 'container',
+        id: 13
+
+
+    }, {
+        type: 'container',
+        backgroundColor: '#22c2d2',
+        id: 16,
+        content: [
+            {
+                type: 'sponsors',
+                size: 'full',
+                id: 3333
+            }
+        ]
+
+
+    },
     {
         type: 'footer',
 
