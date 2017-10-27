@@ -38,18 +38,7 @@
                 },
                 enabled: true
             }
-            //},
-
-
-            //donate: {
-            //    text: {
-            //        english: "Donate",
-            //        french: "Le Donate"
-            //    },
-            //    enabled: true,
-            //    cssClass: 'btn fs-primary-btn fs-button'
-
-            //}
+          
         }
     };
     layouts.location = {};
@@ -59,6 +48,7 @@
     layouts.event = {
         type: 'container-fluid',
         background: 'transparent',
+       
         content: [
           header,
         {
@@ -89,26 +79,6 @@
             }
 
         },
-//{
-//    type: 'container',
-//    backgroundColor: 'rgba(255,255,255,.7)',
-//    id: 11,
-//    content: [
-//        {
-//            type: 'content',
-//            size: 'full',
-
-//            id: 3
-//        }
-//    ]
-
-
-//},
-
-
-
-
-
 {
     type: 'container',
     backgroundColor: 'rgb(0,154,166,.8)',
@@ -126,6 +96,7 @@
             size: 'lg',
             videoSource: 'youtube',
             videoId: 'm0LT_hHzoZc',
+            locked: true,
 
 
             id: 7
@@ -226,6 +197,7 @@
         pageType: 'location',
         type: 'container-fluid',
         background: 'transparent',
+       
         content: [
           header,
         {
@@ -235,6 +207,7 @@
             date: "May 7, 2018",
             id: 'hero',
             width: 'full',
+            locked: true,
             progressBar:
     {
         enabled: true,
@@ -272,13 +245,16 @@
                  {
                      type: 'content',
                      size: 'full',
-                     id: 9
+                     id: 9,
+                     locked: true
+
                  },
                  {
                      type: 'video',
                      size: 'full',
                      backgroundColor: 'rgb(0, 154, 166)',
-                     id: 7
+                     id: 7,
+                     locked: true
                  }, {
 
                      type: 'content',
@@ -334,7 +310,8 @@
             {
                 type: 'sponsors',
                 size: 'full',
-                id: 3333
+                id: 3333,
+                locked: true
             }
         ]
 
