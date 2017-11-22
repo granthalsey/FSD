@@ -27,8 +27,12 @@
     </div>
     <div ng-if="layout.type=='hero'"
          class="fs-hero"
-         style="background-image: url({{layout.backgroundImage}}); ">
+         style="background-image: url({{layout.backgroundImage}});">
         <ng-include src="'/templates/edit/sample/hero.html'"></ng-include>
+    </div>
+    <div ng-if="layout.type=='donation-form'"
+         class="fs-form">
+        <ng-include src="'/templates/edit/sample/donationForm.html'"></ng-include>
     </div>
     <div ng-if="layout.type=='header'"
          style="">

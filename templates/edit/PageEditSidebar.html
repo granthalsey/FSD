@@ -79,7 +79,8 @@
 
                 </li>
 
-            </ol><div class="col col-12">
+            </ol>
+            <div class="col col-12" ng-hide="pageVM.layout.pageType=='donation'">
                 <button class="btn btn-outline-primary btn-block btn-sm">
                     <i class="zmdi zmdi-plus"></i> Add Container
                 </button>
@@ -90,7 +91,7 @@
 
         <div class="sidebar-footer-placeholder">
         </div>
-        <div class="sidebar-footer" ng-hide="pageVM.layout.pageType==='singlelocation'">
+        <div class="sidebar-footer" ng-hide="pageVM.layout.pageType==='singlelocation' || pageVM.layout.pageType==='donation' ">
             <small ng-if="pageVM.enableRearrange">
                 Drag and drop widgets to reorder
             </small>

@@ -16,33 +16,36 @@
                 Location
             </span>
         </a>
-
-
-        <!--<a href
-           ng-click="pageVM.toggleActivePage('team')">
-            <i class="zmdi zmdi-accounts-alt"></i>
-            <span>
-                Team
-            </span>
-        </a>
-        <a href>
-            <i class="zmdi zmdi-account-circle"></i>
-            <span>
-                Individual
-            </span>
-        </a>
-        <a href>
-            <i class="zmdi zmdi-shield-check"></i>
+        <a ui-sref-active="active"
+           ui-sref="pages({page:'donation'})">
+            <i class=" zmdi zmdi-shield-check">
+            </i>
             <span>
                 Donation
             </span>
         </a>
-        <a href>
-            <i class="zmdi zmdi-thumb-up"></i>
+        <a ui-sref-active="active"
+           ui-sref="pages({page:'thankyou'})">
+            <i class=" zmdi zmdi-thumb-up">
+            </i>
             <span>
                 Thank You
             </span>
-        </a>-->
+        </a>
+
+        <!--<a href
+             ng-click="pageVM.toggleActivePage('team')">
+              <i class="zmdi zmdi-accounts-alt"></i>
+              <span>
+                  Team
+              </span>
+          </a>
+          <a href>
+              <i class="zmdi zmdi-account-circle"></i>
+              <span>
+                  Individual
+              </span>
+          </a>
+        -->
     </div>
 </div>
-    

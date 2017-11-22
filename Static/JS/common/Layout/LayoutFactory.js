@@ -9,6 +9,13 @@
 
     var service = {};
     var layouts = {}
+    var donationForm = {
+        type: 'donation-form',
+        backgroundColor: '#fff',
+        id: 'donationform',
+        size: 'md'
+    }
+
     var header = {
         type: 'header', backgroundColor: 'rgb(0, 154, 166)',
         linkColor: '#ffffff',
@@ -38,7 +45,7 @@
                 },
                 enabled: true
             }
-          
+
         }
     };
     layouts.location = {};
@@ -48,7 +55,7 @@
     layouts.event = {
         type: 'container-fluid',
         background: 'transparent',
-       
+
         content: [
           header,
         {
@@ -187,17 +194,55 @@
 },
 {
     type: 'footer',
-
     id: 17
     // backgroundColor: '#353535'
 }]
     };
 
+    layouts.donation = {
+        pageType: 'donation',
+        type: 'container-fluid',
+        background: '#ccc',
+        content: [
+        header,
+            {
+                type: 'container',
+                id: 565656656565,
+                content: [donationForm, {
+                    size: 'sm',
+                    type: 'content',
+                    id: 'sidebar'
+                }]
+            },
+        {
+            type: 'footer',
+            locked: true,
+            id: 17
+            // backgroundColor: '#353535'
+        }]
+
+    }
+    layouts.thankyou = {
+        pageType: 'thankyou',
+        type: 'container-fluid',
+        background: '#ccc',
+        content: [
+            header,
+            {
+                type: 'footer',
+                locked: true,
+                id: 17
+                // backgroundColor: '#353535'
+            }]
+
+    }
+
+
     layouts.location = {
         pageType: 'location',
         type: 'container-fluid',
         background: 'transparent',
-       
+
         content: [
           header,
         {
@@ -340,7 +385,8 @@
         header: { displayName: 'Header', userSelectable: false, sizable: false, required: true },
         footer: { displayName: 'Footer', userSelectable: false, sizable: false, required: true },
         video: { displayName: 'Video', userSelectable: true, sizable: true },
-        sponsors: { displayName: 'Sponsors', userSelectable: true, sizable: true }
+        sponsors: { displayName: 'Sponsors', userSelectable: true, sizable: true },
+        'donation-form': { displayName: 'Donation Form', userSelectable: true, sizable: true }
 
 
     }

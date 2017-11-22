@@ -748,11 +748,13 @@
     <Content Include="templates\edit\PageEditSidebar.html" />
     <Content Include="templates\edit\pageSelector.html" />
     <Content Include="templates\edit\ruleEditor.html" />
+    <Content Include="templates\edit\sample\sidebar.html" />
     <Content Include="templates\edit\sample\10.html" />
     <Content Include="templates\edit\sample\6.html" />
     <Content Include="templates\edit\sample\7.html" />
     <Content Include="templates\edit\sample\9.html" />
     <Content Include="templates\edit\sample\8.html" />
+    <Content Include="templates\edit\sample\donationForm.html" />
     <Content Include="templates\edit\sample\footer.html" />
     <Content Include="templates\edit\sample\donations.html" />
     <Content Include="templates\edit\sample\video.html" />

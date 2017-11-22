@@ -14,7 +14,7 @@
                    class=" zmdi zmdi-chevron-down" ng-class="pageVM.isCurrentEditingWidget(node.id) ? 'open' : ''"></i>
 
                 <i ng-show="pageVM.enableRearrange" class="zmdi zmdi-unfold-more"></i>
-                <i ng-show="pageVM.layout.pageType==='singlelocation' && node.locked" class="zmdi zmdi-lock"></i>
+                <i ng-show="(pageVM.layout.pageType==='singlelocation' && node.locked) || (pageVM.layout.pageType==='donation' && node.locked)" class="zmdi zmdi-lock"></i>
             </span>
             <!--ng-class="pageVM.isCurrentEditingWidget(node.id) ? 'zmdi-chevron-up' : '"-->
         </div>
